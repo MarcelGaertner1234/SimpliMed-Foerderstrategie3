@@ -47,3 +47,37 @@ credentials.json
 # Build artifacts
 dist/
 build/
+
+# Binäre Dateien (Word, Excel, PowerPoint, PDFs)
+*.docx
+*.xlsx
+*.pptx
+*.pdf
+*.doc
+*.xls
+*.ppt
+
+# Persönliche Dokumente von Marcus
+markus\ unterlagen/
+marcus\ unterlagen/
+*/markus*
+*/marcus*
+
+# Test und Debug Dateien
+test-*.html
+test-*.js
+debug-*.json
+*-test.*
+
+# Komprimierte Dateien
+*.zip
+*.rar
+*.7z
+*.tar
+*.gz
+
+# Weitere sensitive Patterns
+*password*
+*secret*
+*private*
+*confidential*

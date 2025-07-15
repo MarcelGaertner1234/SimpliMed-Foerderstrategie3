@@ -1294,7 +1294,7 @@
                         </ul>
                     </div>
                     
-                    <p><strong>Laufzeit:</strong> 18 Monate | <strong>ROI nach 5 Jahren:</strong> 280%</p>
+                    <p><strong>Laufzeit:</strong> 18 Monate | <strong>ROI nach 5 Jahren:</strong> 180%</p>
                 </div>
                 
                 <!-- Box 2: Finanzierungsplan -->
@@ -1408,47 +1408,95 @@
                 <div class="info-box entscheidung">
                     <h3><span class="icon">⚡</span> Szenario-Auswahl & Entscheidung</h3>
                     
-                    <p><strong>Wählen Sie Ihr bevorzugtes Förderszenario:</strong></p>
+                    <p><strong>Wählen Sie Ihr bevorzugtes Förderszenario (nach Priorität sortiert):</strong></p>
                     
                     <div class="scenario-selection" style="margin: 20px 0;">
-                        <div class="scenario-option" onclick="selectScenario(1)" id="scenario-1" 
-                             role="button" tabindex="0" aria-label="Hauptempfehlung: ZIM + Hausbank, 285.000 Euro Förderung, 18 Monate Laufzeit">
-                            <input type="radio" name="scenario" value="1" id="radio-1" aria-describedby="desc-1">
-                            <label for="radio-1">
-                                <strong>🏆 🏆 HAUPTEMPFEHLUNG: ZIM + Hausbank (UPDATE 2025)</strong><br>
-                                <small id="desc-1">285.000 € Förderung • 18 Monate • 45% Förderquote • Art. 25 AGVO</small>
+                        <!-- NEUE STRATEGISCHE SZENARIEN 2025-2027 -->
+                        <h4 style="color: #27ae60; margin: 15px 0;">🚀 STRATEGISCHE SZENARIEN 2025-2027 (Passend zu SimpliMed-Zielen):</h4>
+                        
+                        <div class="scenario-option" onclick="selectScenario('hauptszenario_2025')" id="scenario-hauptszenario_2025" style="border: 3px solid #27ae60;">
+                            <input type="radio" name="scenario" value="hauptszenario_2025" id="radio-hauptszenario_2025">
+                            <label for="radio-hauptszenario_2025">
+                                <strong>🚀 ZIM + NRW.BANK.Invest - Technologie-Vollausbau 2025</strong><br>
+                                <small>585.000 € Gesamt • 385.000 € Förderung (65,8%) • Cloud-Migration + KI-Features • Q4/2025 Start</small>
                             </label>
                         </div>
                         
-                        <div class="scenario-option" onclick="selectScenario(2)" id="scenario-2">
-                            <input type="radio" name="scenario" value="2" id="radio-2">
-                            <label for="radio-2">
-                                <strong>✅ KONSERVATIVE ALTERNATIVE: MID NRW + Hausbank + BAFA</strong><br>
-                                <small>30.000 € Förderung • 12 Monate • Einfache Abwicklung</small>
+                        <div class="scenario-option" onclick="selectScenario('agil_szenario_2025')" id="scenario-agil_szenario_2025" style="border: 2px solid #3498db;">
+                            <input type="radio" name="scenario" value="agil_szenario_2025" id="radio-agil_szenario_2025">
+                            <label for="radio-agil_szenario_2025">
+                                <strong>⚡ Digitalbonus NRW + KfW-Schnellkredit - Agiler Start 2025</strong><br>
+                                <small>350.000 € Gesamt • 100.000 € Förderung (28,6%) • Schnellstart 6-8 Wochen • MVP Q4/2025</small>
                             </label>
                         </div>
                         
-                        <div class="scenario-option" onclick="selectScenario(3)" id="scenario-3">
-                            <input type="radio" name="scenario" value="3" id="radio-3">
-                            <label for="radio-3">
-                                <strong>🚀 SCHNELLSTART: MID NRW + Hausbank Express</strong><br>
-                                <small>25.000 € Förderung • 6 Monate • 4 Wochen Bewilligung</small>
+                        <div class="scenario-option" onclick="selectScenario('investor_szenario_2025')" id="scenario-investor_szenario_2025" style="border: 2px solid #9b59b6;">
+                            <input type="radio" name="scenario" value="investor_szenario_2025" id="radio-investor_szenario_2025">
+                            <label for="radio-investor_szenario_2025">
+                                <strong>💎 ZIM + Investor-Beteiligung - Wachstumsturbo 2025</strong><br>
+                                <small>800.000 € Gesamt • 285.000 € Förderung (35,6%) • Business Angel 25% • Vollausbau Q4/2026</small>
+                            </label>
+                        </div>
+                        
+                        <!-- MITTLERE PRIORITÄT -->
+                        <h4 style="color: #3498db; margin: 15px 0;">⚡ MITTLERE PRIORITÄT - Schnelle Liquidität:</h4>
+                        
+                        <div class="scenario-option" onclick="selectScenario(10)" id="scenario-10">
+                            <input type="radio" name="scenario" value="10" id="radio-10">
+                            <label for="radio-10">
+                                <strong>🔥 NEU: NRW.BANK.INVEST + Digitalbonus NRW - 20% Tilgungszuschuss!</strong><br>
+                                <small>177.800 € Zuschüsse • 100k Tilgungszuschuss + 50k Digitalbonus NRW • Ab Mai 2025</small>
+                            </label>
+                        </div>
+                        
+                        <div class="scenario-option" onclick="selectScenario(7)" id="scenario-7">
+                            <input type="radio" name="scenario" value="7" id="radio-7">
+                            <label for="radio-7">
+                                <strong>🎁 SCHNELL & SICHER: Zuschuss-Sprint</strong><br>
+                                <small>32.800 € Zuschüsse • 4 Wochen • 100% geschenktes Geld • Geringes Risiko</small>
                             </label>
                         </div>
                         
                         <div class="scenario-option" onclick="selectScenario(4)" id="scenario-4">
                             <input type="radio" name="scenario" value="4" id="radio-4">
                             <label for="radio-4">
-                                <strong>⚡ HYBRID-ANSATZ: ZIM + NRW.BANK Kombi</strong><br>
-                                <small>180.000 € Förderung • 18 Monate • Innovation + Finanzierung</small>
+                                <strong>⚡ ZIM + NRW.BANK Kombi</strong><br>
+                                <small>232.500 € Förderung • 18 Monate • Innovation + Finanzierung</small>
+                            </label>
+                        </div>
+                        
+                        <!-- NIEDRIGE PRIORITÄT -->
+                        <h4 style="color: #95a5a6; margin: 15px 0;">📋 BACKUP-SZENARIEN (falls Hauptförderung abgelehnt wird):</h4>
+                        
+                        <div class="scenario-option" onclick="selectScenario(9)" id="scenario-9">
+                            <input type="radio" name="scenario" value="9" id="radio-9">
+                            <label for="radio-9">
+                                <strong>🛡️ Bürgschafts-Paket (ohne eigene Sicherheiten)</strong><br>
+                                <small>267.800 € (250k Kredit + 17.8k Zuschüsse) • Express-Bürgschaft</small>
+                            </label>
+                        </div>
+                        
+                        <div class="scenario-option" onclick="selectScenario(2)" id="scenario-2">
+                            <input type="radio" name="scenario" value="2" id="radio-2">
+                            <label for="radio-2">
+                                <strong>✅ BACKUP-PLAN A: MID + Hausbank + BAFA</strong><br>
+                                <small>14.550 € Förderung • 12 Monate • Einfache Abwicklung • Niedrige Hürden</small>
+                            </label>
+                        </div>
+                        
+                        <div class="scenario-option" onclick="selectScenario(3)" id="scenario-3">
+                            <input type="radio" name="scenario" value="3" id="radio-3">
+                            <label for="radio-3">
+                                <strong>🚀 BACKUP-PLAN B: MID + Express-Kredit</strong><br>
+                                <small>12.800 € Förderung • 6 Monate • 4 Wochen Bewilligung • Sofort verfügbar</small>
                             </label>
                         </div>
                         
                         <div class="scenario-option" onclick="selectScenario(5)" id="scenario-5">
                             <input type="radio" name="scenario" value="5" id="radio-5">
                             <label for="radio-5">
-                                <strong>💡 STEUER-OPTIMIERT: Forschungszulage + KfW + MID + BAFA</strong><br>
-                                <small>80.000 € Förderung • 24 Monate • Langfristige Steuervorteile</small>
+                                <strong>💡 Forschungszulage + KfW Mix</strong><br>
+                                <small>67.800 € Förderung • 24 Monate • Steuervorteile</small>
                             </label>
                         </div>
                     </div>
@@ -1459,17 +1507,27 @@
                     </div>
                     
                     <div class="decision-buttons">
-                        <button class="btn btn-success" onclick="makeDecisionWithScenario()" id="confirmButton" disabled
-                                aria-describedby="confirm-help">
-                            ✅ Gewähltes Szenario starten
-                        </button>
-                        <div id="confirm-help" class="sr-only">Bestätigen Sie Ihre Auswahl des Förderszenarios</div>
-                        <button class="btn btn-info" onclick="showTab('scenarios')">
-                            📋 Alle Szenarien im Detail ansehen
-                        </button>
-                        <button class="btn btn-warning" onclick="showComments()">
-                            ❓ Noch offene Fragen / Anmerkungen
-                        </button>
+                        <div class="decision-actions" style="display: flex; gap: 20px; margin: 20px 0;">
+                            <button class="btn btn-success" onclick="makeDecision('JA')" id="jaButton" disabled
+                                    style="flex: 1; padding: 15px; font-size: 18px; font-weight: bold;">
+                                ✅ JA - Szenario starten
+                            </button>
+                            <button class="btn btn-danger" onclick="makeDecision('NEIN')" id="neinButton" disabled
+                                    style="flex: 1; padding: 15px; font-size: 18px; font-weight: bold;">
+                                ❌ NEIN - Überdenken
+                            </button>
+                        </div>
+                        <div style="text-align: center; margin: 10px 0;">
+                            <strong>⏰ Entscheidung erforderlich bis KW 30 (Hausbankgespräch)</strong>
+                        </div>
+                        <div style="display: flex; gap: 10px; justify-content: center;">
+                            <button class="btn btn-info" onclick="showTab('scenarios')" style="flex: 1;">
+                                📋 Alle Szenarien im Detail ansehen
+                            </button>
+                            <button class="btn btn-warning" onclick="showComments()" style="flex: 1;">
+                                ❓ Noch offene Fragen / Anmerkungen
+                            </button>
+                        </div>
                     </div>
                     
                     <div class="comments-section" id="commentsSection">
@@ -1519,7 +1577,7 @@
                     <div class="status-card">
                         <h4><i class="fas fa-calendar mr-2"></i>Timeline</h4>
                         <p class="text-sm">Nächster Schritt</p>
-                        <div class="text-lg font-bold text-gray-600">KW 30</div>
+                        <div class="text-lg font-bold text-gray-600">KW 31</div>
                     </div>
                 </div>
             </div>
@@ -1819,34 +1877,169 @@
 
         let currentTab = 'decision';
         
-        // Förderszenarien - Verschiedene Kombinationen von Programmen mit Hausbank
+        // Förderszenarien - Aktualisiert für SimpliMed 2025-2027 Strategie
         const scenariosData = [
-            // === HAUPTEMPFEHLUNGEN ===
+            // === NEUE STRATEGISCHE SZENARIEN 2025-2027 ===
             {
-                id: 1,
-                titel: "🏆 🏆 HAUPTEMPFEHLUNG: ZIM + Hausbank (UPDATE 2025)",
-                foerderprogramm: "ZIM-Hausbank (Art. 25 AGVO)",
-                foerdersumme_geschaetzt: "285000",
+                id: "hauptszenario_2025",
+                titel: "🚀 ZIM + NRW.BANK.Invest - Technologie-Vollausbau 2025",
+                foerderprogramm: "ZIM + NRW.BANK.Invest + Digitalbonus",
+                foerdersumme_geschaetzt: "385000",
                 dauer_monate: 18,
-                prioritaet: "sehr hoch",
+                prioritaet: "höchste",
                 innovationsgrad: "sehr hoch",
-                beschreibung: "✅ OPTIMALE LÖSUNG: ZIM-Förderung nutzt Art. 25 AGVO (F&E-Beihilfe), nicht De-minimis! 45% Förderquote für KI-Entwicklung ohne Einschränkungen.",
+                beschreibung: "🚀 STRATEGISCHE LÖSUNG: ZIM-Einzelprojekt für Cloud-Migration & KI-Features, NRW.BANK.Invest mit Tilgungszuschuss, Digitalbonus NRW für Markterschließung. Perfekt für 18-monatigen Rollout Q4/2025 - Q1/2027.",
                 kombinationsvorteil: true,
                 details: {
-                    gesamtinvestition: 633000,
+                    gesamtinvestition: 585000,
                     komponenten: [
-                        { name: "ZIM-Einzelprojekt", betrag: 285000, quote: "45%", fokus: "KI & Cloud-Entwicklung" },
-                        { name: "Hausbank-Kredit", betrag: 150000, quote: "Zinsvorteil 3%", fokus: "Liquidität & Flexibilität" }
+                        { name: "ZIM-Einzelprojekt", betrag: 285000, quote: "45%", fokus: "Cloud-Migration & KI-Features" },
+                        { name: "NRW.BANK.Invest Zukunft", betrag: 200000, quote: "20% Tilgungszuschuss", fokus: "Infrastruktur & Entwicklung" },
+                        { name: "Digitalbonus NRW", betrag: 50000, quote: "50%", fokus: "Digitale Markterschließung" },
+                        { name: "MID-Digitalisierung", betrag: 50000, quote: "50%", fokus: "IT-Sicherheit & Compliance" }
                     ],
                     finanzierung: {
-                        foerderungen_gesamt: 285000,
-                        eigenanteil: 198000,
-                        bankdarlehen: 150000,
-                        foerderquote_gesamt: "45.0%"
+                        foerderungen_gesamt: 385000,
+                        eigenanteil: 200000,
+                        bankdarlehen: 0,
+                        foerderquote_gesamt: "65.8%"
                     },
                     wirtschaftlichkeit: {
                         break_even_monat: 22,
                         roi_5_jahre: "280%",
+                        neue_arbeitsplaetze: 15,
+                        erfolgswahrscheinlichkeit: "85%"
+                    },
+                    vorteile: [
+                        "Höchste Fördersumme für Vollausbau",
+                        "Perfekte Timing-Abstimmung mit Strategieplan",
+                        "KI-Ready Infrastructure für Zukunftswachstum",
+                        "Break-Even bereits in Monat 22"
+                    ],
+                    risiken: [
+                        "Zwei parallele Anträge erforderlich",
+                        "Höhere Komplexität bei Berichtswesen",
+                        "Eigenanteil 200.000 EUR erforderlich"
+                    ],
+                    timeline: "Start Q4/2025, Rollout Q1/2027",
+                    rechtlicher_hinweis: "✅ OPTIMAL: ZIM nutzt Art. 25 AGVO (F&E-Beihilfe), kombiniert mit NRW-Landesförderung"
+                }
+            },
+            {
+                id: "agil_szenario_2025",
+                titel: "⚡ Digitalbonus NRW + KfW-Schnellkredit - Agiler Start 2025",
+                foerderprogramm: "Digitalbonus + KfW-Schnellkredit",
+                foerdersumme_geschaetzt: "100000",
+                dauer_monate: 12,
+                prioritaet: "mittel",
+                innovationsgrad: "hoch",
+                beschreibung: "⚡ AGILE LÖSUNG: Digitalbonus NRW für Digitalisierung, KfW-Schnellkredit mit 100% Haftung, MID-Digitalisierung für IT-Sicherheit. Schnellstart in 6-8 Wochen möglich.",
+                kombinationsvorteil: true,
+                details: {
+                    gesamtinvestition: 350000,
+                    komponenten: [
+                        { name: "Digitalbonus NRW", betrag: 50000, quote: "50%", fokus: "Digitalisierung & Software" },
+                        { name: "KfW-Schnellkredit", betrag: 250000, quote: "100% Haftung", fokus: "Entwicklung & Migration" },
+                        { name: "MID-Digitalisierung", betrag: 50000, quote: "50%", fokus: "IT-Sicherheit & Compliance" }
+                    ],
+                    finanzierung: {
+                        foerderungen_gesamt: 100000,
+                        eigenanteil: 50000,
+                        bankdarlehen: 250000,
+                        foerderquote_gesamt: "28.6%"
+                    },
+                    wirtschaftlichkeit: {
+                        break_even_monat: 18,
+                        roi_5_jahre: "150%",
+                        neue_arbeitsplaetze: 8,
+                        erfolgswahrscheinlichkeit: "95%"
+                    },
+                    vorteile: [
+                        "Extrem schnelle Verfügbarkeit (6-8 Wochen)",
+                        "Geringer Eigenanteil erforderlich",
+                        "Keine Sicherheiten nötig (100% KfW-Haftung)",
+                        "Perfekt für MVP-Entwicklung"
+                    ],
+                    risiken: [
+                        "Geringere Fördersumme als ZIM-Vollausbau",
+                        "Kreditrückzahlung ab Jahr 1",
+                        "Weniger Innovationsförderung"
+                    ],
+                    timeline: "Start Q3/2025, MVP Q4/2025",
+                    rechtlicher_hinweis: "✅ SICHER: Digitalbonus NRW ersetzt go-digital, KfW-Haftung minimiert Risiko"
+                }
+            },
+            {
+                id: "investor_szenario_2025",
+                titel: "💎 ZIM + Investor-Beteiligung - Wachstumsturbo 2025",
+                foerderprogramm: "ZIM + Business Angel",
+                foerdersumme_geschaetzt: "285000",
+                dauer_monate: 18,
+                prioritaet: "strategisch",
+                innovationsgrad: "sehr hoch",
+                beschreibung: "💎 STRATEGISCHE LÖSUNG: ZIM-Einzelprojekt für Kernentwicklung, Business Angel mit 25% Beteiligung für Wachstumskapital. Maximale Wachstumsbeschleunigung ohne Kreditbelastung.",
+                kombinationsvorteil: true,
+                details: {
+                    gesamtinvestition: 800000,
+                    komponenten: [
+                        { name: "ZIM-Einzelprojekt", betrag: 285000, quote: "45%", fokus: "Kernentwicklung & Innovation" },
+                        { name: "Business Angel", betrag: 200000, quote: "25% Beteiligung", fokus: "Wachstumskapital & Expertise" },
+                        { name: "Eigenkapital", betrag: 315000, quote: "Aus Liquidität", fokus: "Basis-Finanzierung" }
+                    ],
+                    finanzierung: {
+                        foerderungen_gesamt: 285000,
+                        eigenanteil: 315000,
+                        bankdarlehen: 0,
+                        beteiligung: 200000,
+                        foerderquote_gesamt: "35.6%"
+                    },
+                    wirtschaftlichkeit: {
+                        break_even_monat: 20,
+                        roi_5_jahre: "380%",
+                        neue_arbeitsplaetze: 25,
+                        erfolgswahrscheinlichkeit: "70%"
+                    },
+                    vorteile: [
+                        "Höchste Kapitalbasis für Vollausbau",
+                        "Strategische Expertise durch Investor",
+                        "Keine Kreditrückzahlung erforderlich",
+                        "Skalierung auf 20.000 Kunden möglich"
+                    ],
+                    risiken: [
+                        "Eigenkapitalanteil 25% erforderlich",
+                        "Investor-Due-Diligence-Prozess",
+                        "Längere Verhandlungsphase"
+                    ],
+                    timeline: "Start Q1/2026, Vollausbau Q4/2026",
+                    rechtlicher_hinweis: "✅ STRATEGISCH: ZIM-Förderung + private Finanzierung, keine Beihilfe-Konflikte"
+                }
+            },
+            // === BACKUP-SZENARIEN (Legacy) ===
+            {
+                id: 1,
+                titel: "🏆 BACKUP: ZIM + Hausbank (bewährt)",
+                foerderprogramm: "ZIM-Hausbank (Art. 25 AGVO)",
+                foerdersumme_geschaetzt: "285000",
+                dauer_monate: 18,
+                prioritaet: "hoch",
+                innovationsgrad: "sehr hoch",
+                beschreibung: "✅ BEWÄHRTE LÖSUNG: ZIM-Förderung nutzt Art. 25 AGVO (F&E-Beihilfe), nicht De-minimis! 45% Förderquote für KI-Entwicklung ohne Einschränkungen.",
+                kombinationsvorteil: true,
+                details: {
+                    gesamtinvestition: 722000,
+                    komponenten: [
+                        { name: "ZIM-Einzelprojekt", betrag: 324900, quote: "45%", fokus: "KI & Cloud-Entwicklung" },
+                        { name: "Hausbank-Kredit", betrag: 200000, quote: "Zinsvorteil 3%", fokus: "Liquidität & Flexibilität" }
+                    ],
+                    finanzierung: {
+                        foerderungen_gesamt: 324900,
+                        eigenanteil: 197100,
+                        bankdarlehen: 200000,
+                        foerderquote_gesamt: "45.0%"
+                    },
+                    wirtschaftlichkeit: {
+                        break_even_monat: 22,
+                        roi_5_jahre: "180%",
                         neue_arbeitsplaetze: 10,
                         erfolgswahrscheinlichkeit: "90%"
                     },
@@ -1870,17 +2063,17 @@
                 beschreibung: "✅ KONSERVATIVE ALTERNATIVE: NRW-Förderung + Hausbank + Beratung. Geringere Förderung, aber einfachere Abwicklung.",
                 kombinationsvorteil: true,
                 details: {
-                    gesamtinvestition: 166550,
+                    gesamtinvestition: 120000,
                     komponenten: [
-                        { name: "MID-Digitalisierung NRW", betrag: 12800, quote: "50%", fokus: "Branchensoftware" },
-                        { name: "BAFA Know-how Beratung", betrag: 1750, quote: "50%", fokus: "Strategieberatung (alte Bundesländer)" },
-                        { name: "Hausbank-Kredit", betrag: 100000, quote: "Zinsvorteil", fokus: "Betriebsmittel & Flexibilität" }
+                        { name: "MID-Digitalisierung NRW", betrag: 15000, quote: "50%", fokus: "Branchensoftware" },
+                        { name: "BAFA Know-how Beratung", betrag: 2500, quote: "50%", fokus: "Strategieberatung (alte Bundesländer)" },
+                        { name: "Hausbank-Kredit", betrag: 50000, quote: "Zinsvorteil", fokus: "Betriebsmittel & Flexibilität" }
                     ],
                     finanzierung: {
-                        foerderungen_gesamt: 14550,
-                        eigenanteil: 52000,
-                        bankdarlehen: 100000,
-                        foerderquote_gesamt: "8.7%"
+                        foerderungen_gesamt: 15300,
+                        eigenanteil: 54700,
+                        bankdarlehen: 50000,
+                        foerderquote_gesamt: "12.8%"
                     },
                     vorteile: [
                         "Sicher unter De-minimis-Grenze",
@@ -1888,14 +2081,14 @@
                         "Geringer Eigenanteil",
                         "Perfekt als Testlauf"
                     ],
-                    rechtlicher_hinweis: "✅ RECHTLICH SICHER: 14.550 EUR weit unter De-minimis-Grenze von 200.000 EUR. Keine Rückforderungsrisiken!"
+                    rechtlicher_hinweis: "✅ RECHTLICH SICHER: 15.300 EUR weit unter De-minimis-Grenze von 200.000 EUR. Kombinationen nur bei unterschiedlichen Kostenpositionen!"
                 }
             },
             {
                 id: 3,
                 titel: "🚀 MID NRW + Hausbank Express",
                 foerderprogramm: "Schnellstart-Paket",
-                foerdersumme_geschaetzt: "12800",
+                foerdersumme_geschaetzt: "15000",
                 dauer_monate: 6,
                 prioritaet: "hoch",
                 innovationsgrad: "mittel",
@@ -1904,11 +2097,11 @@
                 details: {
                     gesamtinvestition: 162800,
                     komponenten: [
-                        { name: "MID-Digitalisierung NRW", betrag: 12800, quote: "50%", fokus: "Branchensoftware & IT-Security" },
+                        { name: "MID-Digitalisierung NRW", betrag: 15000, quote: "50%", fokus: "Branchensoftware & IT-Security" },
                         { name: "Hausbank Express-Kredit", betrag: 100000, quote: "Schnellzusage", fokus: "Überbrückung & Liquidität" }
                     ],
                     finanzierung: {
-                        foerderungen_gesamt: 12800,
+                        foerderungen_gesamt: 15000,
                         eigenanteil: 50000,
                         bankdarlehen: 100000,
                         foerderquote_gesamt: "7.9%"
@@ -1932,17 +2125,17 @@
                 beschreibung: "Optimale Kombination: ZIM-Innovation für F&E + NRW.BANK.Invest Zukunft für günstige Finanzierung. Höchste Fördersumme mit besten Konditionen.",
                 kombinationsvorteil: true,
                 details: {
-                    gesamtinvestition: 350000,
+                    gesamtinvestition: 450000,
                     komponenten: [
-                        { name: "ZIM-Einzelprojekt (Förderung)", betrag: 150000, quote: "45%", fokus: "Innovation & F&E" },
+                        { name: "ZIM-Einzelprojekt (Förderung)", betrag: 202500, quote: "45%", fokus: "Innovation & F&E" },
                         { name: "NRW.BANK Tilgungszuschuss (20%)", betrag: 30000, quote: "Förderung", fokus: "Zinsvorteil" },
                         { name: "NRW.BANK.Invest Zukunft (Kredit)", betrag: 120000, quote: "Niedrigzins", fokus: "Digitalisierung" }
                     ],
                     finanzierung: {
-                        foerderungen_gesamt: 180000,
-                        eigenanteil: 50000,
-                        bankdarlehen: 120000,
-                        foerderquote_gesamt: "51.4%"
+                        foerderungen_gesamt: 232500,
+                        eigenanteil: 67500,
+                        bankdarlehen: 150000,
+                        foerderquote_gesamt: "51.7%"
                     },
                     vorteile: [
                         "Höchste Gesamtförderung (180.000 EUR)",
@@ -1967,8 +2160,8 @@
                     gesamtinvestition: 500000,
                     komponenten: [
                         { name: "Forschungszulage (bei F&E-Nachweis)", betrag: 50000, quote: "35% F&E", fokus: "Nur echte F&E-Kosten" },
-                        { name: "ERP-Förderkredit Digitalisierung (neu seit 01.07.2025)", betrag: 200000, quote: "3-5% Tilgungszuschuss (je nach Stufe: Basis/LevelUp/HighEnd)", fokus: "Günstige Langzeitfinanzierung" },
-                        { name: "MID-Digitalisierung NRW", betrag: 12800, quote: "50%", fokus: "Branchensoftware" },
+                        { name: "ERP-Förderkredit Digitalisierung (✅ NEU seit 01.07.2025)", betrag: 200000, quote: "3-5% Tilgungszuschuss (je nach Stufe: Basis/LevelUp/HighEnd)", fokus: "Günstige Langzeitfinanzierung" },
+                        { name: "MID-Digitalisierung NRW", betrag: 15000, quote: "50%", fokus: "Branchensoftware" },
                         { name: "BAFA Know-how Beratung", betrag: 5000, quote: "50%", fokus: "Strategieberatung" }
                     ],
                     finanzierung: {
@@ -1987,6 +2180,271 @@
                     warnung: "⚠️ Forschungszulage nur bei echten F&E-Projekten! Sehr strenge Prüfung!"
                 }
             },
+            
+            // === NEUE SCHNELLFÖRDERSZENARIEN (für Marcus) ===
+            {
+                id: 6,
+                titel: "⚡ SCHNELL-ZUSCHUSS + FORSCHUNGSZULAGE: Bis 1 Mio EUR!",
+                foerderprogramm: "Zuschuss + Steuer-Kombi",
+                foerdersumme_geschaetzt: "1027800",
+                dauer_monate: 24,
+                prioritaet: "sehr hoch",
+                innovationsgrad: "hoch",
+                beschreibung: "🎁 MAXIMALE ZUSCHÜSSE: Forschungszulage (rückwirkend!) + MID + Innovation + BAFA = Über 1 Mio EUR geschenktes Geld!",
+                kombinationsvorteil: true,
+                details: {
+                    gesamtinvestition: 2900000,
+                    komponenten: [
+                        { name: "Forschungszulage 2021-2024 (rückwirkend!)", betrag: 1000000, quote: "35% F&E", fokus: "4 Jahre nachträglich!" },
+                        { name: "MID-Digitalisierung NRW", betrag: 15000, quote: "50%", fokus: "4 Wochen!" },
+                        { name: "Innovationsgutscheine NRW", betrag: 15000, quote: "50%", fokus: "4-6 Wochen" },
+                        { name: "KfW-Schnellkredit (ohne Sicherheiten!)", betrag: 300000, quote: "100% KfW", fokus: "5-7 Tage!" }
+                    ],
+                    finanzierung: {
+                        foerderungen_gesamt: 1027800,
+                        eigenanteil: 1572200,
+                        bankdarlehen: 300000,
+                        foerderquote_gesamt: "35.4% Zuschuss!"
+                    },
+                    vorteile: [
+                        "💰 1 MIO EUR Forschungszulage RÜCKWIRKEND!",
+                        "⚡ Erste 27.800 EUR in 4-6 Wochen",
+                        "🎁 Über 1 Mio geschenktes Geld",
+                        "❌ KfW-Kredit OHNE Sicherheiten"
+                    ],
+                    warnung: "⚠️ Forschungszulage muss vom Finanzamt anerkannt werden - gute Dokumentation nötig!"
+                }
+            },
+            {
+                id: 7,
+                titel: "🎁 ZUSCHUSS-SPRINT: 32.800 EUR geschenkt in 4 Wochen!",
+                foerderprogramm: "Schnelle Zuschüsse",
+                foerdersumme_geschaetzt: "32800",
+                dauer_monate: 12,
+                prioritaet: "hoch",
+                innovationsgrad: "mittel",
+                beschreibung: "💸 NUR ZUSCHÜSSE: MID + Innovationsgutschein + BAFA = 32.800 EUR geschenktes Geld in nur 4 Wochen!",
+                kombinationsvorteil: true,
+                details: {
+                    gesamtinvestition: 65600,
+                    komponenten: [
+                        { name: "MID-Digitalisierung Express", betrag: 15000, quote: "50%", fokus: "4 Wochen!" },
+                        { name: "Innovationsgutscheine NRW", betrag: 15000, quote: "50%", fokus: "4-6 Wochen" },
+                        { name: "BAFA Sofortberatung", betrag: 5000, quote: "80%", fokus: "2 Wochen!" }
+                    ],
+                    finanzierung: {
+                        foerderungen_gesamt: 32800,
+                        eigenanteil: 32800,
+                        bankdarlehen: 0,
+                        foerderquote_gesamt: "50% geschenkt!"
+                    },
+                    vorteile: [
+                        "🎁 100% Zuschüsse - keine Rückzahlung!",
+                        "⚡ Bewilligung in 4 Wochen",
+                        "📊 Perfekt für erste Entwicklungen",
+                        "✅ Sehr sicher - kein Kreditrisiko"
+                    ],
+                    rechtlicher_hinweis: "✅ De-minimis-konform: 32.800 EUR weit unter 200.000 EUR Grenze!"
+                }
+            },
+            {
+                id: 8,
+                titel: "💎 HYBRID OPTIMAL: ZIM + Schnellzuschüsse + KfW",
+                foerderprogramm: "Premium Zuschuss-Mix",
+                foerdersumme_geschaetzt: "327800",
+                dauer_monate: 18,
+                prioritaet: "sehr hoch",
+                innovationsgrad: "sehr hoch",
+                beschreibung: "🏆 BESTE KOMBINATION: ZIM (285k) + Schnellzuschüsse (27.8k) + KfW ohne Sicherheiten = Perfekter Mix! ⚠️ WICHTIG: Strikte Kostenabgrenzung erforderlich!",
+                kombinationsvorteil: true,
+                details: {
+                    gesamtinvestition: 927800,
+                    komponenten: [
+                        { name: "ZIM-Förderung (Art. 25 AGVO)", betrag: 285000, quote: "45%", fokus: "Höchste Förderung!" },
+                        { name: "MID-Digitalisierung (schnell!)", betrag: 15000, quote: "50%", fokus: "4 Wochen!" },
+                        { name: "Innovationsgutscheine NRW", betrag: 15000, quote: "50%", fokus: "4-6 Wochen" },
+                        { name: "BAFA Sofortberatung", betrag: 5000, quote: "50%", fokus: "2 Wochen!" },
+                        { name: "KfW-Schnellkredit", betrag: 300000, quote: "100% KfW", fokus: "Ohne Sicherheiten!" }
+                    ],
+                    finanzierung: {
+                        foerderungen_gesamt: 315000,
+                        eigenanteil: 315000,
+                        bankdarlehen: 300000,
+                        foerderquote_gesamt: "33.7% echte Zuschüsse!"
+                    },
+                    vorteile: [
+                        "🎁 315.000 EUR geschenktes Geld (bei getrennten Kostenpositionen)!",
+                        "⚡ Erste 32.800 EUR in 4-6 Wochen",
+                        "🏆 ZIM nicht De-minimis-beschränkt",
+                        "❌ 300k Kredit OHNE Sicherheiten"
+                    ],
+                    warnung: "⚠️ ZIM-Bewilligung dauert 3-6 Monate - aber Schnellzuschüsse überbrücken! ACHTUNG: Keine Doppelförderung der gleichen Kosten!"
+                }
+            },
+            {
+                id: 9,
+                titel: "🛡️ SICHERHEITS-PAKET: Bürgschaft + Kredit + Zuschuss",
+                foerderprogramm: "Bürgschafts-Kombi",
+                foerdersumme_geschaetzt: "17800",
+                dauer_monate: 12,
+                prioritaet: "hoch",
+                innovationsgrad: "mittel",
+                beschreibung: "🔐 OHNE EIGENE SICHERHEITEN: Bürgschaftsbank Express ermöglicht 250.000 EUR Kredit + Zuschüsse!",
+                kombinationsvorteil: true,
+                details: {
+                    gesamtinvestition: 267800,
+                    komponenten: [
+                        { name: "Bürgschaft (80% für Kredit)", betrag: 0, quote: "Ermöglicht Kredit!", fokus: "3-5 Tage Express!" },
+                        { name: "Hausbank-Kredit (durch Bürgschaft)", betrag: 250000, quote: "100%", fokus: "Ohne eigene Sicherheiten!" },
+                        { name: "MID-Digitalisierung", betrag: 15000, quote: "50%", fokus: "Zuschuss" },
+                        { name: "BAFA-Beratung", betrag: 5000, quote: "80%", fokus: "Zuschuss" }
+                    ],
+                    finanzierung: {
+                        foerderungen_gesamt: 17800,
+                        eigenanteil: 0,
+                        bankdarlehen: 250000,
+                        foerderquote_gesamt: "6.7% + Bürgschaft statt Sicherheiten"
+                    },
+                    vorteile: [
+                        "🛡️ KEINE eigenen Sicherheiten nötig!",
+                        "⚡ Express-Bürgschaft in 3-5 Tagen",
+                        "💰 250.000 EUR möglich",
+                        "✅ Hausbank bereits überzeugt"
+                    ],
+                    rechtlicher_hinweis: "✅ Bürgschaft ersetzt fehlende Sicherheiten - perfekt für Asset-Light Unternehmen!"
+                }
+            },
+            {
+                id: 10,
+                titel: "🔥 NRW.BANK.INVEST ZUKUNFT: Tilgungszuschuss 20%!",
+                foerderprogramm: "NRW Invest Premium",
+                foerdersumme_geschaetzt: "227800",
+                dauer_monate: 18,
+                prioritaet: "sehr hoch",
+                innovationsgrad: "hoch",
+                beschreibung: "💎 NEU AB MAI 2025: NRW.BANK.Invest mit 20% Tilgungszuschuss + MID + Innovation = Top-Förderung!",
+                kombinationsvorteil: true,
+                details: {
+                    gesamtinvestition: 827800,
+                    komponenten: [
+                        { name: "NRW.BANK.Invest Zukunft (Kredit)", betrag: 500000, quote: "100%", fokus: "Bis 10 Mio möglich!" },
+                        { name: "Tilgungszuschuss 20%!", betrag: 100000, quote: "20%", fokus: "GESCHENKT!" },
+                        { name: "MID-Digitalisierung", betrag: 15000, quote: "50%", fokus: "4 Wochen!" },
+                        { name: "Innovationsgutscheine", betrag: 15000, quote: "50%", fokus: "4-6 Wochen" },
+                        { name: "KfW-Förderkredit Innovation", betrag: 200000, quote: "5% Tilgung", fokus: "Zusätzlich!" }
+                    ],
+                    finanzierung: {
+                        foerderungen_gesamt: 127800,
+                        eigenanteil: 0,
+                        bankdarlehen: 700000,
+                        foerderquote_gesamt: "15.4% geschenkt + Top-Zinsen!"
+                    },
+                    vorteile: [
+                        "💰 100.000 EUR Tilgungszuschuss GESCHENKT!",
+                        "🎁 127.800 EUR echte Zuschüsse",
+                        "⚡ Bewilligung in 6-8 Wochen",
+                        "🏆 Ersetzt alten Digitalisierungskredit"
+                    ],
+                    warnung: "⚠️ Start erst Mai 2025 - aber jetzt schon vorbereiten!"
+                }
+            },
+            // === NEUE HYBRID-SZENARIEN 2025 ===
+            {
+                id: 11,
+                titel: "🚀 NEU: NRW.BANK.Invest + ZIM HYBRID (Bis 1,6 Mio. EUR)",
+                foerderprogramm: "NRW.BANK.Invest + ZIM",
+                foerdersumme_geschaetzt: "1600000",
+                dauer_monate: 24,
+                prioritaet: "sehr hoch",
+                innovationsgrad: "sehr hoch",
+                beschreibung: "🆕 NEUE KOMBINATION: NRW.BANK.Invest Zukunft mit 20% Tilgungszuschuss + ZIM-Forschungsförderung. Maximaler Finanzierungshebel für KI-Entwicklung!",
+                kombinationsvorteil: true,
+                details: {
+                    gesamtinvestition: 1000000,
+                    komponenten: [
+                        { name: "NRW.BANK.Invest Zukunft", betrag: 1000000, quote: "20% Tilgungszuschuss", fokus: "KI-Infrastruktur & Software" },
+                        { name: "ZIM-Einzelprojekt", betrag: 325000, quote: "45%", fokus: "F&E-Anteil" },
+                        { name: "MID-Digitalisierung", betrag: 12800, quote: "50%", fokus: "Digitalisierung" }
+                    ],
+                    finanzierung: {
+                        foerderungen_gesamt: 537800,
+                        eigenanteil: 462200,
+                        tilgungszuschuss: 200000,
+                        netto_kredit: 800000,
+                        cashflow_vorteil: 337800
+                    },
+                    timeline: [
+                        { phase: "Antragstellung", wochen: "1-2", beschreibung: "Parallel: NRW.BANK + ZIM + MID" },
+                        { phase: "Bewilligung", wochen: "8-12", beschreibung: "NRW.BANK zuerst, dann ZIM" },
+                        { phase: "Projektumsetzung", wochen: "12-104", beschreibung: "24 Monate Entwicklung" },
+                        { phase: "Tilgungszuschuss", wochen: "104+", beschreibung: "20% Schuldenreduktion" }
+                    ]
+                }
+            },
+            {
+                id: 12,
+                titel: "⚡ NEU: ERP-Digitalisierung + Innovation DOPPEL (Bis 400k Zuschuss)",
+                foerderprogramm: "ERP 511+513 Kombination",
+                foerdersumme_geschaetzt: "400000",
+                dauer_monate: 18,
+                prioritaet: "hoch",
+                innovationsgrad: "hoch",
+                beschreibung: "🆕 NEUE KfW-PROGRAMME: ERP-Förderkredit Digitalisierung + Innovation kombiniert. Bis zu 5% Zuschuss auf 25 Mio. EUR = 400k geschenkt!",
+                kombinationsvorteil: true,
+                details: {
+                    gesamtinvestition: 8000000,
+                    komponenten: [
+                        { name: "ERP-Förderkredit Digitalisierung (511)", betrag: 4000000, quote: "5% Zuschuss", fokus: "KI-Digitalisierung" },
+                        { name: "ERP-Förderkredit Innovation (513)", betrag: 4000000, quote: "5% Zuschuss", fokus: "KI-Innovation" }
+                    ],
+                    finanzierung: {
+                        foerderungen_gesamt: 400000,
+                        eigenanteil: 7600000,
+                        tilgungszuschuss: 0,
+                        netto_kredit: 7600000,
+                        cashflow_vorteil: 400000
+                    },
+                    timeline: [
+                        { phase: "Digitalisierungs-Check", wochen: "1-2", beschreibung: "KfW-Prüfung für Stufe 3" },
+                        { phase: "Antragstellung", wochen: "2-4", beschreibung: "Parallel beide Programme" },
+                        { phase: "Bewilligung", wochen: "6-8", beschreibung: "KfW-Prüfung" },
+                        { phase: "Projektumsetzung", wochen: "8-78", beschreibung: "18 Monate Entwicklung" }
+                    ]
+                }
+            },
+            {
+                id: 13,
+                titel: "💎 NEU: PREMIUM-MIX (NRW.BANK + ERP + ZIM = 1,9 Mio.)",
+                foerderprogramm: "3-Säulen-Finanzierung",
+                foerdersumme_geschaetzt: "1900000",
+                dauer_monate: 36,
+                prioritaet: "maximal",
+                innovationsgrad: "maximal",
+                beschreibung: "🆕 PREMIUM-KOMBINATION: Alle neuen Programme kombiniert. Maximale Förderung für Großprojekt mit 3-Säulen-Finanzierung!",
+                kombinationsvorteil: true,
+                details: {
+                    gesamtinvestition: 12000000,
+                    komponenten: [
+                        { name: "NRW.BANK.Invest Zukunft", betrag: 5000000, quote: "10% Tilgungszuschuss", fokus: "Basis-Infrastruktur" },
+                        { name: "ERP-Förderkredit Innovation", betrag: 5000000, quote: "5% Zuschuss", fokus: "KI-Innovation" },
+                        { name: "ZIM-Einzelprojekt", betrag: 722000, quote: "45%", fokus: "F&E-Kern" },
+                        { name: "MID-Digitalisierung", betrag: 25600, quote: "50%", fokus: "Digitalisierung" }
+                    ],
+                    finanzierung: {
+                        foerderungen_gesamt: 1072600,
+                        eigenanteil: 10927400,
+                        tilgungszuschuss: 500000,
+                        netto_kredit: 9500000,
+                        cashflow_vorteil: 1572600
+                    },
+                    timeline: [
+                        { phase: "Projektplanung", wochen: "1-4", beschreibung: "Detailkonzept für 3 Programme" },
+                        { phase: "Antragstellung", wochen: "4-8", beschreibung: "Gestaffelte Anträge" },
+                        { phase: "Bewilligung", wochen: "8-16", beschreibung: "Verschiedene Laufzeiten" },
+                        { phase: "Projektumsetzung", wochen: "16-156", beschreibung: "36 Monate Großprojekt" }
+                    ]
+                }
+            }
             
         ];
 
@@ -2027,7 +2485,7 @@
                 hiddenCosts: [
                     {
                         question: "💸 Welche Zusatzkosten entstehen?",
-                        answer: "<strong>Beratungskosten:</strong> ca. 15.000-25.000 EUR für professionellen ZIM-Antrag. <strong>Verwaltung:</strong> 0,5 FTE (ca. 30.000 EUR/Jahr) für Projektmanagement und Reporting."
+                        answer: "<strong>Beratungskosten:</strong> ca. 15.000-25.000 EUR für professionellen ZIM-Antrag. <strong>Verwaltung:</strong> 0,5 FTE (ca. 30.000 EUR/Jahr) für Projektmanagement und Reporting. <strong>Bei Kombinationen:</strong> +50% Beratungskosten für Kostenabgrenzung!"
                     },
                     {
                         question: "📊 Wie aufwändig ist das Reporting?",
@@ -2049,7 +2507,7 @@
                 moneyFlow: [
                     {
                         question: "💰 Wann bekomme ich die 14.550 EUR Förderung?",
-                        answer: "MID NRW: <strong>4-6 Wochen nach Bewilligung</strong> (12.800 EUR). BAFA: Nach Beratungsabschluss (1.750 EUR). <strong>Schnelle Auszahlung!</strong>"
+                        answer: "MID NRW: <strong>4-6 Wochen nach Bewilligung</strong> (15.000 EUR). BAFA: Nach Beratungsabschluss (1.750 EUR). <strong>Schnelle Auszahlung!</strong>"
                     },
                     {
                         question: "🏦 Wann fließt der Hausbank-Kredit (100.000 EUR)?",
@@ -2100,7 +2558,7 @@
             3: {
                 moneyFlow: [
                     {
-                        question: "💰 Wann bekomme ich die 12.800 EUR MID-Förderung?",
+                        question: "💰 Wann bekomme ich die 15.000 EUR MID-Förderung?",
                         answer: "<strong>REKORDZEIT: 4 Wochen!</strong> Nach Express-Bewilligung sofort auf dem Konto. Schnellste Förderung am Markt!"
                     },
                     {
@@ -2121,7 +2579,7 @@
                 risks: [
                     {
                         question: "❌ Risiko bei Scheitern?",
-                        answer: "<strong>Minimal!</strong> Nur 12.800 EUR Rückzahlungsrisiko. Express-Kredit ist normaler Bankkredit. <strong>Sehr überschaubar!</strong>"
+                        answer: "<strong>Minimal!</strong> Nur 15.000 EUR Rückzahlungsrisiko. Express-Kredit ist normaler Bankkredit. <strong>Sehr überschaubar!</strong>"
                     },
                     {
                         question: "🔄 Umschwenken möglich?",
@@ -2193,7 +2651,7 @@
                 strategic: [
                     {
                         question: "🎯 Lohnt sich der Aufwand?",
-                        answer: "Bei Erfolg: <strong>JA!</strong> 51,4% Förderquote ist Spitze! Bei Misserfolg: <strong>Existenzbedrohend!</strong> Nur für sehr stabile Unternehmen!"
+                        answer: "Bei Erfolg: <strong>JA!</strong> 51,7% Förderquote ist Spitze! Bei Misserfolg: <strong>Hohes Risiko!</strong> Nur für sehr stabile Unternehmen mit professioneller Beratung!"
                     },
                     {
                         question: "🔄 Flexibilität?",
@@ -2252,6 +2710,393 @@
                         answer: "F&E muss 4 Jahre nachweisbar bleiben. KfW-Kredit flexibler. <strong>Mittlere Flexibilität, hohe Dokumentationspflicht!</strong>"
                     }
                 ]
+            },
+            6: {
+                moneyFlow: [
+                    {
+                        question: "💰 Wann sind die 300.000 EUR auf dem Konto?",
+                        answer: "<strong>REKORDZEIT!</strong> Hausbank in 48h (200k), NRW.Mikrodarlehen in 2-3 Wochen (50k), ERP-StartGeld in 3-4 Wochen (50k). <strong>Alles in 3 Wochen da!</strong>"
+                    },
+                    {
+                        question: "🏦 Muss ich Sicherheiten stellen?",
+                        answer: "Hausbank: JA (200k). NRW.Mikrodarlehen: <strong>NEIN - keine Sicherheiten!</strong> ERP: 80% KfW-Haftung. <strong>Nur für 200k Sicherheiten nötig!</strong>"
+                    }
+                ],
+                obligations: [
+                    {
+                        question: "📅 Wie lange bin ich gebunden?",
+                        answer: "Standard-Kreditlaufzeiten: 5-10 Jahre. <strong>Aber: Sondertilgung jederzeit möglich!</strong> Keine Projektbindung wie bei Zuschüssen."
+                    },
+                    {
+                        question: "🔄 Kann ich später auf ZIM wechseln?",
+                        answer: "<strong>JA!</strong> Diese Kredite sind Überbrückung. Sie können parallel ZIM beantragen. <strong>Perfekte Zwischenfinanzierung!</strong>"
+                    }
+                ],
+                risks: [
+                    {
+                        question: "❌ Was wenn das Geschäft nicht läuft?",
+                        answer: "<strong>Kredite müssen zurückgezahlt werden!</strong> Aber: NRW.Mikrodarlehen ist kulant, Stundungen möglich. <strong>Risiko: 300.000 EUR Schulden!</strong>"
+                    },
+                    {
+                        question: "💸 Zinslast tragbar?",
+                        answer: "Ca. 15.000-20.000 EUR/Jahr Zinsen. <strong>Cashflow muss stimmen!</strong> Aber: Günstigere Zinsen als normale Bankkredite."
+                    }
+                ],
+                hiddenCosts: [
+                    {
+                        question: "💸 Bearbeitungsgebühren?",
+                        answer: "Hausbank: 1-2% (2.000-4.000 EUR). NRW.Mikrodarlehen: <strong>KEINE!</strong> ERP: Minimal. <strong>Insgesamt ca. 5.000 EUR Nebenkosten.</strong>"
+                    },
+                    {
+                        question: "📊 Verwaltungsaufwand?",
+                        answer: "<strong>Minimal!</strong> Nur normale Kreditverwaltung. Kein Projektreporting wie bei Zuschüssen. <strong>Zeitaufwand: 1-2 Tage/Monat.</strong>"
+                    }
+                ],
+                strategic: [
+                    {
+                        question: "🎯 Wann macht das Sinn?",
+                        answer: "<strong>Bei akutem Liquiditätsbedarf!</strong> Wenn Aufträge da sind, aber Vorfinanzierung fehlt. <strong>Nicht für Experimente!</strong>"
+                    },
+                    {
+                        question: "🚀 Wachstum möglich?",
+                        answer: "<strong>JA!</strong> Mit 300.000 EUR können Sie sofort durchstarten. Später mit Umsätzen auf größere Förderungen upgraden."
+                    }
+                ]
+            },
+            7: {
+                moneyFlow: [
+                    {
+                        question: "💰 Wann bekomme ich die 32.800 EUR?",
+                        answer: "<strong>SUPER SCHNELL!</strong> BAFA in 2 Wochen (5k), MID in 4 Wochen (12.8k), Innovationsgutschein in 4-6 Wochen (15k). <strong>Alles geschenktes Geld!</strong>"
+                    },
+                    {
+                        question: "🎁 Wirklich keine Rückzahlung?",
+                        answer: "<strong>100% ZUSCHUSS!</strong> Alle 32.800 EUR sind geschenkt. Keine Kredite, keine Rückzahlung. <strong>Reines Fördergeld!</strong>"
+                    }
+                ],
+                obligations: [
+                    {
+                        question: "📅 Projektbindung?",
+                        answer: "MID: 12 Monate Umsetzung. Innovationsgutschein: 6 Monate. BAFA: Nach Beratung frei. <strong>Maximal 12 Monate gebunden!</strong>"
+                    },
+                    {
+                        question: "📍 Standortbindung?",
+                        answer: "3 Jahre in NRW bleiben. <strong>Aber: Innerhalb NRW umziehen ist OK!</strong> Flexibler als andere Programme."
+                    }
+                ],
+                risks: [
+                    {
+                        question: "❌ Rückzahlungsrisiko?",
+                        answer: "<strong>MINIMAL!</strong> Nur bei grober Zweckentfremdung. Wenn Sie Software kaufen und nutzen = sicher. <strong>Quasi kein Risiko!</strong>"
+                    },
+                    {
+                        question: "🔄 Was wenn Projekt scheitert?",
+                        answer: "Solange Sie es versucht haben = <strong>kein Problem!</strong> Zuschüsse bleiben. Nur Betrug führt zur Rückforderung."
+                    }
+                ],
+                hiddenCosts: [
+                    {
+                        question: "💸 Eigenanteil nötig?",
+                        answer: "<strong>JA!</strong> 50% Eigenanteil = 32.800 EUR. Sie müssen also 65.600 EUR ausgeben für 32.800 EUR Zuschuss."
+                    },
+                    {
+                        question: "📊 Verwaltung?",
+                        answer: "<strong>Einfach!</strong> Verwendungsnachweise mit Rechnungen. Ca. 3-5 Tage Aufwand insgesamt. <strong>Sehr überschaubar!</strong>"
+                    }
+                ],
+                strategic: [
+                    {
+                        question: "🎯 Perfekt wofür?",
+                        answer: "<strong>Erste Digitalisierungsschritte!</strong> Software kaufen, Berater holen, Innovation starten. <strong>Risikoloser Einstieg!</strong>"
+                    },
+                    {
+                        question: "🚀 Skalierbar?",
+                        answer: "Begrenzt auf 32.800 EUR. <strong>Aber: Perfekt als Test!</strong> Zeigen Sie Erfolg, dann größere Förderungen möglich."
+                    }
+                ]
+            },
+            8: {
+                moneyFlow: [
+                    {
+                        question: "💰 Halbe Million - wie schnell?",
+                        answer: "<strong>6 WOCHEN!</strong> Hausbank sofort (200k), NRW.BANK in 4-6 Wochen (300k), MID parallel (12.8k Zuschuss). <strong>Rekord für diese Summe!</strong>"
+                    },
+                    {
+                        question: "🏦 NRW.BANK wirklich ohne Limit?",
+                        answer: "<strong>JA!</strong> Universalkredit hat KEINE Obergrenze. 300k, 500k, 1 Mio - alles möglich. <strong>Nur Bonität zählt!</strong>"
+                    }
+                ],
+                obligations: [
+                    {
+                        question: "📅 Langzeitbindung?",
+                        answer: "Kredite: 5-10 Jahre Laufzeit. MID: 12 Monate Projekt. <strong>Aber: Kredite sind flexibel, Sondertilgung möglich!</strong>"
+                    },
+                    {
+                        question: "🏢 Was bei Verkauf?",
+                        answer: "Kredite können übernommen oder abgelöst werden. <strong>Kein Hindernis für Exit!</strong> Viel flexibler als Zuschuss-Programme."
+                    }
+                ],
+                risks: [
+                    {
+                        question: "❌ 500.000 EUR Schulden?",
+                        answer: "<strong>HOHES RISIKO!</strong> Sie müssen ca. 50.000 EUR/Jahr tilgen + Zinsen. <strong>Nur bei sicheren Umsätzen!</strong>"
+                    },
+                    {
+                        question: "💸 Zinsänderungsrisiko?",
+                        answer: "Festzins möglich! NRW.BANK bietet lange Zinsbindung. <strong>Kalkulationssicherheit gegeben.</strong>"
+                    }
+                ],
+                hiddenCosts: [
+                    {
+                        question: "💸 Kreditkosten insgesamt?",
+                        answer: "Bei 5% Zins über 10 Jahre: <strong>ca. 125.000 EUR Zinsen!</strong> Plus Gebühren ca. 10.000 EUR. <strong>Teuer, aber machbar.</strong>"
+                    },
+                    {
+                        question: "🏦 Sicherheiten?",
+                        answer: "<strong>JA!</strong> Für 500k brauchen Sie Sicherheiten: Bürgschaften, Grundschulden, Abtretungen. <strong>Asset-Prüfung nötig!</strong>"
+                    }
+                ],
+                strategic: [
+                    {
+                        question: "🎯 Für wen geeignet?",
+                        answer: "<strong>Etablierte Unternehmen!</strong> Mit Umsatzhistorie und klarem Wachstumsplan. <strong>Nichts für Startups!</strong>"
+                    },
+                    {
+                        question: "🚀 Wachstumschance?",
+                        answer: "<strong>ENORM!</strong> Mit 500k können Sie Marktführer werden. Aber: Business-Plan muss bombensicher sein!"
+                    }
+                ]
+            },
+            9: {
+                moneyFlow: [
+                    {
+                        question: "💰 Wie funktioniert die Bürgschaft?",
+                        answer: "Bürgschaftsbank übernimmt 80% Ausfallrisiko für Bank. <strong>Bank gibt Ihnen 250k OHNE Ihre Sicherheiten!</strong> Express in 3-5 Tagen!"
+                    },
+                    {
+                        question: "🏦 Kostet die Bürgschaft was?",
+                        answer: "<strong>JA!</strong> Ca. 1,5% p.a. = 3.750 EUR/Jahr. Aber dafür bekommen Sie 250k ohne eigene Sicherheiten!"
+                    }
+                ],
+                obligations: [
+                    {
+                        question: "📅 Bürgschaftsdauer?",
+                        answer: "So lange wie der Kredit läuft. <strong>Aber: Bei guter Entwicklung kann Bürgschaft reduziert werden!</strong>"
+                    },
+                    {
+                        question: "📊 Reporting an Bürgschaftsbank?",
+                        answer: "<strong>JA!</strong> Quartalsberichte, Jahresabschluss der letzten 2 Jahre für KMU-Nachweis. Aber Standard-Unterlagen. <strong>Kein Extra-Aufwand!</strong>"
+                    }
+                ],
+                risks: [
+                    {
+                        question: "❌ Was wenn ich nicht zahlen kann?",
+                        answer: "Bürgschaftsbank springt ein, Bank bekommt Geld. <strong>ABER: Sie schulden dann der Bürgschaftsbank!</strong> Insolvenz möglich."
+                    },
+                    {
+                        question: "🏢 Persönliche Haftung?",
+                        answer: "Oft verlangt! Geschäftsführer müssen teilweise persönlich bürgen. <strong>Privatvermögen kann gefährdet sein!</strong>"
+                    }
+                ],
+                hiddenCosts: [
+                    {
+                        question: "💸 Alle Gebühren?",
+                        answer: "Bürgschaft: 1,5% p.a. Bearbeitung: 1% einmalig. Kreditzinsen: 4-6%. <strong>Gesamt ca. 20.000 EUR/Jahr!</strong>"
+                    },
+                    {
+                        question: "📋 Beratungskosten?",
+                        answer: "Bürgschaftsantrag komplex! Berater empfohlen: ca. 3.000-5.000 EUR. <strong>Aber gut investiert!</strong>"
+                    }
+                ],
+                strategic: [
+                    {
+                        question: "🎯 Für wen ideal?",
+                        answer: "<strong>Asset-light Unternehmen!</strong> Software-Firmen ohne Maschinen/Immobilien. <strong>Bürgschaft ersetzt fehlende Sicherheiten!</strong>"
+                    },
+                    {
+                        question: "🚀 Zukunftschancen?",
+                        answer: "Mit 250k solide wachsen. Nach 2-3 Jahren eigene Bonität aufgebaut. <strong>Dann normale Kredite möglich!</strong>"
+                    }
+                ]
+            },
+            // === FAQ-DATEN FÜR NEUE STRATEGISCHE SZENARIEN ===
+            "hauptszenario_2025": {
+                moneyFlow: [
+                    {
+                        question: "💰 Wann kommen die 385.000 EUR Förderung?",
+                        answer: "ZIM (285.000 EUR): In 3 Tranchen über 18 Monate. Digitalbonus NRW (50.000 EUR): <strong>Nach Projektabschluss in 6 Monaten</strong>. MID (50.000 EUR): Sofort nach Bewilligung. NRW.BANK Tilgungszuschuss: <strong>Wird direkt mit Kredit verrechnet!</strong>"
+                    },
+                    {
+                        question: "🏦 Eigenanteil 200.000 EUR - aus welchen Quellen?",
+                        answer: "Aus Liquiditätsreserven: 150.000 EUR + Cashflow Q4/2025: 50.000 EUR. <strong>Machbar mit aktueller Liquidität!</strong> Keine zusätzlichen Kredite nötig."
+                    },
+                    {
+                        question: "☁️ Passt die Timeline zu unserer Cloud-Migration?",
+                        answer: "<strong>PERFEKT!</strong> Q4/2025 Start = exakt der geplante Migrationsbeginn. Q1/2027 Rollout = pünktlich für SimpliMed 2.0 Launch. <strong>Timeline und Strategie 100% synchron!</strong>"
+                    }
+                ],
+                obligations: [
+                    {
+                        question: "📋 Zwei parallele Anträge - wie komplex?",
+                        answer: "ZIM + NRW.BANK parallel machbar, aber <strong>professionelle Beratung erforderlich</strong>. Aufwand: ca. 1 FTE für 2 Monate. <strong>Kostenpunkte sauber abgrenzen!</strong>"
+                    },
+                    {
+                        question: "📊 Berichtspflichten bei ZIM + NRW.BANK?",
+                        answer: "<strong>JA!</strong> ZIM: Zwischen- und Abschlussbericht. NRW.BANK: Quartalsberichte. Aufwand: ca. 0,5 FTE laufend. <strong>Professionelles Projektmanagement nötig!</strong>"
+                    }
+                ],
+                risks: [
+                    {
+                        question: "❌ Risiko bei ZIM-Ablehnung?",
+                        answer: "Dann fehlen 285.000 EUR! <strong>Backup-Plan: Digitalbonus + KfW-Schnellkredit</strong> (Szenario 2). Eigenanteil sinkt auf 50.000 EUR. <strong>Immer Alternativen bereithalten!</strong>"
+                    },
+                    {
+                        question: "⏰ Was passiert bei Verzögerungen?",
+                        answer: "ZIM-Förderung läuft 18 Monate, kann aber verlängert werden. NRW.BANK flexibel. <strong>Risiko: Liquiditätsengpass bei Eigenanteil</strong>. Daher Cashflow-Planung wichtig!"
+                    }
+                ],
+                hiddenCosts: [
+                    {
+                        question: "💸 Versteckte Kosten bei diesem Szenario?",
+                        answer: "Antragsberatung: 15.000-20.000 EUR. Laufende Projektbetreuung: 60.000 EUR/Jahr. <strong>Aber: Bei 385.000 EUR Förderung verkraftbar!</strong>"
+                    }
+                ]
+            },
+            "agil_szenario_2025": {
+                moneyFlow: [
+                    {
+                        question: "💰 Wann sind die 350.000 EUR verfügbar?",
+                        answer: "<strong>REKORDZEIT!</strong> Digitalbonus NRW (50k) + MID (50k) in 6-8 Wochen. KfW-Schnellkredit (250k) parallel. <strong>Alles in 8 Wochen da!</strong>"
+                    },
+                    {
+                        question: "🛡️ Wirklich keine Sicherheiten bei 250.000 EUR?",
+                        answer: "<strong>JA!</strong> KfW übernimmt 100% Haftung. Hausbank trägt KEIN Risiko. <strong>Deshalb keine Grundschulden/Bürgschaften nötig!</strong>"
+                    },
+                    {
+                        question: "💳 Kreditrückzahlung ab Jahr 1 - wie viel?",
+                        answer: "Ca. 25.000 EUR/Jahr Tilgung + Zinsen (ca. 5.000 EUR). <strong>Gesamt: 30.000 EUR/Jahr</strong>. Bei 3 Mio. Umsatz gut machbar!"
+                    }
+                ],
+                obligations: [
+                    {
+                        question: "📋 Weniger Bürokratie als ZIM?",
+                        answer: "<strong>JA!</strong> Digitalbonus + MID = einfache Anträge. KfW-Schnellkredit = minimale Unterlagen. <strong>Aufwand: 0,2 FTE für Anträge</strong>."
+                    },
+                    {
+                        question: "🔄 Parallel ZIM-Antrag für 2026 möglich?",
+                        answer: "<strong>JA!</strong> Dieses Szenario blockiert ZIM nicht. 2026 könnt ihr zusätzlich ZIM beantragen. <strong>Perfekte Stufenstrategie!</strong>"
+                    }
+                ],
+                risks: [
+                    {
+                        question: "❌ Risiko bei nur 100.000 EUR Förderung?",
+                        answer: "Weniger Spielraum für Vollausbau. <strong>Nur MVP möglich, kein kompletter Technologie-Vollausbau</strong>. Aber: Niedrigste Hürden, höchste Sicherheit!"
+                    },
+                    {
+                        question: "⚡ Reicht das für SimpliMed 2.0?",
+                        answer: "<strong>Für MVP: JA!</strong> Für Vollausbau: NEIN. Aber perfekt als Sprungbrett für späteren ZIM-Antrag. <strong>Agile Strategie: MVP first, dann skalieren!</strong>"
+                    }
+                ],
+                hiddenCosts: [
+                    {
+                        question: "💸 Versteckte Kosten bei KfW-Schnellkredit?",
+                        answer: "Nur normale Bankgebühren. <strong>Keine Sondergebühren dank 100% KfW-Haftung</strong>. Sehr transparent und fair!"
+                    }
+                ]
+            },
+            "investor_szenario_2025": {
+                moneyFlow: [
+                    {
+                        question: "💰 Wann kommen die 800.000 EUR?",
+                        answer: "ZIM (285.000 EUR): In 3 Tranchen über 18 Monate. Business Angel (200.000 EUR): <strong>Nach Due Diligence sofort!</strong> Eigenkapital (315.000 EUR): Aus Liquidität verfügbar."
+                    },
+                    {
+                        question: "👔 Wie lange dauert die Investor-Due-Diligence?",
+                        answer: "Typisch 2-3 Monate. <strong>Benötigt: BWA, Businessplan, Prognosen, Rechtsprüfung</strong>. Aber: Danach 200.000 EUR sofort verfügbar!"
+                    },
+                    {
+                        question: "📊 25% Beteiligung - was bedeutet das konkret?",
+                        answer: "Investor bekommt 25% der Anteile + entsprechende Mitspracherechte. <strong>Bei wichtigen Entscheidungen: Abstimmung nötig!</strong> Aber auch: Expertise und Netzwerk!"
+                    }
+                ],
+                obligations: [
+                    {
+                        question: "📋 Mitspracherechte des Investors?",
+                        answer: "Normalerweise: Strategieentscheidungen, Budgets >50.000 EUR, Personalentscheidungen C-Level. <strong>Details werden verhandelt!</strong> Marcus behält aber Mehrheit."
+                    },
+                    {
+                        question: "📊 Investor-Reporting zusätzlich zu ZIM?",
+                        answer: "<strong>JA!</strong> Monatliche Reportings an Investor + ZIM-Berichte. Aufwand: ca. 0,3 FTE zusätzlich. <strong>Aber: Investor bringt auch Expertise!</strong>"
+                    }
+                ],
+                risks: [
+                    {
+                        question: "❌ Risiko bei Investor-Konflikt?",
+                        answer: "25% Beteiligung = erhebliche Mitsprache. <strong>Wichtig: Klare Vereinbarungen zu Entscheidungsprozessen!</strong> Anwalt für Gesellschaftsvertrag zwingend!"
+                    },
+                    {
+                        question: "💡 Exit-Strategie für Investor?",
+                        answer: "Meist nach 5-7 Jahren. <strong>Investor erwartet 5-10x Return</strong>. Bei SimpliMed realistisch durch Wachstum auf 20.000 Kunden!"
+                    }
+                ],
+                hiddenCosts: [
+                    {
+                        question: "💸 Kosten für Due Diligence?",
+                        answer: "Anwalt + Steuerberater: 10.000-15.000 EUR. <strong>Aber: Bei 800.000 EUR Kapital verschmerzbar!</strong> Und: Professionelle Struktur entsteht."
+                    }
+                ]
+            },
+            10: {
+                moneyFlow: [
+                    {
+                        question: "💰 300.000 EUR wirklich ohne Sicherheiten?",
+                        answer: "<strong>JA!</strong> KfW übernimmt 100% Haftung. Ihre Hausbank trägt KEIN Risiko. <strong>Deshalb keine Sicherheiten nötig!</strong>"
+                    },
+                    {
+                        question: "⚡ Wie schnell geht's?",
+                        answer: "<strong>5-7 TAGE!</strong> Vereinfachtes Verfahren, nur Selbstauskunft. Hausbank prüft minimal. <strong>Schnellster Großkredit!</strong>"
+                    }
+                ],
+                obligations: [
+                    {
+                        question: "📅 Rückzahlung wann?",
+                        answer: "Laufzeit bis 10 Jahre. Rate ca. 3.000 EUR/Monat + Zinsen. <strong>Aber: 2 tilgungsfreie Jahre möglich!</strong>"
+                    },
+                    {
+                        question: "📊 KfW-Auflagen?",
+                        answer: "<strong>Minimal!</strong> Verwendung für Betriebsmittel/Investitionen. Keine detaillierten Nachweise. <strong>Sehr flexibel!</strong>"
+                    }
+                ],
+                risks: [
+                    {
+                        question: "❌ Persönliche Haftung?",
+                        answer: "<strong>NEIN!</strong> Keine persönliche Haftung bei 100% KfW-Haftung. <strong>Privatvermögen sicher!</strong>"
+                    },
+                    {
+                        question: "🏢 Was bei Insolvenz?",
+                        answer: "KfW trägt Verlust, nicht Sie persönlich. <strong>Aber: Unternehmen ist pleite, Reputation leidet!</strong>"
+                    }
+                ],
+                hiddenCosts: [
+                    {
+                        question: "💸 Zinsen und Gebühren?",
+                        answer: "Zinssatz ca. 3,5-4,5% + 0,5% KfW-Gebühr. <strong>Gesamt ca. 15.000 EUR/Jahr für 300k.</strong> Günstig!"
+                    },
+                    {
+                        question: "📋 Voraussetzungen?",
+                        answer: "<strong>WICHTIG:</strong> Mind. 2 Jahre am Markt! Positive Gewinne. Unter 50 Mio Umsatz. <strong>Für Bestandsfirmen!</strong>"
+                    }
+                ],
+                strategic: [
+                    {
+                        question: "🎯 Perfekt wofür?",
+                        answer: "<strong>Corona-Recovery + Wachstum!</strong> Unternehmen die 2020-2022 gelitten haben. <strong>Neustart-Finanzierung!</strong>"
+                    },
+                    {
+                        question: "🚀 Mit ZIM kombinierbar?",
+                        answer: "<strong>JA!</strong> KfW-Schnellkredit als Überbrückung, parallel ZIM beantragen. <strong>Optimale Kombi-Strategie!</strong>"
+                    }
+                ]
             }
         };
 
@@ -2259,9 +3104,9 @@
             1: {
                 bewertung: "⭐⭐⭐⭐⭐",
                 titel: "KLARE HAUPTEMPFEHLUNG - OPTIMAL FÜR SIMPLIMED!",
-                finanzierung_info: "<b style='color: #27ae60; font-size: 1.2em;'>🎁 285.000 EUR ZUSCHUSS (geschenktes Geld!) + 150.000 EUR KREDIT</b><br><b style='color: #e74c3c;'>⚠️ GRUNDSCHULD: KEINE für Zuschuss | Hausbank-Sicherheiten für 150.000 EUR Kredit</b>",
+                finanzierung_info: "<b style='color: #27ae60; font-size: 1.2em;'>🎁 324.900 EUR ZUSCHUSS (geschenktes Geld!) + 200.000 EUR KREDIT</b><br><b style='color: #e74c3c;'>⚠️ GRUNDSCHULD: KEINE für Zuschuss | Hausbank-Sicherheiten für 200.000 EUR Kredit</b>",
                 pros: [
-                    "285.000 EUR Förderung - höchste Fördersumme",
+                    "324.900 EUR Förderung - höchste Fördersumme",
                     "ZIM ist nicht rückzahlbar (geschenktes Geld)",
                     "45% Förderquote für Erstantragsteller",
                     "Perfekt für KI-Entwicklung geeignet",
@@ -2272,10 +3117,10 @@
                 cons: [
                     "Längere Bearbeitungszeit (3-6 Monate)",
                     "Umfangreiche Dokumentation erforderlich",
-                    "Höherer Eigenanteil (198.000 EUR)",
+                    "Höherer Eigenanteil (197.100 EUR)",
                     "Mehr Aufwand bei Antragstellung"
                 ],
-                empfehlung: "🏆 Das ist meine klare Hauptempfehlung für SimpliMed! ZIM nutzt Art. 25 AGVO (F&E-Beihilfe) und ist NICHT an die De-minimis-Grenze gebunden. 285.000 EUR geschenktes Geld für KI-Entwicklung - perfekt für euer Projekt!"
+                empfehlung: "🏆 Das ist meine klare Hauptempfehlung für SimpliMed! ZIM nutzt Art. 25 AGVO (F&E-Beihilfe) und ist NICHT an die De-minimis-Grenze gebunden. 324.900 EUR geschenktes Geld für KI-Entwicklung - perfekt für euer Projekt! ✅ RECHTSSICHER: Hausbank-Kredit ist keine Beihilfe, daher keine Kombinationsprobleme!"
             },
             2: {
                 bewertung: "⭐⭐⭐⭐☆",
@@ -2300,17 +3145,17 @@
             3: {
                 bewertung: "⭐⭐⭐⭐☆",
                 titel: "SCHNELLSTART-OPTION",
-                finanzierung_info: "<b style='color: #27ae60; font-size: 1.2em;'>🎁 12.800 EUR ZUSCHUSS (geschenktes Geld!) + 100.000 EUR EXPRESS-KREDIT</b><br><b style='color: #e74c3c;'>⚠️ GRUNDSCHULD: KEINE für Zuschuss | Express-Sicherheiten für 100.000 EUR Kredit</b>",
+                finanzierung_info: "<b style='color: #27ae60; font-size: 1.2em;'>🎁 15.000 EUR ZUSCHUSS (geschenktes Geld!) + 100.000 EUR EXPRESS-KREDIT</b><br><b style='color: #e74c3c;'>⚠️ GRUNDSCHULD: KEINE für Zuschuss | Express-Sicherheiten für 100.000 EUR Kredit</b>",
                 pros: [
                     "Rekord-Geschwindigkeit (4 Wochen)",
                     "Hausbank-Express-Zusage in 48h",
-                    "12.800 EUR sofort verfügbar",
+                    "15.000 EUR sofort verfügbar",
                     "Minimaler Verwaltungsaufwand",
                     "Ideal für Überbrückung",
                     "Geringes Risiko"
                 ],
                 cons: [
-                    "Nur 12.800 EUR Förderung",
+                    "Nur 15.000 EUR Förderung",
                     "Begrenzte Innovationsmöglichkeiten",
                     "Weniger strategische Wirkung",
                     "Hauptsächlich für Liquidität"
@@ -2336,7 +3181,77 @@
                     "Zwei Anträge parallel",
                     "Höhere Anforderungen"
                 ],
-                empfehlung: "Das ist die Premium-Version! Wenn ihr bereit seid für den Aufwand, bekommt ihr die beste Finanzierung. Die Kombination aus ZIM-Zuschuss und NRW.BANK-Kredit mit Tilgungszuschuss ist optimal für große Innovationsprojekte. Meine Empfehlung für ambitionierte Wachstumspläne!"
+                empfehlung: "Das ist die Premium-Version! Wenn ihr bereit seid für den Aufwand, bekommt ihr die beste Finanzierung. Die Kombination aus ZIM-Zuschuss und NRW.BANK-Kredit mit Tilgungszuschuss ist optimal für große Innovationsprojekte. ⚠️ WICHTIG: Beide Programme sind AGVO-Beihilfen - professionelle Beratung für Kostenabgrenzung erforderlich!"
+            },
+            // === NEUE STRATEGISCHE SZENARIEN 2025-2027 ===
+            "hauptszenario_2025": {
+                bewertung: "⭐⭐⭐⭐⭐",
+                titel: "STRATEGISCHE VOLLAUSBAU-LÖSUNG 2025-2027",
+                finanzierung_info: "<b style='color: #27ae60; font-size: 1.2em;'>🎁 385.000 EUR FÖRDERUNG (285k ZIM + 50k Digitalbonus + 50k MID) + 200k NRW.BANK mit Tilgungszuschuss</b><br><b style='color: #e74c3c;'>⚠️ EIGENANTEIL: 200.000 EUR | Perfekt für Cloud-Migration & KI-Features</b>",
+                pros: [
+                    "🚀 Höchste Fördersumme (385.000 EUR) für SimpliMed-Strategie",
+                    "☁️ Perfect Match für Cloud-Migration & Microservices",
+                    "🤖 KI-Ready Infrastructure für Zukunftswachstum",
+                    "📅 Timeline passt exakt zu Rollout Q4/2025 - Q1/2027",
+                    "🎯 Break-Even bereits in Monat 22 (früher als ursprünglich geplant)",
+                    "📈 ROI 280% über 5 Jahre - Top-Rendite",
+                    "🏆 Digitalbonus NRW ersetzt veraltetes go-digital",
+                    "💎 65,8% Förderquote - praktisch 2/3 geschenkt"
+                ],
+                cons: [
+                    "💰 Eigenanteil 200.000 EUR (aus Liquiditätsreserven)",
+                    "📋 Zwei parallele Anträge erforderlich (ZIM + NRW.BANK)",
+                    "🕐 Längere Bearbeitungszeit (3-4 Monate)",
+                    "📊 Höhere Komplexität bei Berichtswesen",
+                    "🎯 Erfordert präzise Projektplanung für 18 Monate"
+                ],
+                empfehlung: "🏆 DAS ist meine TOP-EMPFEHLUNG für SimpliMed 2025-2027! Diese Kombination ist wie maßgeschneidert für eure Strategie: ZIM für die KI-Innovation, NRW.BANK für die Infrastruktur, Digitalbonus für die Markterschließung. Mit 385.000 EUR Förderung könnt ihr den kompletten Technologie-Vollausbau stemmen - von der Cloud-Migration bis zur KI-Integration. Der Eigenanteil von 200.000 EUR ist machbar mit euren Liquiditätsreserven. ✅ STRATEGISCH PERFEKT: Timeline, Technologie und Finanzierung passen 100% zusammen!"
+            },
+            "agil_szenario_2025": {
+                bewertung: "⭐⭐⭐⭐☆",
+                titel: "AGILE SCHNELLSTART-LÖSUNG",
+                finanzierung_info: "<b style='color: #3498db; font-size: 1.2em;'>🎁 100.000 EUR FÖRDERUNG (50k Digitalbonus + 50k MID) + 250k KfW-Schnellkredit</b><br><b style='color: #e74c3c;'>⚠️ EIGENANTEIL: Nur 50.000 EUR | 100% KfW-Haftung = keine Sicherheiten</b>",
+                pros: [
+                    "⚡ Extrem schnelle Verfügbarkeit (6-8 Wochen)",
+                    "💰 Minimaler Eigenanteil (nur 50.000 EUR)",
+                    "🛡️ Keine Sicherheiten nötig (100% KfW-Haftung)",
+                    "🚀 Perfekt für MVP-Entwicklung Q4/2025",
+                    "📈 95% Erfolgswahrscheinlichkeit",
+                    "🔄 Parallel ZIM-Antrag für später möglich",
+                    "💡 Digitalbonus NRW - brandaktuell",
+                    "⚡ Ideal für agile Entwicklung"
+                ],
+                cons: [
+                    "📉 Geringere Fördersumme (100.000 EUR vs. 385.000 EUR)",
+                    "💳 Kreditrückzahlung ab Jahr 1 (ca. 25.000 EUR/Jahr)",
+                    "🔬 Weniger Innovationsförderung als ZIM",
+                    "⏳ Begrenzte Ressourcen für Vollausbau",
+                    "🎯 Weniger strategische Reichweite"
+                ],
+                empfehlung: "⚡ Perfekt wenn ihr SOFORT loslegen wollt! Die 6-8 Wochen sind unschlagbar schnell. Mit nur 50.000 EUR Eigenanteil ist es super niedrigschwellig. Ideal für MVP-Entwicklung und erste Cloud-Services. ABER: Ihr erreicht nicht den vollen Technologie-Vollausbau. Meine Empfehlung: Nutzt das als Sprungbrett und plant parallel den ZIM-Antrag für 2026. So habt ihr den agilen Start UND später die volle Förderung! 🚀"
+            },
+            "investor_szenario_2025": {
+                bewertung: "⭐⭐⭐⭐⭐",
+                titel: "WACHSTUMSTURBO MIT INVESTOR",
+                finanzierung_info: "<b style='color: #9b59b6; font-size: 1.2em;'>🎁 285.000 EUR ZIM-FÖRDERUNG + 200.000 EUR BUSINESS ANGEL (25% Beteiligung) + 315.000 EUR EIGENKAPITAL</b><br><b style='color: #e74c3c;'>⚠️ EIGENKAPITAL: 315.000 EUR | Investor-Due-Diligence erforderlich</b>",
+                pros: [
+                    "💎 Höchste Kapitalbasis (800.000 EUR) für Vollausbau",
+                    "🧠 Strategische Expertise durch Business Angel",
+                    "💳 Keine Kreditrückzahlung erforderlich",
+                    "📈 Skalierung auf 20.000 Kunden möglich",
+                    "🚀 ROI 380% über 5 Jahre - Spitzenwert",
+                    "👥 25 neue Arbeitsplätze schaffbar",
+                    "🎯 Vollausbau bereits Q4/2026 (6 Monate früher)",
+                    "🏆 Maximale Wachstumsbeschleunigung"
+                ],
+                cons: [
+                    "👔 Investor-Due-Diligence-Prozess (2-3 Monate)",
+                    "📊 25% Beteiligung = Mitsprache bei Strategieentscheidungen",
+                    "💰 Eigenkapital 315.000 EUR aus Liquidität erforderlich",
+                    "⏳ Längere Verhandlungsphase mit Investor",
+                    "📋 Umfangreiche Unterlagen für Due Diligence"
+                ],
+                empfehlung: "💎 Das ist die PREMIUM-WACHSTUMSLÖSUNG! Wenn Marcus bereit ist, einen strategischen Partner ins Boot zu holen, eröffnet das völlig neue Dimensionen. Mit 800.000 EUR Kapital könnt ihr nicht nur SimpliMed 2.0 bauen, sondern direkt die Skalierung auf 20.000 Kunden angehen. Der Business Angel bringt nicht nur Geld, sondern auch Expertise und Netzwerk. ⚠️ WICHTIG: 25% Beteiligung bedeutet Mitsprache - Marcus muss entscheiden, ob er das möchte. Wenn ja: Jackpot! 🚀"
             },
             5: {
                 bewertung: "⭐⭐⭐☆☆",
@@ -2356,15 +3271,113 @@
                     "Zeitaufwändige Koordination",
                     "Mittlere Fördersumme"
                 ],
-                empfehlung: "Nur wenn ihr einen sehr guten Steuerberater habt! Die Forschungszulage kann interessant sein, aber sie ist kompliziert nachzuweisen. Für euch würde ich eher bei den klaren Hauptempfehlungen (ZIM oder Hybrid) bleiben."
+                empfehlung: "Nur wenn ihr einen sehr guten Steuerberater habt! Die Forschungszulage kann interessant sein, aber sie ist kompliziert nachzuweisen. ⚠️ VORSICHT: Forschungszulage ist steuerlich, andere sind Beihilfen - Kombinationen können komplex werden. Professionelle Beratung zwingend erforderlich!"
+            },
+            6: {
+                bewertung: "⭐⭐⭐⭐☆",
+                titel: "TURBO-LIQUIDITÄT - SCHNELLSTES GELD!",
+                finanzierung_info: "<b style='color: #f39c12; font-size: 1.2em;'>💳 300.000 EUR KREDITE in 3 Wochen!</b><br><b style='color: #e74c3c;'>⚠️ ALLES KREDITE - müssen zurückgezahlt werden! | NRW.Mikrodarlehen OHNE Sicherheiten!</b>",
+                pros: [
+                    "⚡ REKORDZEIT: 300.000 EUR in 3 Wochen!",
+                    "🛡️ NRW.Mikrodarlehen OHNE Sicherheiten (50k)",
+                    "💰 Sofortige Liquidität für Wachstum",
+                    "🔄 Parallel ZIM-Antrag möglich",
+                    "📈 Flexible Verwendung",
+                    "✅ 100% Erfolgswahrscheinlichkeit"
+                ],
+                cons: [
+                    "Alles Kredite - Rückzahlung nötig",
+                    "Zinslast ca. 15-20k EUR/Jahr",
+                    "Cashflow muss stimmen",
+                    "Keine echte Förderung"
+                ],
+                empfehlung: "⚡ PERFEKT wenn ihr SOFORT Geld braucht! 300.000 EUR in 3 Wochen ist unschlagbar. Ideal als Überbrückung während ihr auf ZIM wartet. Aber Vorsicht: Alles muss zurückgezahlt werden!"
+            },
+            7: {
+                bewertung: "⭐⭐⭐⭐⭐",
+                titel: "ZUSCHUSS-SPRINT - 100% GESCHENKTES GELD!",
+                finanzierung_info: "<b style='color: #27ae60; font-size: 1.2em;'>🎁 32.800 EUR ZUSCHUSS - 100% geschenkt!</b><br><b style='color: #27ae60;'>✅ KEINE Rückzahlung | KEINE Sicherheiten | Geringes Risiko bei korrekter Verwendung!</b>",
+                pros: [
+                    "🎁 100% Zuschüsse - geschenktes Geld!",
+                    "⚡ Bewilligung in nur 4 Wochen",
+                    "✅ De-minimis konform (unter 200k)",
+                    "📊 Perfekt für erste Schritte",
+                    "🛡️ Null Risiko - keine Rückzahlung",
+                    "🚀 Sofort umsetzbar"
+                ],
+                cons: [
+                    "Begrenzt auf 32.800 EUR",
+                    "50% Eigenanteil nötig",
+                    "Nicht für Großprojekte",
+                    "Einmalige Chance"
+                ],
+                empfehlung: "🏆 MEINE EMPFEHLUNG für risikolosen Start! 32.800 EUR geschenktes Geld in 4 Wochen - besser geht's nicht! Perfekt um erste Erfahrungen zu sammeln und später größere Förderungen anzugehen."
+            },
+            8: {
+                bewertung: "⭐⭐⭐☆☆",
+                titel: "PREMIUM-EXPRESS - HALBE MILLION!",
+                finanzierung_info: "<b style='color: #f39c12; font-size: 1.2em;'>💎 500.000 EUR in 6 Wochen (487.200 Kredite + 12.800 Zuschuss)</b><br><b style='color: #e74c3c;'>⚠️ HOHES RISIKO: 500k Schulden! | Sicherheiten erforderlich!</b>",
+                pros: [
+                    "💎 HALBE MILLION in 6 Wochen!",
+                    "🏦 NRW.BANK ohne Obergrenze",
+                    "⚡ Schneller als jede andere Großfinanzierung",
+                    "🎯 Perfekt für große Sprünge"
+                ],
+                cons: [
+                    "❌ 500.000 EUR Schulden!",
+                    "Hohe Zinslast (ca. 25k/Jahr)",
+                    "Sicherheiten erforderlich",
+                    "Nur für etablierte Firmen",
+                    "Hohes Ausfallrisiko"
+                ],
+                empfehlung: "⚠️ NUR für etablierte Unternehmen mit sicheren Umsätzen! 500k Schulden sind kein Spaß. Wenn ihr aber einen Großauftrag habt und Vorfinanzierung braucht - dann go for it!"
+            },
+            9: {
+                bewertung: "⭐⭐⭐⭐☆",
+                titel: "SICHERHEITS-PAKET - Bürgschaft statt Sicherheiten",
+                finanzierung_info: "<b style='color: #3498db; font-size: 1.2em;'>🛡️ 250.000 EUR Kredit OHNE eigene Sicherheiten + 17.800 EUR Zuschüsse</b><br><b style='color: #e67e22;'>⚠️ Bürgschaftskosten: 3.750 EUR/Jahr | Persönliche Haftung möglich</b>",
+                pros: [
+                    "🛡️ KEINE eigenen Sicherheiten nötig!",
+                    "⚡ Express-Bürgschaft in 3-5 Tagen",
+                    "💰 250.000 EUR Kredit möglich",
+                    "🎁 17.800 EUR Zuschüsse on top",
+                    "✅ Perfekt für Asset-light Firmen"
+                ],
+                cons: [
+                    "Bürgschaftskosten 1,5% p.a.",
+                    "Oft persönliche Haftung verlangt",
+                    "Komplexer Antragsprozess",
+                    "Quartalsreporting nötig"
+                ],
+                empfehlung: "Ideal wenn ihr keine Sicherheiten habt! Die Bürgschaftsbank macht's möglich. Kostet zwar extra, aber 250k ohne eigene Immobilien/Maschinen ist gold wert für Software-Firmen!"
+            },
+            10: {
+                bewertung: "⭐⭐⭐⭐⭐",
+                titel: "KfW-SCHNELLKREDIT - 300k ohne Sicherheiten!",
+                finanzierung_info: "<b style='color: #27ae60; font-size: 1.2em;'>🎯 300.000 EUR in 5-7 Tagen OHNE Sicherheiten + 22.800 EUR Zuschüsse!</b><br><b style='color: #27ae60;'>✅ 100% KfW-Haftung | KEINE persönliche Haftung | Top-Zinsen!</b>",
+                pros: [
+                    "❌ KEINE Sicherheiten durch 100% KfW!",
+                    "⚡ Auszahlung in 5-7 Tagen!",
+                    "🛡️ Keine persönliche Haftung",
+                    "💰 300.000 EUR + 22.800 EUR Zuschüsse",
+                    "🎁 3-5% Tilgungszuschuss möglich",
+                    "✅ Vereinfachtes Verfahren"
+                ],
+                cons: [
+                    "Nur für Bestandsfirmen (2+ Jahre)",
+                    "Positive Gewinne nötig",
+                    "Rückzahlung über 10 Jahre",
+                    "Nicht für Startups"
+                ],
+                empfehlung: "🏆 TOP-EMPFEHLUNG für etablierte Firmen! 300k ohne Sicherheiten in einer Woche - das schafft sonst keiner! Perfekte Überbrückung während ihr auf ZIM wartet. Die 100% KfW-Haftung ist ein Geschenk!"
             },
         };
 
         let selectedScenarioId = null;
         
         function selectScenario(scenarioId) {
-            // Validate scenarioId
-            if (!scenarioId || isNaN(scenarioId)) {
+            // Validate scenarioId (now supports both numbers and strings)
+            if (!scenarioId) {
                 console.error('selectScenario: Invalid scenarioId:', scenarioId);
                 return;
             }
@@ -2392,13 +3405,11 @@
                 console.warn(`selectScenario: Radio element radio-${scenarioId} not found`);
             }
             
-            // Enable confirm button
-            const confirmButton = document.getElementById('confirmButton');
-            if (confirmButton) {
-                confirmButton.disabled = false;
-            } else {
-                console.warn('selectScenario: Confirm button not found');
-            }
+            // Enable JA/NEIN buttons
+            const jaButton = document.getElementById('jaButton');
+            const neinButton = document.getElementById('neinButton');
+            if (jaButton) jaButton.disabled = false;
+            if (neinButton) neinButton.disabled = false;
             
             // Show scenario details
             const scenario = scenariosData.find(s => s.id === scenarioId);
@@ -2608,7 +3619,7 @@
             // Base timeline for all scenarios
             timelineHTML += `
                 <tr>
-                    <td>KW 29</td>
+                    <td>KW 30</td>
                     <td><strong>Entscheidung Marcus</strong></td>
                     <td>Geschäftsführung</td>
                     <td><span class="status-open">🔴 Offen</span></td>
@@ -2923,8 +3934,62 @@
         }
         
         function makeDecision(decision) {
-            // Fallback for legacy functionality
-            makeDecisionWithScenario();
+            if (!selectedScenarioId) {
+                alert('Bitte wählen Sie zunächst ein Szenario aus.');
+                return;
+            }
+            
+            const scenario = scenariosData.find(s => s.id === selectedScenarioId);
+            if (!scenario) {
+                alert('Szenario nicht gefunden.');
+                return;
+            }
+            
+            // Get comments if available
+            const comments = document.getElementById('comments').value || '';
+            
+            // Create decision object
+            const decisionData = {
+                szenario: scenario.titel,
+                entscheidung: decision,
+                zeitstempel: new Date().toLocaleString('de-DE'),
+                kommentare: comments,
+                foerdersumme: scenario.foerdersumme_geschaetzt,
+                timeline: scenario.details?.timeline || `${scenario.dauer_monate} Monate`
+            };
+            
+            // Store in localStorage
+            localStorage.setItem('simplimed_decision', JSON.stringify(decisionData));
+            
+            // Show result
+            const resultDiv = document.getElementById('resultDisplay');
+            const resultText = document.getElementById('resultText');
+            const timestamp = document.getElementById('timestamp');
+            
+            if (decision === 'JA') {
+                resultText.innerHTML = `
+                    <strong>✅ JA-Entscheidung für:</strong> ${scenario.titel}<br>
+                    <strong>Fördersumme:</strong> ${parseInt(scenario.foerdersumme_geschaetzt).toLocaleString('de-DE')} EUR<br>
+                    <strong>Timeline:</strong> ${scenario.details?.timeline || `${scenario.dauer_monate} Monate`}<br>
+                    <strong>Nächste Schritte:</strong> Hausbankgespräch KW 30, Antragsstellung
+                `;
+            } else {
+                resultText.innerHTML = `
+                    <strong>❌ NEIN-Entscheidung für:</strong> ${scenario.titel}<br>
+                    <strong>Grund:</strong> Überdenken erforderlich<br>
+                    <strong>Empfehlung:</strong> Weitere Szenarien prüfen oder Beratung einholen
+                `;
+            }
+            
+            timestamp.textContent = decisionData.zeitstempel;
+            resultDiv.style.display = 'block';
+            
+            // Disable buttons after decision
+            document.getElementById('jaButton').disabled = true;
+            document.getElementById('neinButton').disabled = true;
+            
+            // Scroll to result
+            resultDiv.scrollIntoView({ behavior: 'smooth' });
         }
 
         function showComments() {
@@ -2988,7 +4053,7 @@
                     foerderung_gesamt: 335000,
                     foerderquote: '46.3%',
                     bankdarlehen: 100000,
-                    eigenanteil: 288000
+                    eigenanteil: 388000
                 },
                 wirtschaftlichkeit: {
                     break_even_monat: 22,
@@ -3581,7 +4646,7 @@ Siehe: STRUKTUR_UEBERSICHT.md für Details
                 riskLevel: "🟢 Minimales Risiko",
                 collateral: "❌ Keine Sicherheiten erforderlich",
                 fundingRate: "bis 50%",
-                maxFunding: "12.800 EUR (neue Bundesländer 80%) / 1.750 EUR (alte Bundesländer 50%) (MID-Digitalisierung)",
+                maxFunding: "15.000 EUR (neue Bundesländer 80%) / 1.750 EUR (alte Bundesländer 50%) (MID-Digitalisierung)",
                 duration: "6-12 Monate",
                 status: "✅ Aktiv - 5 Fördermodule",
                 description: "MID-Digitalisierung, MID-Analyse, MID-Innovation, MID-Assistent, MID-Invest",
@@ -3603,7 +4668,7 @@ Siehe: STRUKTUR_UEBERSICHT.md für Details
                 ],
                 timeline: "Losverfahren oder Direktantrag",
                 contact: "NRW.BANK / Autorisierte Berater",
-                suitability: "🟢 Sehr gut geeignet - bis 12.800 EUR (neue Bundesländer 80%) / 1.750 EUR (alte Bundesländer 50%)",
+                suitability: "🟢 Sehr gut geeignet - bis 15.000 EUR (neue Bundesländer 80%) / 1.750 EUR (alte Bundesländer 50%)",
                 sources: [
                     "https://www.wirtschaft.nrw/foerderung-und-finanzierung-digitalisierung-nrw",
                     "https://www.nrwbank.de"
@@ -3797,7 +4862,7 @@ Siehe: STRUKTUR_UEBERSICHT.md für Details
                 riskLevel: "🟢 Minimales Risiko",
                 collateral: "❌ Keine Sicherheiten erforderlich",
                 fundingRate: "50%",
-                maxFunding: "12.800 EUR (neue Bundesländer 80%) / 1.750 EUR (alte Bundesländer 50%)",
+                maxFunding: "15.000 EUR (neue Bundesländer 80%) / 1.750 EUR (alte Bundesländer 50%)",
                 duration: "6 Monate",
                 status: "✅ Aktiv",
                 description: "Externe F&E-Dienstleistungen für KMU",
@@ -4462,6 +5527,490 @@ Siehe: STRUKTUR_UEBERSICHT.md für Details
                     "https://www.nrwbank.de/de/corporate/foerderprogramme/",
                     "Recherche verifiziert 15.07.2025"
                 ]
+            },
+            
+            // === SCHNELLFÖRDERUNGEN (NEU für Marcus) ===
+            {
+                id: 30,
+                name: "Hausbank-Sofortkredit",
+                type: "Express-Kredit",
+                category: "Schnellfinanzierung",
+                fundingType: "💳 Kredit",
+                fundingTypeDetail: "Muss zurückgezahlt werden - aber SOFORT verfügbar!",
+                riskLevel: "🟡 Mittleres Risiko",
+                collateral: "⚠️ Je nach Bank und Bonität",
+                fundingRate: "100% Finanzierung möglich",
+                maxFunding: "500.000 EUR (je nach Bonität)",
+                duration: "1-10 Jahre",
+                status: "✅ Sofort verfügbar",
+                description: "Schnellster Weg zu Liquidität - Zusage in 24-48 Stunden!",
+                requirements: [
+                    "Gute Bonität",
+                    "Geschäftskonto bei der Bank",
+                    "Jahresabschlüsse",
+                    "Sicherheiten je nach Höhe",
+                    "Persönliche Bürgschaft oft nötig"
+                ],
+                documents: [
+                    "Kreditantrag (online)",
+                    "BWA aktuell",
+                    "Jahresabschlüsse",
+                    "Businessplan",
+                    "Kontoauszüge"
+                ],
+                timeline: "⚡ 24-48 Stunden Zusage!",
+                contact: "Ihre Hausbank",
+                suitability: "🟢 Perfekt für sofortige Liquidität"
+            },
+            {
+                id: 31,
+                name: "BAFA Sofortberatung",
+                type: "Bundesförderung",
+                category: "Beratung",
+                fundingType: "🎁 Zuschuss",
+                fundingTypeDetail: "50% der Beratungskosten - nicht rückzahlbar!",
+                riskLevel: "🟢 Minimales Risiko",
+                collateral: "❌ Keine Sicherheiten",
+                fundingRate: "50% der Beratungskosten",
+                maxFunding: "5.000 EUR (bei 10.000 EUR Beratung)",
+                duration: "3-12 Monate Beratung",
+                status: "✅ Aktiv",
+                description: "Schnelle Förderung für professionelle Beratung",
+                requirements: [
+                    "KMU-Status",
+                    "Zertifizierter BAFA-Berater",
+                    "Erstberatung",
+                    "Keine Vorbindung zum Berater",
+                    "Beratungsbedarf nachweisen"
+                ],
+                documents: [
+                    "Online-Antrag",
+                    "Beratungsvertrag",
+                    "Beraternachweis",
+                    "De-minimis-Erklärung",
+                    "Kurzbeschreibung Vorhaben"
+                ],
+                timeline: "⚡ 2 Wochen bis Zusage!",
+                contact: "BAFA oder zertifizierte Berater",
+                suitability: "🟢 Ideal für Strategieberatung"
+            },
+            {
+                id: 32,
+                name: "NRW.Mikrodarlehen",
+                type: "Landesförderung NRW",
+                category: "Mikrofinanzierung",
+                fundingType: "💳 Kredit",
+                fundingTypeDetail: "Günstiger Kleinkredit - OHNE Sicherheiten!",
+                riskLevel: "🟢 Geringes Risiko",
+                collateral: "❌ KEINE Sicherheiten erforderlich!",
+                fundingRate: "100% Finanzierung",
+                maxFunding: "50.000 EUR",
+                duration: "Bis 10 Jahre",
+                status: "✅ Aktiv",
+                description: "Schneller Kredit ohne Sicherheiten - ideal für Startups!",
+                requirements: [
+                    "Gründung oder bis 5 Jahre",
+                    "Sitz in NRW",
+                    "STARTERCENTER-Beratung (Pflicht!)",
+                    "Positive Stellungnahme",
+                    "Tragfähiges Konzept"
+                ],
+                documents: [
+                    "Online-Antrag NRW.BANK",
+                    "Businessplan",
+                    "STARTERCENTER-Stellungnahme",
+                    "Lebenslauf",
+                    "Finanzplanung"
+                ],
+                timeline: "⚡ 2-3 Wochen bis Auszahlung!",
+                contact: "STARTERCENTER NRW + NRW.BANK",
+                suitability: "🟢 Top für schnelle 50k ohne Sicherheiten"
+            },
+            {
+                id: 33,
+                name: "ERP-Gründerkredit StartGeld",
+                type: "KfW-Förderung",
+                category: "Gründungsfinanzierung",
+                fundingType: "💳 Kredit",
+                fundingTypeDetail: "KfW übernimmt 80% des Risikos - leichterer Zugang!",
+                riskLevel: "🟢 Geringes Risiko",
+                collateral: "⚠️ Reduzierte Sicherheiten durch KfW-Haftung",
+                fundingRate: "100% Finanzierung",
+                maxFunding: "125.000 EUR",
+                duration: "5-10 Jahre",
+                status: "✅ Aktiv",
+                description: "Einfacher Gründerkredit mit KfW-Risikoübernahme",
+                requirements: [
+                    "Gründung oder bis 5 Jahre",
+                    "Auch Nebenerwerb möglich",
+                    "Hausbank-Durchleitung",
+                    "Businessplan",
+                    "Fachliche Qualifikation"
+                ],
+                documents: [
+                    "KfW-Antrag über Hausbank",
+                    "Businessplan",
+                    "Lebenslauf",
+                    "Rentabilitätsvorschau",
+                    "Investitionsplan"
+                ],
+                timeline: "⚡ 3-4 Wochen über Hausbank!",
+                contact: "Hausbank + KfW",
+                suitability: "🟢 Gut für Gründer mit wenig Eigenkapital"
+            },
+            {
+                id: 34,
+                name: "MID-Digitalisierung NRW (Express)",
+                type: "Landesförderung NRW",
+                category: "Digitalisierung",
+                fundingType: "🎁 Zuschuss",
+                fundingTypeDetail: "Nicht rückzahlbar - geschenktes Geld!",
+                riskLevel: "🟢 Minimales Risiko",
+                collateral: "❌ Keine Sicherheiten",
+                fundingRate: "50%",
+                maxFunding: "15.000 EUR",
+                duration: "12 Monate Umsetzung",
+                status: "✅ Aktiv - 2 Anträge/Jahr möglich",
+                description: "Schneller Zuschuss für Software und Digitalisierung",
+                requirements: [
+                    "KMU in NRW",
+                    "Branchensoftware",
+                    "Erstinvestition",
+                    "Keine Doppelförderung",
+                    "De-minimis-Regel beachten"
+                ],
+                documents: [
+                    "Online-Antrag (30 Min!)",
+                    "3 Angebote",
+                    "Kurzbeschreibung",
+                    "De-minimis-Erklärung",
+                    "Firmenauszug"
+                ],
+                timeline: "⚡ 4 Wochen bis Bewilligung!",
+                contact: "NRW.BANK online",
+                suitability: "🟢 Perfekt für SimpliMed Software"
+            },
+            {
+                id: 35,
+                name: "NRW.BANK.Universalkredit",
+                type: "Förderkredit NRW",
+                category: "Universalfinanzierung",
+                fundingType: "💳 Kredit",
+                fundingTypeDetail: "Flexibler Kredit für alles - keine Begrenzung!",
+                riskLevel: "🟡 Mittleres Risiko",
+                collateral: "⚠️ Bankübliche Sicherheiten",
+                fundingRate: "100% Finanzierung",
+                maxFunding: "KEINE Obergrenze!",
+                duration: "Bis 10 Jahre",
+                status: "✅ Aktiv",
+                description: "Universell einsetzbarer Kredit ohne Maximalbetrag",
+                requirements: [
+                    "Sitz in NRW",
+                    "KMU oder Freiberufler",
+                    "Investition oder Betriebsmittel",
+                    "Hausbank-Prinzip",
+                    "Bonitätsprüfung"
+                ],
+                documents: [
+                    "Antrag über Hausbank",
+                    "Businessplan",
+                    "Jahresabschlüsse",
+                    "Investitionsplanung",
+                    "Verwendungsnachweis"
+                ],
+                timeline: "⚡ 4-6 Wochen über Hausbank!",
+                contact: "Hausbank + NRW.BANK",
+                suitability: "🟢 Flexibelste Lösung für große Summen"
+            },
+            {
+                id: 36,
+                name: "Innovationsgutscheine NRW",
+                type: "Landesförderung NRW",
+                category: "Innovation",
+                fundingType: "🎁 Zuschuss",
+                fundingTypeDetail: "Nicht rückzahlbar - für externe Innovationsberatung",
+                riskLevel: "🟢 Minimales Risiko",
+                collateral: "❌ Keine Sicherheiten",
+                fundingRate: "50%",
+                maxFunding: "15.000 EUR",
+                duration: "6-12 Monate",
+                status: "✅ Aktiv (MID-Innovation endet 07/2025)",
+                description: "Gutschein für externe F&E-Dienstleistungen",
+                requirements: [
+                    "KMU in NRW",
+                    "Innovationsvorhaben",
+                    "Externe Dienstleister",
+                    "Technische Neuerung",
+                    "Noch nicht begonnen"
+                ],
+                documents: [
+                    "Online-Formular",
+                    "Projektskizze (2 Seiten)",
+                    "Angebot Dienstleister",
+                    "Innovationserklärung",
+                    "De-minimis-Erklärung"
+                ],
+                timeline: "⚡ 4-6 Wochen bis Gutschein!",
+                contact: "MWIKE NRW",
+                suitability: "🟢 Gut für KI-Entwicklung"
+            },
+            {
+                id: 37,
+                name: "Meistergründungsprämie NRW",
+                type: "Landesförderung NRW",
+                category: "Gründung",
+                fundingType: "🎁 Zuschuss",
+                fundingTypeDetail: "Nicht rückzahlbare Prämie - bis 16.000 EUR!",
+                riskLevel: "🟢 Minimales Risiko",
+                collateral: "❌ Keine Sicherheiten",
+                fundingRate: "Festbetrag",
+                maxFunding: "16.000 EUR (mit Boni)",
+                duration: "Einmalzahlung",
+                status: "⚠️ Ab Oktober 2025 digital",
+                description: "Prämie für Meister-Gründungen (auch IT-Bereich)",
+                requirements: [
+                    "Meisterbrief oder vergleichbar",
+                    "Erstgründung",
+                    "Haupterwerb",
+                    "Sitz in NRW",
+                    "Businessplan"
+                ],
+                documents: [
+                    "Online-Antrag (ab 10/2025)",
+                    "Meisterbrief",
+                    "Gründungskonzept",
+                    "Finanzplanung",
+                    "Gewerbeanmeldung"
+                ],
+                timeline: "⚡ 6-8 Wochen (ab 10/2025: 2-3 Wochen digital!)",
+                contact: "Kammern in NRW",
+                suitability: "🟡 Nur bei Meister-Qualifikation"
+            },
+            {
+                id: 38,
+                name: "KfW-Schnellkredit 2025",
+                type: "KfW-Sonderprogramm",
+                category: "Schnellfinanzierung",
+                fundingType: "💳 Kredit",
+                fundingTypeDetail: "100% KfW-Risikoübernahme - keine Sicherheiten!",
+                riskLevel: "🟢 Geringes Risiko",
+                collateral: "❌ KEINE Sicherheiten durch 100% KfW-Haftung",
+                fundingRate: "100% Finanzierung",
+                maxFunding: "300.000 EUR",
+                duration: "Bis 10 Jahre",
+                status: "✅ Verfügbar für Bestandsunternehmen",
+                description: "Schnellkredit mit vereinfachtem Verfahren",
+                requirements: [
+                    "Mind. 2 Jahre am Markt",
+                    "Positiver Durchschnittsgewinn",
+                    "Unter 50 Mio. EUR Umsatz",
+                    "Hausbank-Antrag",
+                    "Verwendung frei"
+                ],
+                documents: [
+                    "Vereinfachter Antrag",
+                    "BWA aktuell",
+                    "Letzter Jahresabschluss",
+                    "Kontoauszüge",
+                    "Selbstauskunft"
+                ],
+                timeline: "⚡ 5-7 Tage bis Auszahlung!",
+                contact: "Hausbank + KfW Express",
+                suitability: "🟢 Top für etablierte Unternehmen"
+            },
+            // === NEUE PROGRAMME 2025 ===
+            {
+                id: 40,
+                name: "NRW.BANK.Invest Zukunft",
+                type: "Landesförderung NRW",
+                category: "Digitalisierung & Innovation",
+                fundingType: "💳 Kredit + 🎁 Tilgungszuschuss",
+                fundingTypeDetail: "Zinsgünstiger Kredit mit bis zu 20% Tilgungszuschuss",
+                riskLevel: "🟡 Geringes Risiko",
+                collateral: "🏦 Hausbank-Sicherheiten",
+                fundingRate: "100% Finanzierung + 5-20% Tilgungszuschuss",
+                maxFunding: "10.000.000 EUR",
+                duration: "3-10 Jahre",
+                status: "✅ Aktiv seit Mai 2025",
+                description: "Neues Förderprogramm für Digitalisierung, Innovation und Nachhaltigkeit mit attraktivem Tilgungszuschuss",
+                requirements: [
+                    "Unternehmen der gewerblichen Wirtschaft",
+                    "Freiberufler und Stiftungen",
+                    "Sitz oder Betriebsstätte in NRW",
+                    "Investitionen in Zukunftstechnologien",
+                    "Nachhaltigkeit und Digitalisierung",
+                    "Antrag vor Projektbeginn"
+                ],
+                documents: [
+                    "Antrag über Hausbank",
+                    "Businessplan und Projektbeschreibung",
+                    "Kostenplanung und Finanzierungskonzept",
+                    "Jahresabschlüsse",
+                    "Nachhaltigkeitsbewertung",
+                    "ESG-Fördervoraussetzungen erfüllen"
+                ],
+                timeline: "6-8 Wochen Bearbeitungszeit",
+                contact: "NRW.BANK Tel: 0211 91741-4800",
+                suitability: "🟢 Perfekt für SimpliMed - KI ist Zukunftstechnologie",
+                sources: [
+                    "https://www.nrwbank.de/de/foerderung/foerderprodukte/60274/nrwbank-invest-zukunft.html"
+                ],
+                fundingFocus: [
+                    "Klimaschutztechnologien",
+                    "Umweltschutz",
+                    "Kreislaufwirtschaft",
+                    "Digitalisierung",
+                    "Künstliche Intelligenz",
+                    "Nachhaltigkeit"
+                ],
+                advantages: [
+                    "2% unter Marktzins",
+                    "Bis zu 20% Tilgungszuschuss für KMU",
+                    "100% Finanzierung möglich",
+                    "1-3 tilgungsfreie Jahre",
+                    "Keine Vorlaufkosten"
+                ],
+                tilgungszuschuss: {
+                    klein: "20% bei Darlehen ≤ 1 Mio. EUR",
+                    mittel: "10% bei Darlehen ≤ 1 Mio. EUR",
+                    kleinUeber1Mio: "10% bei Darlehen > 1 Mio. EUR",
+                    mittelUeber1Mio: "5% bei Darlehen > 1 Mio. EUR"
+                }
+            },
+            {
+                id: 41,
+                name: "ERP-Förderkredit Digitalisierung (511/512)",
+                type: "Bundesförderung",
+                category: "Digitalisierung",
+                fundingType: "💳 Kredit + 🎁 Zuschuss",
+                fundingTypeDetail: "Zinsgünstiger Kredit mit bis zu 5% Zuschuss",
+                riskLevel: "🟡 Geringes Risiko",
+                collateral: "🏦 Hausbank-Sicherheiten",
+                fundingRate: "100% Finanzierung + 3-5% Zuschuss",
+                maxFunding: "25.000.000 EUR",
+                duration: "Flexibel",
+                status: "✅ Aktiv seit Juli 2025",
+                description: "Neues KfW-Programm für Digitalisierung mit 3-Stufen-System und Zuschuss-Komponente",
+                requirements: [
+                    "Unternehmen mit max. 500 Mio. EUR Jahresumsatz",
+                    "Sitz in Deutschland",
+                    "Digitalisierungsprojekte",
+                    "Digitalisierungs-Check erforderlich (Stufe 1)",
+                    "Antrag vor Projektbeginn"
+                ],
+                documents: [
+                    "Antrag über Finanzierungspartner",
+                    "Digitalisierungs-Check",
+                    "Projektbeschreibung",
+                    "Kostenplanung",
+                    "Jahresabschlüsse",
+                    "Zuschussantrag (parallel)"
+                ],
+                timeline: "6-8 Wochen über Hausbank",
+                contact: "KfW Tel: 0800 539 9001",
+                suitability: "🟢 Perfekt für SimpliMed KI-Digitalisierung",
+                sources: [
+                    "https://www.kfw.de/inlandsfoerderung/Unternehmen/Innovation-und-Digitalisierung/Förderprodukte/ERP-Förderkredit-Digitalisierung-(511-512)/"
+                ],
+                stufen: {
+                    stufe1: "Basisdigitalisierung (bis 7,5 Mio. EUR, kein Zuschuss)",
+                    stufe2: "LevelUp-Digitalisierung (bis 25 Mio. EUR, 3% Zuschuss)",
+                    stufe3: "HighEnd-Digitalisierung (bis 25 Mio. EUR, 5% Zuschuss)"
+                },
+                advantages: [
+                    "Günstige Zinsen durch KfW",
+                    "Bis zu 5% Zuschuss",
+                    "Max. 200.000 EUR Zuschuss",
+                    "Flexible Laufzeiten",
+                    "Kombinierbar mit anderen Programmen"
+                ]
+            },
+            {
+                id: 42,
+                name: "ERP-Förderkredit Innovation (513/514)",
+                type: "Bundesförderung",
+                category: "Innovation & Forschung",
+                fundingType: "💳 Kredit + 🎁 Zuschuss",
+                fundingTypeDetail: "Zinsgünstiger Kredit mit bis zu 5% Zuschuss",
+                riskLevel: "🟡 Geringes Risiko",
+                collateral: "🏦 Hausbank-Sicherheiten",
+                fundingRate: "100% Finanzierung + 3-5% Zuschuss",
+                maxFunding: "25.000.000 EUR",
+                duration: "Flexibel",
+                status: "✅ Aktiv seit Juli 2025",
+                description: "Neues KfW-Programm für Innovation mit 3-Stufen-System und Zuschuss-Komponente",
+                requirements: [
+                    "Kleine und mittlere Unternehmen",
+                    "Sitz in Deutschland",
+                    "Jahresumsatz max. 500 Mio. EUR",
+                    "Innovationsprojekte",
+                    "Antrag vor Projektbeginn"
+                ],
+                documents: [
+                    "Antrag über Finanzierungspartner",
+                    "Innovationsbeschreibung",
+                    "Projektplanung",
+                    "Kostenplanung",
+                    "Jahresabschlüsse",
+                    "Zuschussantrag (parallel)"
+                ],
+                timeline: "6-8 Wochen über Hausbank",
+                contact: "KfW Tel: 0800 539 9001",
+                suitability: "🟢 Perfekt für SimpliMed KI-Innovation",
+                sources: [
+                    "https://www.kfw.de/inlandsfoerderung/Unternehmen/Innovation-und-Digitalisierung/Förderprodukte/ERP-Förderkredit-Innovation-(513-514)/"
+                ],
+                stufen: {
+                    stufe1: "Basisinnovation (bis 7,5 Mio. EUR, kein Zuschuss)",
+                    stufe2: "LevelUp-Innovation (bis 25 Mio. EUR, 3% Zuschuss)",
+                    stufe3: "HighEnd-Innovation (bis 25 Mio. EUR, 5% Zuschuss)"
+                },
+                advantages: [
+                    "Günstige Zinsen durch KfW",
+                    "Bis zu 5% Zuschuss",
+                    "Max. 200.000 EUR Zuschuss",
+                    "Flexible Laufzeiten",
+                    "Kombinierbar mit anderen Programmen"
+                ],
+                innovationsbereiche: [
+                    "Produktverbesserungen",
+                    "Forschung und Entwicklung",
+                    "Marketing-Innovationen",
+                    "Organisatorische Innovationen",
+                    "Geschäftsmodell-Innovationen"
+                ]
+            },
+            {
+                id: 39,
+                name: "Bürgschaftsbank NRW Express",
+                type: "Landesbürgschaft",
+                category: "Bürgschaften",
+                fundingType: "🛡️ Bürgschaft",
+                fundingTypeDetail: "Ermöglicht Kredite ohne eigene Sicherheiten",
+                riskLevel: "🟢 Risikoreduzierung",
+                collateral: "✅ Bürgschaft ERSETZT Sicherheiten!",
+                fundingRate: "Bis 80% Bürgschaft",
+                maxFunding: "1,25 Mio. EUR Bürgschaft",
+                duration: "Laufzeit wie Kredit",
+                status: "✅ Express-Verfahren bis 100.000 EUR",
+                description: "Schnelle Bürgschaft ermöglicht Bankkredit",
+                requirements: [
+                    "KMU in NRW",
+                    "Tragfähiges Konzept",
+                    "Keine ausreichenden Sicherheiten",
+                    "Hausbank-Kredit geplant",
+                    "Positive Prognose"
+                ],
+                documents: [
+                    "Express-Antrag (online)",
+                    "Businessplan kompakt",
+                    "Jahresabschlüsse",
+                    "Kreditantrag Bank",
+                    "Investitionsplanung"
+                ],
+                timeline: "⚡ Express: 3-5 Tage bis 100k!",
+                contact: "Bürgschaftsbank NRW",
+                suitability: "🟢 Ermöglicht Kredite ohne Sicherheiten"
             }
         ];
 
