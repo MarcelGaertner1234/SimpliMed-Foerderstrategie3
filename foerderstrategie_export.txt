@@ -1,0 +1,398 @@
+====================================================================
+SIMPLIMED GMBH - FÖRDERSTRATEGIE 2025-2027
+VOLLSTÄNDIGER EXPORT ALLER SZENARIEN UND ENTSCHEIDUNGSGRUNDLAGEN
+Stand: Juli 2025
+====================================================================
+
+------------------------------------------------------------
+🎯 ENTSCHEIDUNGSVORLAGE
+------------------------------------------------------------
+
+HAUPTEMPFEHLUNGEN (TOP 3):
+
+Szenario 1: ZIM + NRW.BANK.Invest - Technologie-Vollausbau 2025
+- Projektvolumen: 585.000 €
+- ZIM-Zuschuss: 285.000 €
+- NRW.BANK-Darlehen mit Tilgungszuschuss: 100.000 € (20% = 20.000 € geschenkt)
+- Digitalbonus NRW: 50.000 €
+- Eigenanteil: 150.000 €
+- Förderquote: 65,8 %
+- Laufzeit: 18 Monate
+- Vorteile: Cloud-Native Architektur, KI-Features, FHIR-Integration, Skalierung für 20.000+ Kunden
+- Risiken: ZIM-Bewilligung erst Q4/2025, höherer Eigenanteil erforderlich
+- Break-Even: Nach 22 Monaten
+- ROI 5 Jahre: 280%
+
+Szenario 2: Digitalbonus NRW + KfW-Schnellkredit - Agiler Start 2025
+- Projektvolumen: 350.000 €
+- Digitalbonus NRW: 50.000 €
+- BAFA Know-how Beratung: 5.000 €
+- MID-Invest NRW: 25.000 €
+- KfW-Digitalisierungskredit: 200.000 € (3% Tilgungszuschuss = 6.000 €)
+- Eigenanteil: 70.000 €
+- Förderquote: 28,6 %
+- Laufzeit: 12 Monate
+- Vorteile: Schnellstart in 6-8 Wochen, MVP bis Q4/2025, geringer Eigenanteil
+- Risiken: Niedrigere Förderquote, begrenzte Innovationshöhe
+- Break-Even: Nach 18 Monaten
+- ROI 5 Jahre: 220%
+
+Szenario 3: ZIM + Investor-Beteiligung - Wachstumsturbo 2025
+- Projektvolumen: 800.000 €
+- ZIM-Zuschuss: 285.000 €
+- Business Angel Investment: 200.000 € (25% Unternehmensanteil)
+- Hausbank-Kredit: 150.000 €
+- Eigenanteil: 165.000 €
+- Förderquote: 35,6 % (plus Investor)
+- Laufzeit: 24 Monate
+- Vorteile: Größtes Budget, strategische Beratung durch Investor, schnelle Skalierung
+- Risiken: Verwässerung der Anteile, Investor-Reporting, höhere Komplexität
+- Break-Even: Nach 20 Monaten
+- ROI 5 Jahre: 380%
+
+WEITERE OPTIONEN:
+
+Szenario 4: NRW.BANK.INVEST + Digitalbonus NRW - 20% Tilgungszuschuss
+- Projektvolumen: 500.000 €
+- NRW.BANK-Darlehen: 500.000 € (20% Tilgungszuschuss = 100.000 €)
+- Digitalbonus NRW: 50.000 €
+- MID-Digitalisierung: 12.800 €
+- BAFA-Beratung: 5.000 €
+- Eigenanteil: 100.000 € (nur für Begleitung)
+- Effektive Förderung: 177.800 €
+- Förderquote: 35,6 %
+- Vorteile: Hohe Liquidität sofort, 100.000 € geschenkt, ab Mai 2025
+- Risiken: Hohe Verschuldung, langfristige Bindung
+
+Szenario 5: Zuschuss-Sprint - 100% geschenktes Geld
+- Projektvolumen: 65.000 €
+- MID-Invest NRW: 12.800 € (2x im Jahr)
+- Digitalbonus NRW: 10.000 € (Teilprojekt)
+- BAFA-Beratung: 5.000 €
+- Innovationsgutschein NRW: 5.000 €
+- Eigenanteil: 32.200 €
+- Förderquote: 50,5 %
+- Vorteile: 4 Wochen Bewilligung, 100% Zuschüsse, kein Risiko
+- Risiken: Kleines Budget, begrenzte Reichweite
+
+------------------------------------------------------------
+🧩 ALLE FÖRDERSZENARIEN (Detailliert)
+------------------------------------------------------------
+
+DATENBANK-INFRASTRUKTUR AUSBAUEN
+- Beschreibung: Cloud-Native Architektur zur Steigerung von Performance und Datenschutz
+- Förderprogramme: ZIM + Digital Jetzt (Achtung: Digital Jetzt eingestellt!)
+- Fördersumme: 285.000 €
+- Eigenanteil: 215.000 €
+- Projektdauer: 18 Monate
+- Konkrete Maßnahmen:
+  * Migration auf moderne Cloud-Native Architektur
+  * Implementierung von Microservices
+  * Aufbau redundanter Systeme für 99.9% Verfügbarkeit
+  * FHIR-Standard Integration für Interoperabilität
+- Erfolgswahrscheinlichkeit: 85%
+- Verantwortlicher: Marcus Schmitz + externer CTO
+
+DIGITALES MARKETING & VERTRIEBSAUTOMATISIERUNG
+- Beschreibung: CRM-gestütztes Marketing- und Vertriebssystem
+- Förderprogramme: MID NRW + Digitalbonus NRW
+- Fördersumme: 45.000 €
+- Eigenanteil: 35.000 €
+- Projektdauer: 9 Monate
+- Konkrete Maßnahmen:
+  * HubSpot CRM Implementation
+  * Marketing Automation für E-Mail-Kampagnen
+  * Lead-Scoring-System entwickeln
+  * Integration mit SimpliMed-Software
+- Erfolgswahrscheinlichkeit: 90%
+- Break-Even: Nach 12 Monaten
+
+CYBERSECURITY & COMPLIANCE UPGRADE
+- Beschreibung: Enterprise-Security-Standards für Gesundheitsdaten
+- Förderprogramme: ZIM + IT-Sicherheit in der Wirtschaft
+- Fördersumme: 125.000 €
+- Eigenanteil: 95.000 €
+- Projektdauer: 12 Monate
+- Konkrete Maßnahmen:
+  * BSI-Grundschutz-Zertifizierung
+  * Zero-Trust-Security-Architektur
+  * Ende-zu-Ende-Verschlüsselung
+  * ISO 27001 Vorbereitung
+- Erfolgswahrscheinlichkeit: 95%
+- ROI: Präventivmaßnahme (Risikominimierung)
+
+KI-ASSISTENZSYSTEM FÜR HEILPRAKTIKER
+- Beschreibung: KI-basiertes Assistenzsystem für Dokumentation und Therapieempfehlungen
+- Förderprogramme: ZIM + KMU-innovativ + Horizont Europa
+- Fördersumme: 450.000 €
+- Eigenanteil: 350.000 €
+- Projektdauer: 36 Monate
+- Konkrete Maßnahmen:
+  * NLP-Engine für medizinische Dokumentation
+  * Machine Learning für Abrechnungsoptimierung
+  * Therapieempfehlungs-Algorithmen
+  * Platform-as-a-Service Modell
+- Erfolgswahrscheinlichkeit: 70%
+- Break-Even: Q2 2028
+- Alleinstellungsmerkmal im Markt
+
+TELEMEDIZIN-PLATTFORM INTEGRATION
+- Beschreibung: Videosprechstunden und Remote-Patientenbetreuung
+- Förderprogramme: Innovationsfonds + EFRE + eHealth
+- Fördersumme: 320.000 €
+- Eigenanteil: 180.000 €
+- Projektdauer: 24 Monate
+- Konkrete Maßnahmen:
+  * WebRTC-basierte Videosprechstunden
+  * E-Rezept-Integration
+  * Digitale Patientenakte
+  * Mobile Apps für Patienten
+- Erfolgswahrscheinlichkeit: 75%
+- Lizenzmodell: 50€/Monat pro Praxis
+
+INTERNATIONALE EXPANSION DACH-REGION
+- Beschreibung: Markterschließung Österreich und Schweiz
+- Förderprogramme: go-international + EFRE + Außenwirtschaft
+- Fördersumme: 180.000 €
+- Eigenanteil: 120.000 €
+- Projektdauer: 18 Monate
+- Konkrete Maßnahmen:
+  * Lokalisierung für AT/CH Abrechnungssysteme
+  * Partnerschaften mit lokalen Verbänden
+  * Compliance mit nationalen Regelungen
+  * Lokale Cloud-Infrastruktur
+- Erfolgswahrscheinlichkeit: 80%
+- Ziel: 200 Kunden in 24 Monaten
+
+NACHHALTIGKEITSINITIATIVE GREEN-IT
+- Beschreibung: CO2-neutrale Cloud-Infrastruktur bis 2027
+- Förderprogramme: EFRE + Umweltinnovationsprogramm + progres.nrw
+- Fördersumme: 150.000 €
+- Eigenanteil: 100.000 €
+- Projektdauer: 15 Monate
+- Konkrete Maßnahmen:
+  * Migration zu Green-Cloud-Providern
+  * Energy-Efficient-Coding-Standards
+  * Server-Konsolidierung
+  * ISO 14001 Zertifizierung
+- Erfolgswahrscheinlichkeit: 90%
+- Kosteneinsparung: 40.000 €/Jahr
+
+WEITERBILDUNG DIGITALE TRANSFORMATION
+- Beschreibung: Qualifizierung aller 10 Mitarbeiter
+- Förderprogramme: Bildungsscheck NRW + Qualifizierungschancengesetz
+- Fördersumme: 35.000 €
+- Eigenanteil: 25.000 €
+- Projektdauer: 24 Monate
+- Konkrete Maßnahmen:
+  * KI/ML-Grundlagen (40h)
+  * Cloud-Architekturen (AWS/Azure)
+  * Agile/Scrum Master Ausbildungen
+  * Datenschutz-Fachkunde
+- Erfolgswahrscheinlichkeit: 100%
+- Produktivitätssteigerung: 30%
+
+------------------------------------------------------------
+📋 FÖRDERANALYSE (Verfügbare Programme)
+------------------------------------------------------------
+
+EMPFOHLENE HAUPTPROGRAMME:
+
+ZIM - Zentrales Innovationsprogramm Mittelstand
+- Zuschuss: bis 690.000 € (Einzelprojekt)
+- Förderquote: 25-45% (KMU)
+- Kombinierbar: Ja, mit anderen Programmen
+- Status: ✅ Neue Richtlinie ab 01.01.2025
+- Bearbeitungszeit: 3-6 Monate
+- Besonderheit: Nutzt AGVO Art. 25 (nicht De-minimis)
+
+NRW.BANK.Invest Zukunft
+- Darlehen: bis 10 Mio. €
+- Tilgungszuschuss: 20% (max. 1 Mio. €)
+- Zinssatz: 2% unter Marktniveau
+- Status: ✅ Verfügbar seit 19.05.2025
+- Bearbeitungszeit: 3-4 Wochen über Hausbank
+- Vorteil: Bei 500k Darlehen = 100k geschenkt
+
+Digitalbonus NRW
+- Zuschuss: bis 50.000 € (50% der Kosten)
+- Zielgruppe: KMU mit Sitz in NRW
+- Status: ✅ Aktiv (ersetzt go-digital)
+- Bearbeitungszeit: 8-12 Wochen
+- De-minimis-relevant
+
+MID - Mittelstand Innovativ & Digital NRW
+- Module: MID-Invest, MID-Digitalisierung, MID-Analyse
+- Zuschuss: bis 25.000 € pro Modul
+- Besonderheit: 2 Anträge pro Jahr möglich
+- Status: ✅ Losverfahren am 1. jeden Monats
+
+KfW ERP-Förderkredit Innovation
+- Kredit: bis 25 Mio. €
+- Tilgungszuschuss: 3% (max. 200.000 €)
+- Zinssatz: ab 2,3% p.a.
+- Status: ✅ Neu seit Juli 2025
+- Laufzeit: bis 20 Jahre
+
+Forschungszulage
+- Steuerbonus: 35% der F&E-Personalkosten (KMU)
+- Max. Bemessungsgrundlage: 10 Mio. €
+- Besonderheit: Rückwirkend 2021-2024 beantragbar
+- Status: ✅ Dauerhaft verfügbar
+- NICHT beihilferelevant (Steuer)
+
+BAFA - Förderung unternehmerisches Know-how
+- Zuschuss: 50% (max. 1.750 € West)
+- Themen: Digitalisierung, Organisation, Markt
+- Status: ✅ Aktiv bis 31.12.2026
+- Max. 5 Beratungen bis 2026
+
+WICHTIGE WARNUNGEN:
+❌ go-digital: Eingestellt zum 31.12.2024
+❌ Digital Jetzt: Eingestellt zum 31.12.2023
+❌ Bildungsscheck NRW: Keine Neuausstellung mehr
+⚠️ De-minimis-Grenze: Max. 200.000 € in 3 Jahren
+⚠️ Keine Doppelförderung gleicher Kosten
+⚠️ EU-Beihilferecht strikt beachten
+
+KOMBINATIONSMÖGLICHKEITEN:
+✅ ZIM + NRW.BANK: Verschiedene Beihilfekategorien
+✅ Digitalbonus + MID + BAFA: Unter De-minimis
+✅ Forschungszulage + alle anderen: Steuer ≠ Beihilfe
+❌ ZIM + EFRE: Meist nicht kombinierbar
+❌ Mehrere EU-Programme: Doppelförderung
+
+------------------------------------------------------------
+📚 DOKUMENTENBASIS
+------------------------------------------------------------
+
+VERWENDETE HAUPTDOKUMENTE:
+
+Strategiepapiere:
+- Belege05062025_Strategiepapier.pdf (395 KB)
+- Belege05062025_Strategiepapier.docx (120 KB)
+- Begleittext_SimpliMed_GmbH.pdf (83 KB)
+- 240625_Begleittext.pdf (174 KB)
+
+Geschäftsdaten:
+- SimpliMed-GmbH-Investorenprasentation.pptx (895 KB)
+- SimpliMed-Plus-Investitionschance-im-Gesundheitsmarkt.pdf (1,2 MB)
+- Absatz_Umsatz_Uebersicht.xlsx (51 KB)
+
+Förderanalysen (JSON):
+- foerderstrategie.json (aktuelle Szenarien)
+- foerder_research_report.json (Programmübersicht)
+- kombiniertes-foerderszenario.json (Hauptempfehlung)
+- moegliche_foerderungen.json (alle Programme)
+
+KERNZIELE LAUT STRATEGIEPAPIER:
+
+Technologie:
+- SaaS-Migration und Cloud-Native Architektur
+- API-first Ansatz mit RESTful APIs
+- Microservices für Skalierbarkeit
+- KI-Integration für Dokumentation
+- FHIR-Standard für Interoperabilität
+
+Markt:
+- Primär: Heilpraktiker (47.000 in Deutschland)
+- Sekundär: Ärzte, Osteopathen, Therapeuten
+- Marktanteil Ziel: 25% bis 2029
+- ARPU-Ziel: 69 €/Monat (von aktuell 29 €)
+- Kundenziel: 20.000+ bis 2029
+
+Finanzen:
+- Umsatz aktuell: 2,2-3,0 Mio. €/Jahr
+- Umsatzziel 2029: 15 Mio. €/Jahr
+- Kapitalbedarf: 300.000-500.000 €
+- Break-Even neu: Q4 2026
+- Exit-Option: 2029-2030
+
+Personal:
+- Aktuell: 10 Mitarbeiter
+- Geplant: +10 neue Stellen bis 2027
+- Schwerpunkt: Entwickler, KI-Experten, Vertrieb
+
+------------------------------------------------------------
+❓ CEO-FAQ (Häufige Fragen für Geschäftsführung)
+------------------------------------------------------------
+
+F: Wie viel Eigenkapital benötigen wir mindestens?
+A: Im besten Szenario (NRW.BANK + Zuschüsse) nur 70.000 €. 
+   Bei ZIM-Hauptszenario: 150.000 €. Mit Investor: 165.000 €.
+
+F: Welches Szenario hat die höchste Erfolgswahrscheinlichkeit?
+A: Digitalbonus + KfW (95% Erfolg) oder MID + BAFA (90% Erfolg).
+   ZIM hat 70-80% Erfolgsquote bei guter Vorbereitung.
+
+F: Können wir mehrere Förderungen parallel beantragen?
+A: Ja, aber nur wenn kombinierbar:
+   ✅ ZIM + NRW.BANK + Digitalbonus = OK
+   ✅ MID + BAFA + KfW = OK
+   ❌ ZIM + EFRE = Problematisch
+   ❌ Über 200k De-minimis = Illegal
+
+F: Wie lange dauern die Bewilligungen?
+A: - MID NRW: 4 Wochen (Losverfahren)
+   - Digitalbonus: 8-12 Wochen
+   - BAFA: 2-3 Wochen
+   - ZIM: 3-6 Monate
+   - NRW.BANK: 3-4 Wochen über Hausbank
+
+F: Was passiert bei Ablehnung?
+A: Backup-Szenarien verfügbar:
+   1. Bürgschaftsbank + Hausbank (ohne Sicherheiten)
+   2. Investor-Beteiligung (25% Anteile)
+   3. Klassischer Bankkredit
+   4. Kleinere Zuschuss-Kombination
+
+F: Wann ist der beste Startzeitpunkt?
+A: - Digitalbonus/MID: Sofort (Juli 2025)
+   - NRW.BANK: Ab August 2025
+   - ZIM: Antrag Q4/2025, Start Q1/2026
+   - Forschungszulage: Rückwirkend jederzeit
+
+F: Welche Unterlagen sind kritisch?
+A: - Businessplan mit 5-Jahres-Prognose
+   - Jahresabschlüsse 2023-2024
+   - Innovationsbeschreibung (für ZIM)
+   - De-minimis-Erklärung
+   - Letter of Intent (3 Kunden)
+
+F: Größte Risiken?
+A: 1. De-minimis-Überschreitung (>200k)
+   2. Doppelförderung gleicher Kosten
+   3. Zu optimistische Prognosen
+   4. Fehlende Innovationshöhe (ZIM)
+   5. Liquiditätsengpass bei Vorfinanzierung
+
+F: Empfehlung für risikoarmen Start?
+A: Digitalbonus NRW + MID + BAFA = 32.800 € Zuschüsse
+   in 4-8 Wochen. 100% geschenktes Geld, kein Kredit.
+   Danach größere Programme angehen.
+
+F: Wer unterstützt bei der Antragstellung?
+A: - ZIM: Autorisierte ZIM-Berater
+   - Digitalbonus: IHK oder autorisierte Berater
+   - NRW.BANK: Direkt über Hausbank
+   - BAFA: DIHK als Leitstelle
+   - Steuer: Steuerberater/Wirtschaftsprüfer
+
+------------------------------------------------------------
+ENTSCHEIDUNGSMATRIX
+------------------------------------------------------------
+
+                    EIGENKAPITAL  FÖRDERQUOTE  ZEIT  RISIKO
+ZIM + NRW.BANK       150.000 €      65,8%     18M    Mittel
+Digitalbonus+KfW      70.000 €      28,6%     12M    Niedrig
+ZIM + Investor       165.000 €      35,6%     24M    Hoch
+NRW.BANK pur         100.000 €      35,6%      6M    Niedrig
+Zuschuss-Sprint       32.200 €      50,5%      1M    Minimal
+
+EMPFEHLUNG: Start mit Zuschuss-Sprint für schnelle 
+Liquidität, dann ZIM + NRW.BANK als Hauptförderung.
+
+====================================================================
+Ende des Exports - SimpliMed Förderstrategie 2025-2027
+Erstellt: Juli 2025 | Status: Entscheidung ausstehend
+====================================================================
