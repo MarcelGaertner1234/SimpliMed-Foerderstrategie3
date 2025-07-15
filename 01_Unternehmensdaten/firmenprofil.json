@@ -1,0 +1,60 @@
+{
+  "firmenprofil": {
+    "name": "SimpliMed GmbH",
+    "sitz": "Am Ehrenmal 19, 51588 Nümbrecht",
+    "gründungsjahr": "2012",
+    "gründungsdatum": "13.01.2012",
+    "geschäftsführer": "Marcus Schmitz",
+    "handelsregister_nr": "HRB 11878",
+    "registergericht": "Amtsgericht Siegburg",
+    "stammkapital": "25.000 €",
+    "umsatz_letztes_jahr": "2.2 - 3.0 Mio. EUR (2024, geschätzt)",
+    "anzahl_mitarbeiter": "10 (bestätigt)",
+    "branche": "Softwareentwicklung für das Gesundheitswesen",
+    "tätigkeitsfeld": "Softwareentwicklung und Vertrieb sowie die Durchführung von Chefarztabrechnungen",
+    "website": "https://www.simplimed.de",
+    "markenrechte": ["questiomed"],
+    "zielgruppe": [
+      "Heilpraktiker",
+      "Ärzte",
+      "Osteopathen"
+    ],
+    "kundenbasis": "Über 8.500 Kunden in Deutschland und EU"
+  },
+  "geschäftsmodell": {
+    "hauptprodukte": [
+      {
+        "name": "SimpliMed-Online",
+        "typ": "SaaS-Lösung",
+        "beschreibung": "Plattform- und geräteunabhängige Praxisverwaltungssoftware"
+      },
+      {
+        "name": "SimpliMed23 für Windows",
+        "typ": "On-Premises Software",
+        "beschreibung": "Klassische Praxisverwaltungssoftware für Windows"
+      }
+    ],
+    "kernfunktionen": [
+      "Papierlose Privatabrechnung",
+      "Online-Terminbuchung",
+      "Digitale Unterschriften",
+      "Elektronische Patientenakten",
+      "Abrechnung nach GebüH, GOÄ und Hufeland",
+      "Synchronisation mit Smartphones",
+      "Tarifkenntnis für PKV und Beihilfe"
+    ]
+  },
+  "unternehmensgeschichte": {
+    "gegründet_als_software": "1998",
+    "gmbh_gründung": "2012",
+    "entwicklung": "Kontinuierliche Weiterentwicklung seit über 25 Jahren"
+  },
+  "kontaktdaten": {
+    "adresse": {
+      "straße": "Am Ehrenmal 19",
+      "plz": "51588",
+      "ort": "Nümbrecht",
+      "land": "Deutschland"
+    }
+  }
+}

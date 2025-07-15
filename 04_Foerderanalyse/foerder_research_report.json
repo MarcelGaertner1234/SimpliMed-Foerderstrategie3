@@ -1,0 +1,170 @@
+{
+  "projektdaten": {
+    "name": "SimpliMed 2.0",
+    "kapitalbedarf": 300000,
+    "ziel": "Technische Modernisierung (SaaS), Migration, Marketing, API-Ausbau",
+    "unternehmen": {
+      "rechtsform": "GmbH",
+      "branche": "IT/Praxissoftware",
+      "standort": "Nümbrecht, NRW",
+      "mitarbeiter": 10,
+      "umsatz_aktuell": "2.2-3.0 Mio. EUR",
+      "kunden": 8500
+    }
+  },
+  "foerderprogramme": [
+    {
+      "name": "ZIM - Zentrales Innovationsprogramm Mittelstand",
+      "art": "Zuschuss",
+      "max_summe": 560000,
+      "foerderquote": "25-45%",
+      "kombinierbar": true,
+      "anforderungen": [
+        "KMU mit < 250 Mitarbeitern",
+        "Innovatives F&E-Vorhaben",
+        "Technologie- und branchenoffen",
+        "Marktneuheit oder technische Herausforderung"
+      ],
+      "vorteile": [
+        "Neue Richtlinie ab 01.01.2025 mit erhöhten Fördersätzen",
+        "Erweiterte Machbarkeitsstudien (12 statt 8 Monate)",
+        "Bis zu 690.000 EUR bei Einzelprojekten",
+        "3-6 Monate Bearbeitungszeit"
+      ],
+      "bewertung": "Hervorragend geeignet für KI-Integration und innovative Features. Hohe Förderquote bei erstmaliger ZIM-Förderung.",
+      "status": "Verfügbar ab 01.01.2025"
+    },
+    {
+      "name": "NRW.BANK.Invest Zukunft",
+      "art": "Darlehen mit Zinsverbilligung und Tilgungsnachlass",
+      "max_summe": 10000000,
+      "foerderquote": "bis 100% der Investition",
+      "kombinierbar": true,
+      "anforderungen": [
+        "Unternehmen in NRW",
+        "Investitionen in Digitalisierung/Innovation",
+        "Transformationsvorhaben"
+      ],
+      "vorteile": [
+        "Zinssatz 2% unter Marktniveau",
+        "Tilgungsnachlass bis 20%",
+        "Bei 500.000 EUR bis zu 170.000 EUR Ersparnis",
+        "Einfaches Antragsverfahren über Hausbank"
+      ],
+      "bewertung": "Optimal für Grundfinanzierung der technischen Modernisierung. Sehr attraktive Konditionen für KMU in NRW.",
+      "status": "Verfügbar seit 19.05.2025"
+    }
+  ],
+  "bankdarlehen": [
+    {
+      "anbieter": "KfW ERP-Förderkredit Innovation",
+      "konditionen": {
+        "zinssatz": "ab 2,3% p.a.",
+        "laufzeit": "bis 20 Jahre",
+        "max_betrag": 25000000,
+        "tilgungsfreie_zeit": "bis 3 Jahre"
+      },
+      "kombinierbar": true,
+      "besonderheiten": [
+        "3% Zuschuss auf Kreditsumme (max. 200.000 EUR) ab 20.02.2025",
+        "Bis zu 100% der Investitionskosten finanzierbar",
+        "Risikoübernahme durch KfW bis 70%"
+      ],
+      "bewertung": "Sehr gut geeignet als Ergänzung zur NRW.BANK-Förderung. Der 3% Zuschuss macht es besonders attraktiv.",
+      "status": "Neue Richtlinie seit Juli 2025"
+    },
+    {
+      "anbieter": "Sparkasse/Volksbank - Digitalisierungsdarlehen",
+      "konditionen": {
+        "zinssatz": "individuell, marktüblich",
+        "laufzeit": "5-10 Jahre",
+        "max_betrag": 1500000,
+        "besicherung": "individuell"
+      },
+      "kombinierbar": true,
+      "besonderheiten": [
+        "Lokale Beratung und Betreuung",
+        "Schnelle Entscheidungswege",
+        "Kombination mit Förderprogrammen möglich",
+        "IB-Digitalisierungsdarlehen: 10.000-1.500.000 EUR"
+      ],
+      "bewertung": "Gute Ergänzung für kleinere Beträge oder als Bridge-Finanzierung. Vorteil: persönliche Betreuung vor Ort.",
+      "status": "Laufend verfügbar"
+    }
+  ],
+  "empfehlung": {
+    "optimale_kombination": [
+      {
+        "programm": "ZIM Einzelprojekt",
+        "betrag": 150000,
+        "verwendung": "KI-Features, innovative Entwicklung",
+        "zeitpunkt": "Q1 2026"
+      },
+      {
+        "programm": "NRW.BANK.Invest Zukunft",
+        "betrag": 200000,
+        "verwendung": "Infrastruktur, Migration, Grundfinanzierung",
+        "zeitpunkt": "Q3 2025"
+      },
+      {
+        "programm": "KfW ERP-Förderkredit Innovation (optional)",
+        "betrag": 100000,
+        "verwendung": "Reserve/Puffer, Marketing",
+        "zeitpunkt": "Q4 2025"
+      }
+    ],
+    "gesamtfoerderung": {
+      "zuschüsse": "150.000 EUR (ZIM)",
+      "günstige_darlehen": "200.000-300.000 EUR",
+      "ersparnis_durch_förderung": "ca. 170.000-220.000 EUR über Laufzeit"
+    },
+    "risiken": [
+      "ZIM-Antrag muss innovative Komponente deutlich herausstellen",
+      "De-minimis-Grenze beachten (200.000 EUR/3 Jahre)",
+      "Zeitliche Staffelung der Anträge wichtig",
+      "Eigenkapitalquote für Bankdarlehen sicherstellen"
+    ],
+    "antragsschritte": [
+      {
+        "schritt": 1,
+        "zeitpunkt": "Juli 2025",
+        "aktion": "Hausbankgespräch für NRW.BANK.Invest Zukunft vorbereiten"
+      },
+      {
+        "schritt": 2,
+        "zeitpunkt": "August 2025",
+        "aktion": "NRW.BANK-Antrag über Hausbank einreichen"
+      },
+      {
+        "schritt": 3,
+        "zeitpunkt": "September 2025",
+        "aktion": "ZIM-Projektskizze entwickeln, Innovationsgehalt dokumentieren"
+      },
+      {
+        "schritt": 4,
+        "zeitpunkt": "Oktober 2025",
+        "aktion": "Optional: KfW-Antrag vorbereiten als Puffer"
+      },
+      {
+        "schritt": 5,
+        "zeitpunkt": "Januar 2026",
+        "aktion": "ZIM-Antrag einreichen (neue Richtlinie nutzen)"
+      }
+    ]
+  },
+  "hinweise": {
+    "digital_jetzt": "Programm wurde zum 31.12.2023 eingestellt - nicht mehr verfügbar",
+    "go_digital": "Läuft zum 31.12.2024 aus - für 2025 nicht mehr nutzbar",
+    "alternativen": [
+      "Länderspezifische Programme prüfen",
+      "EFRE-Mittel über NRW möglich",
+      "Horizont Europa für größere F&E-Projekte"
+    ]
+  },
+  "meta": {
+    "erstellt_am": "2025-07-14",
+    "kapitalbedarf_gesamt": 300000,
+    "förderquote_effektiv": "50-70%",
+    "bearbeitungsdauer_gesamt": "3-6 Monate"
+  }
+}

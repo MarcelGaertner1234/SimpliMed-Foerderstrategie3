@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SimpliMed 2.0 – Mobile Entscheidung</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.5;
+            color: #333;
+            background: #f5f5f5;
+            padding: 10px;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            margin-bottom: 15px;
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+        }
+        
+        .header .subtitle {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 20px;
+        }
+        
+        .summary-box {
+            background: #e3f2fd;
+            border-left: 4px solid #2196f3;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .key-facts {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .fact-item {
+            text-align: center;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+        
+        .fact-number {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #2196f3;
+            display: block;
+        }
+        
+        .fact-label {
+            font-size: 0.8rem;
+            color: #666;
+            margin-top: 5px;
+        }
+        
+        .decision-section {
+            background: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 20px;
+            border-radius: 0 8px 8px 0;
+            margin: 20px 0;
+        }
+        
+        .btn {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-success {
+            background: #4caf50;
+            color: white;
+        }
+        
+        .btn-warning {
+            background: #ff9800;
+            color: white;
+        }
+        
+        .btn:active {
+            transform: scale(0.98);
+        }
+        
+        .comments-box {
+            margin-top: 15px;
+            display: none;
+        }
+        
+        .comments-box.show {
+            display: block;
+            animation: slideIn 0.3s ease;
+        }
+        
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .form-group {
+            margin: 15px 0;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+            color: #333;
+        }
+        
+        .form-group textarea,
+        .form-group input {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-family: inherit;
+        }
+        
+        .form-group textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+        
+        .result-box {
+            background: #e8f5e8;
+            border-left: 4px solid #4caf50;
+            padding: 15px;
+            border-radius: 0 8px 8px 0;
+            margin-top: 15px;
+            display: none;
+        }
+        
+        .result-box.show {
+            display: block;
+            animation: slideIn 0.3s ease;
+        }
+        
+        .timeline-item {
+            display: flex;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .timeline-status {
+            width: 20px;
+            margin-right: 10px;
+            text-align: center;
+        }
+        
+        .timeline-content {
+            flex: 1;
+        }
+        
+        .timeline-week {
+            font-size: 0.8rem;
+            color: #666;
+        }
+        
+        .export-btn {
+            background: #6c757d;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 6px;
+            margin: 5px;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+        
+        .center {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="header">
+            <h1>SimpliMed 2.0</h1>
+            <div class="subtitle">Förderstrategie – Entscheidung</div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="content">
+            <div class="summary-box">
+                <h3>💡 Projekt-Essentials</h3>
+                <p><strong>KI-gestützte Praxissoftware</strong> mit Cloud-Migration für Skalierung auf 20.000+ Kunden</p>
+            </div>
+            
+            <div class="key-facts">
+                <div class="fact-item">
+                    <span class="fact-number">723k€</span>
+                    <div class="fact-label">Gesamtvolumen</div>
+                </div>
+                <div class="fact-item">
+                    <span class="fact-number">46,3%</span>
+                    <div class="fact-label">Förderquote</div>
+                </div>
+                <div class="fact-item">
+                    <span class="fact-number">100k€</span>
+                    <div class="fact-label">Bankdarlehen</div>
+                </div>
+                <div class="fact-item">
+                    <span class="fact-number">280%</span>
+                    <div class="fact-label">ROI (5 Jahre)</div>
+                </div>
+            </div>
+            
+            <h4>📅 Nächste Schritte (verkürzt)</h4>
+            <div class="timeline-item">
+                <div class="timeline-status">🔴</div>
+                <div class="timeline-content">
+                    <strong>KW 29: Ihre Entscheidung</strong>
+                    <div class="timeline-week">Diese Woche</div>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-status">⏳</div>
+                <div class="timeline-content">
+                    <strong>KW 30-31: Bank & Förderbank</strong>
+                    <div class="timeline-week">Termine vereinbaren</div>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-status">📋</div>
+                <div class="timeline-content">
+                    <strong>KW 32: ZIM-Antrag einreichen</strong>
+                    <div class="timeline-week">Mit Förderberater</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="content">
+            <div class="decision-section">
+                <h3>⚡ Entscheidung erforderlich</h3>
+                <p><strong>Empfehlung:</strong> Sofortige Umsetzung. Optimaler Zeitpunkt mit 46,3% staatlicher Förderung!</p>
+                
+                <button class="btn btn-success" onclick="makeDecision('ja')">
+                    ✅ Ja, Projekt starten
+                </button>
+                
+                <button class="btn btn-warning" onclick="showComments()">
+                    ❓ Fragen / Anmerkungen
+                </button>
+                
+                <div class="comments-box" id="commentsBox">
+                    <div class="form-group">
+                        <label for="comments">Ihre Anmerkungen:</label>
+                        <textarea id="comments" placeholder="Fragen oder Bedenken..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-Mail:</label>
+                        <input type="email" id="email" placeholder="markus.schmitz@simplimed.de">
+                    </div>
+                    <button class="btn btn-warning" onclick="submitComments()">
+                        💬 Übermitteln
+                    </button>
+                </div>
+                
+                <div class="result-box" id="resultBox">
+                    <h4 id="resultTitle">✅ Entscheidung dokumentiert</h4>
+                    <p id="resultText"></p>
+                    <small><strong>Zeit:</strong> <span id="timestamp"></span></small>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="content center">
+            <h4>📎 Export</h4>
+            <button class="export-btn" onclick="exportDecision()">📊 Entscheidung exportieren</button>
+            <button class="export-btn" onclick="shareDecision()">📤 Link teilen</button>
+        </div>
+    </div>
+
+    <script>
+        let mobileDecisionData = {
+            timestamp: null,
+            decision: null,
+            comments: null,
+            email: null
+        };
+
+        function makeDecision(decision) {
+            mobileDecisionData.decision = decision;
+            mobileDecisionData.timestamp = new Date().toLocaleString('de-DE');
+            
+            const resultBox = document.getElementById('resultBox');
+            const resultText = document.getElementById('resultText');
+            const timestamp = document.getElementById('timestamp');
+            
+            resultText.textContent = 'Förderprojekt wird wie vorgeschlagen gestartet. Nächste Schritte werden eingeleitet.';
+            timestamp.textContent = mobileDecisionData.timestamp;
+            resultBox.classList.add('show');
+            
+            // Lokale Speicherung
+            localStorage.setItem('simplimed_mobile_decision', JSON.stringify(mobileDecisionData));
+        }
+
+        function showComments() {
+            const commentsBox = document.getElementById('commentsBox');
+            commentsBox.classList.add('show');
+        }
+
+        function submitComments() {
+            const comments = document.getElementById('comments').value;
+            const email = document.getElementById('email').value;
+            
+            if (!comments.trim()) {
+                alert('Bitte Anmerkungen eingeben.');
+                return;
+            }
+            
+            mobileDecisionData.decision = 'kommentare';
+            mobileDecisionData.comments = comments;
+            mobileDecisionData.email = email;
+            mobileDecisionData.timestamp = new Date().toLocaleString('de-DE');
+            
+            const resultBox = document.getElementById('resultBox');
+            const resultTitle = document.getElementById('resultTitle');
+            const resultText = document.getElementById('resultText');
+            const timestamp = document.getElementById('timestamp');
+            
+            resultTitle.textContent = '💬 Kommentare erfasst';
+            resultText.textContent = 'Anmerkungen wurden dokumentiert und werden berücksichtigt.';
+            timestamp.textContent = mobileDecisionData.timestamp;
+            resultBox.style.background = '#fff3e0';
+            resultBox.style.borderLeftColor = '#ff9800';
+            resultBox.classList.add('show');
+            
+            localStorage.setItem('simplimed_mobile_decision', JSON.stringify(mobileDecisionData));
+        }
+
+        function exportDecision() {
+            if (!mobileDecisionData.decision) {
+                alert('Noch keine Entscheidung getroffen.');
+                return;
+            }
+            
+            const exportText = `SimpliMed 2.0 Förderstrategie - Entscheidung
+            
+Zeitstempel: ${mobileDecisionData.timestamp}
+Entscheidung: ${mobileDecisionData.decision === 'ja' ? 'Projekt starten' : 'Kommentare'}
+${mobileDecisionData.comments ? 'Anmerkungen: ' + mobileDecisionData.comments : ''}
+${mobileDecisionData.email ? 'Kontakt: ' + mobileDecisionData.email : ''}
+
+Projekt: KI-gestützte Praxissoftware mit Cloud-Migration
+Gesamtvolumen: 723.000 €
+Förderung: 46,3% (335.000 €)
+Bankdarlehen: 100.000 €
+ROI: 280% nach 5 Jahren`;
+            
+            // Erstelle Text-Datei zum Download
+            const blob = new Blob([exportText], { type: 'text/plain' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `SimpliMed_Entscheidung_${new Date().toISOString().split('T')[0]}.txt`;
+            a.click();
+            URL.revokeObjectURL(url);
+        }
+
+        function shareDecision() {
+            if (navigator.share && mobileDecisionData.decision) {
+                navigator.share({
+                    title: 'SimpliMed 2.0 Förderstrategie',
+                    text: `Entscheidung getroffen: ${mobileDecisionData.decision === 'ja' ? 'Projekt wird gestartet' : 'Kommentare eingereicht'}`,
+                    url: window.location.href
+                });
+            } else {
+                // Fallback: URL kopieren
+                navigator.clipboard.writeText(window.location.href).then(() => {
+                    alert('Link in Zwischenablage kopiert!');
+                });
+            }
+        }
+
+        // Laden gespeicherter Entscheidung
+        window.addEventListener('load', function() {
+            const saved = localStorage.getItem('simplimed_mobile_decision');
+            if (saved) {
+                mobileDecisionData = JSON.parse(saved);
+                if (mobileDecisionData.decision) {
+                    const resultBox = document.getElementById('resultBox');
+                    const resultTitle = document.getElementById('resultTitle');
+                    const resultText = document.getElementById('resultText');
+                    const timestamp = document.getElementById('timestamp');
+                    
+                    if (mobileDecisionData.decision === 'ja') {
+                        resultTitle.textContent = '✅ Gespeicherte Entscheidung';
+                        resultText.textContent = 'Förderprojekt wird gestartet.';
+                    } else {
+                        resultTitle.textContent = '💬 Gespeicherte Kommentare';
+                        resultText.textContent = mobileDecisionData.comments;
+                        resultBox.style.background = '#fff3e0';
+                        resultBox.style.borderLeftColor = '#ff9800';
+                    }
+                    
+                    timestamp.textContent = mobileDecisionData.timestamp;
+                    resultBox.classList.add('show');
+                }
+            }
+        });
+    </script>
+</body>
+</html>

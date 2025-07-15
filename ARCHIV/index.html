@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SimpliMed Förderstrategie Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #0891b2;
+            --secondary-color: #10b981;
+            --accent-color: #3b82f6;
+            --danger-color: #ef4444;
+            --warning-color: #f59e0b;
+            --success-color: #22c55e;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #0891b2 0%, #10b981 100%);
+        }
+
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .scenario-card {
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .priority-high { border-left-color: var(--danger-color); }
+        .priority-medium { border-left-color: var(--warning-color); }
+        .priority-low { border-left-color: var(--success-color); }
+
+        .status-badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+
+        .nav-item {
+            transition: all 0.2s ease;
+        }
+
+        .nav-item:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .nav-item.active {
+            background-color: rgba(255, 255, 255, 0.2);
+            border-left: 4px solid white;
+        }
+
+        #loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        .spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid var(--primary-color);
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .comment-section {
+            background-color: #f8fafc;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            margin-top: 1rem;
+        }
+
+        .metric-card {
+            background: white;
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .metric-card:hover {
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        @media print {
+            .no-print {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Loader -->
+    <div id="loader">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="gradient-bg text-white shadow-lg">
+        <div class="container mx-auto px-4 py-6">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-4">
+                    <i class="fas fa-heartbeat text-4xl"></i>
+                    <div>
+                        <h1 class="text-3xl font-bold">SimpliMed Förderstrategie</h1>
+                        <p class="text-cyan-100">Dashboard für Förderanträge und Strategieplanung</p>
+                    </div>
+                </div>
+                <div class="text-right">
+                    <p class="text-sm text-cyan-100">Stand: Juli 2025</p>
+                    <p class="text-xs text-cyan-200">Version 1.1</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="bg-gray-800 text-white sticky top-0 z-50 shadow-md no-print">
+        <div class="container mx-auto px-4">
+            <div class="flex space-x-0">
+                <a href="#overview" class="nav-item px-6 py-4 hover:bg-gray-700 transition">
+                    <i class="fas fa-home mr-2"></i>Übersicht
+                </a>
+                <a href="#scenarios" class="nav-item px-6 py-4 hover:bg-gray-700 transition">
+                    <i class="fas fa-lightbulb mr-2"></i>Szenarien
+                </a>
+                <a href="#company" class="nav-item px-6 py-4 hover:bg-gray-700 transition">
+                    <i class="fas fa-building mr-2"></i>Unternehmen
+                </a>
+                <a href="#market" class="nav-item px-6 py-4 hover:bg-gray-700 transition">
+                    <i class="fas fa-chart-line mr-2"></i>Marktanalyse
+                </a>
+                <a href="#export" class="nav-item px-6 py-4 hover:bg-gray-700 transition">
+                    <i class="fas fa-download mr-2"></i>Export
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <!-- Overview Section -->
+        <section id="overview" class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">
+                <i class="fas fa-dashboard mr-3 text-cyan-600"></i>Übersicht
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+                <div class="metric-card">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="text-gray-500 text-sm">Gesamtfördersumme</p>
+                            <p class="text-3xl font-bold text-gray-800">1.79M €</p>
+                        </div>
+                        <i class="fas fa-euro-sign text-4xl text-green-500"></i>
+                    </div>
+                </div>
+                
+                <div class="metric-card">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="text-gray-500 text-sm">Anzahl Szenarien</p>
+                            <p class="text-3xl font-bold text-gray-800">8</p>
+                        </div>
+                        <i class="fas fa-project-diagram text-4xl text-blue-500"></i>
+                    </div>
+                </div>
+                
+                <div class="metric-card">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="text-gray-500 text-sm">Mitarbeiter</p>
+                            <p class="text-3xl font-bold text-gray-800">10</p>
+                        </div>
+                        <i class="fas fa-users text-4xl text-purple-500"></i>
+                    </div>
+                </div>
+                
+                <div class="metric-card">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="text-gray-500 text-sm">Kunden</p>
+                            <p class="text-3xl font-bold text-gray-800">8.500+</p>
+                        </div>
+                        <i class="fas fa-hospital-user text-4xl text-orange-500"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <h3 class="text-xl font-semibold mb-4">Zusammenfassung</h3>
+                <p class="text-gray-700 leading-relaxed" id="summary-text">
+                    Die SimpliMed GmbH ist ein etablierter Softwarehersteller im Gesundheitswesen mit über 25 Jahren Markterfahrung. 
+                    Das Unternehmen entwickelt spezialisierte Praxisverwaltungssoftware für Heilpraktiker, Ärzte und Osteopathen.
+                    Mit einem geschätzten Jahresumsatz von 2.2-3.0 Mio. EUR und über 8.500 Kunden ist das Unternehmen optimal 
+                    positioniert für verschiedene Förderprogramme.
+                </p>
+            </div>
+        </section>
+
+        <!-- Scenarios Section -->
+        <section id="scenarios" class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">
+                <i class="fas fa-lightbulb mr-3 text-yellow-500"></i>Förderszenarien
+            </h2>
+            
+            <div class="mb-6 flex flex-wrap gap-2">
+                <button onclick="filterScenarios('all')" class="px-4 py-2 bg-gray-200 hover:bg-gray-300 rounded-lg transition">
+                    Alle anzeigen
+                </button>
+                <button onclick="filterScenarios('high')" class="px-4 py-2 bg-red-100 hover:bg-red-200 rounded-lg transition">
+                    <i class="fas fa-fire mr-1"></i>Hohe Priorität
+                </button>
+                <button onclick="filterScenarios('innovation')" class="px-4 py-2 bg-purple-100 hover:bg-purple-200 rounded-lg transition">
+                    <i class="fas fa-rocket mr-1"></i>Innovation
+                </button>
+                <button onclick="filterScenarios('quick-win')" class="px-4 py-2 bg-green-100 hover:bg-green-200 rounded-lg transition">
+                    <i class="fas fa-bolt mr-1"></i>Quick Wins
+                </button>
+            </div>
+
+            <div id="scenarios-container" class="space-y-6">
+                <!-- Scenarios will be loaded dynamically -->
+            </div>
+        </section>
+
+        <!-- Company Section -->
+        <section id="company" class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">
+                <i class="fas fa-building mr-3 text-blue-600"></i>Unternehmensdaten
+            </h2>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-xl font-semibold mb-4">Firmenprofil</h3>
+                    <div id="company-profile" class="space-y-3">
+                        <!-- Company data will be loaded dynamically -->
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-xl font-semibold mb-4">Kennzahlen & Prognosen</h3>
+                    <div id="company-metrics" class="space-y-3">
+                        <!-- Metrics will be loaded dynamically -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Market Section -->
+        <section id="market" class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">
+                <i class="fas fa-chart-line mr-3 text-green-600"></i>Marktanalyse
+            </h2>
+            
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <div id="market-analysis">
+                    <!-- Market data will be loaded dynamically -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Export Section -->
+        <section id="export" class="mb-12 no-print">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">
+                <i class="fas fa-download mr-3 text-purple-600"></i>Export & Berichte
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white rounded-lg shadow-md p-6 text-center card-hover">
+                    <i class="fas fa-file-pdf text-5xl text-red-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">PDF Export</h3>
+                    <p class="text-gray-600 mb-4">Gesamtbericht als PDF</p>
+                    <button onclick="window.print()" class="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600 transition">
+                        <i class="fas fa-print mr-2"></i>PDF erstellen
+                    </button>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-md p-6 text-center card-hover">
+                    <i class="fas fa-file-excel text-5xl text-green-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Excel Export</h3>
+                    <p class="text-gray-600 mb-4">Kennzahlen als Tabelle</p>
+                    <button onclick="exportToExcel()" class="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600 transition">
+                        <i class="fas fa-download mr-2"></i>Excel Download
+                    </button>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-md p-6 text-center card-hover">
+                    <i class="fas fa-comments text-5xl text-blue-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Kommentare</h3>
+                    <p class="text-gray-600 mb-4">Alle Bewertungen exportieren</p>
+                    <button onclick="exportComments()" class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition">
+                        <i class="fas fa-save mr-2"></i>Kommentare speichern
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 mt-12">
+        <div class="container mx-auto px-4 text-center">
+            <p class="mb-2">© 2025 SimpliMed GmbH - Förderstrategie Dashboard</p>
+            <p class="text-gray-400 text-sm">Entwickelt für interne Strategieplanung und Entscheidungsfindung</p>
+        </div>
+    </footer>
+
+    <!-- Checklist Modal -->
+    <div id="checklistModal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center overflow-y-auto">
+        <div class="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 my-8 max-h-[90vh] overflow-y-auto">
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="text-2xl font-bold">Antragsunterlagen & Checkliste</h2>
+                <button onclick="closeChecklistModal()" class="text-gray-500 hover:text-gray-700">
+                    <i class="fas fa-times text-2xl"></i>
+                </button>
+            </div>
+            <div id="checklistContent">
+                <!-- Checklist content will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Comment Modal -->
+    <div id="commentModal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center">
+        <div class="bg-white rounded-lg p-6 max-w-lg w-full mx-4">
+            <h3 class="text-xl font-semibold mb-4">Kommentar hinzufügen</h3>
+            <form id="commentForm">
+                <input type="hidden" id="scenarioId">
+                <div class="mb-4">
+                    <label class="block text-gray-700 mb-2">Bewertung</label>
+                    <select id="commentRating" class="w-full p-2 border rounded">
+                        <option value="pending">🔵 Noch prüfen</option>
+                        <option value="good">🟢 Gut / Umsetzen</option>
+                        <option value="discuss">🟡 Diskutieren</option>
+                        <option value="reject">🔴 Nicht umsetzbar</option>
+                    </select>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 mb-2">Kommentar</label>
+                    <textarea id="commentText" rows="4" class="w-full p-2 border rounded" placeholder="Ihre Einschätzung..."></textarea>
+                </div>
+                <div class="flex justify-end space-x-2">
+                    <button type="button" onclick="closeCommentModal()" class="px-4 py-2 bg-gray-300 rounded hover:bg-gray-400 transition">
+                        Abbrechen
+                    </button>
+                    <button type="submit" class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition">
+                        Speichern
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Verwenden Sie app-standalone.js für direktes Öffnen ohne Webserver -->
+    <!-- oder app.js wenn Sie einen Webserver verwenden -->
+    <script src="foerder-checklisten.js"></script>
+    <script src="dokumente-daten.js"></script>
+    <script src="app-standalone.js"></script>
+</body>
+</html>

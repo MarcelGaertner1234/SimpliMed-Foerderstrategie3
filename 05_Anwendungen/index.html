@@ -1,0 +1,1303 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SimpliMed Förderstrategie Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #0891b2;
+            --secondary-color: #10b981;
+            --accent-color: #3b82f6;
+            --danger-color: #ef4444;
+            --warning-color: #f59e0b;
+            --success-color: #22c55e;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #0891b2 0%, #10b981 100%);
+        }
+
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .scenario-card {
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .priority-high { border-left-color: var(--danger-color); }
+        .priority-medium { border-left-color: var(--warning-color); }
+        .priority-low { border-left-color: var(--success-color); }
+
+        .status-badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+
+        .nav-item {
+            transition: all 0.2s ease;
+        }
+
+        .nav-item:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .nav-item.active {
+            background-color: rgba(255, 255, 255, 0.2);
+            border-left: 4px solid white;
+        }
+
+        #loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        .spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid var(--primary-color);
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .comment-section {
+            background-color: #f8fafc;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            margin-top: 1rem;
+        }
+
+        .metric-card {
+            background: white;
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .metric-card:hover {
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .tab-button {
+            background: #f3f4f6;
+            color: #6b7280;
+            border: none;
+            cursor: pointer;
+        }
+
+        .tab-button.active {
+            background: linear-gradient(135deg, #0891b2, #10b981);
+            color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .tab-button:hover:not(.active) {
+            background: #e5e7eb;
+        }
+
+        .tab-content {
+            animation: fadeIn 0.3s ease-in-out;
+        }
+
+        .tab-content.hidden {
+            display: none;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .scenario-rating-section {
+            background: #f8fafc;
+            border-radius: 8px;
+            padding: 16px;
+            margin-top: 16px;
+            border-left: 4px solid #e5e7eb;
+        }
+
+        .scenario-rating-section.rated-good {
+            border-left-color: #10b981;
+            background: #ecfdf5;
+        }
+
+        .scenario-rating-section.rated-discuss {
+            border-left-color: #f59e0b;
+            background: #fffbeb;
+        }
+
+        .scenario-rating-section.rated-reject {
+            border-left-color: #ef4444;
+            background: #fef2f2;
+        }
+
+        @media print {
+            .no-print {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Loader -->
+    <div id="loader">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="gradient-bg text-white shadow-lg">
+        <div class="container mx-auto px-4 py-6">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-4">
+                    <i class="fas fa-heartbeat text-4xl"></i>
+                    <div>
+                        <h1 class="text-3xl font-bold">SimpliMed Förderstrategie</h1>
+                        <p class="text-cyan-100">Dashboard für Förderanträge und Strategieplanung</p>
+                    </div>
+                </div>
+                <div class="text-right">
+                    <p class="text-sm text-cyan-100">Stand: Juli 2025</p>
+                    <p class="text-xs text-cyan-200">Version 1.1 - Standalone</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="bg-gray-800 text-white sticky top-0 z-50 shadow-md no-print">
+        <div class="container mx-auto px-4">
+            <div class="flex space-x-0">
+                <a href="#overview" class="nav-item px-6 py-4 hover:bg-gray-700 transition">
+                    <i class="fas fa-home mr-2"></i>Übersicht
+                </a>
+                <a href="#scenarios" class="nav-item px-6 py-4 hover:bg-gray-700 transition">
+                    <i class="fas fa-lightbulb mr-2"></i>Szenarien
+                </a>
+                <a href="#company" class="nav-item px-6 py-4 hover:bg-gray-700 transition">
+                    <i class="fas fa-building mr-2"></i>Unternehmen
+                </a>
+                <a href="#market" class="nav-item px-6 py-4 hover:bg-gray-700 transition">
+                    <i class="fas fa-chart-line mr-2"></i>Marktanalyse
+                </a>
+                <a href="#export" class="nav-item px-6 py-4 hover:bg-gray-700 transition">
+                    <i class="fas fa-download mr-2"></i>Export
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <!-- Tab Navigation -->
+        <div class="tab-nav mb-8">
+            <div class="bg-white rounded-lg shadow-md p-1 flex space-x-1">
+                <button onclick="showTab('decision')" id="tab-decision" class="tab-button active flex-1 px-6 py-3 rounded-md transition-all duration-200 font-semibold">
+                    🎯 Entscheidungsvorlage
+                </button>
+                <button onclick="showTab('scenarios')" id="tab-scenarios" class="tab-button flex-1 px-6 py-3 rounded-md transition-all duration-200 font-semibold">
+                    🧩 Alle Förderszenarien
+                </button>
+            </div>
+        </div>
+
+        <!-- Tab Content: Decision Tab -->
+        <div id="tab-content-decision" class="tab-content">
+            <!-- Overview Section -->
+            <section id="overview" class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">
+                <i class="fas fa-dashboard mr-3 text-cyan-600"></i>Übersicht
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+                <div class="metric-card">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="text-gray-500 text-sm">Gesamtfördersumme</p>
+                            <p class="text-3xl font-bold text-gray-800">2.12M €</p>
+                        </div>
+                        <i class="fas fa-euro-sign text-4xl text-green-500"></i>
+                    </div>
+                </div>
+                
+                <div class="metric-card">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="text-gray-500 text-sm">Anzahl Szenarien</p>
+                            <p class="text-3xl font-bold text-gray-800">9</p>
+                        </div>
+                        <i class="fas fa-project-diagram text-4xl text-blue-500"></i>
+                    </div>
+                </div>
+                
+                <div class="metric-card">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="text-gray-500 text-sm">Mitarbeiter</p>
+                            <p class="text-3xl font-bold text-gray-800">10</p>
+                        </div>
+                        <i class="fas fa-users text-4xl text-purple-500"></i>
+                    </div>
+                </div>
+                
+                <div class="metric-card">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="text-gray-500 text-sm">Kunden</p>
+                            <p class="text-3xl font-bold text-gray-800">8.500+</p>
+                        </div>
+                        <i class="fas fa-hospital-user text-4xl text-orange-500"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <h3 class="text-xl font-semibold mb-4">Zusammenfassung</h3>
+                <p class="text-gray-700 leading-relaxed" id="summary-text">
+                    Die SimpliMed GmbH ist ein etablierter Softwarehersteller im Gesundheitswesen mit über 25 Jahren Markterfahrung. 
+                    Das Unternehmen entwickelt spezialisierte Praxisverwaltungssoftware für Heilpraktiker, Ärzte und Osteopathen.
+                    Mit einem geschätzten Jahresumsatz von 2.2-3.0 Mio. EUR und über 8.500 Kunden ist das Unternehmen optimal 
+                    positioniert für verschiedene Förderprogramme.
+                </p>
+            </div>
+        </section>
+
+        <!-- Scenarios Section -->
+        <section id="scenarios" class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">
+                <i class="fas fa-lightbulb mr-3 text-yellow-500"></i>Förderszenarien
+            </h2>
+            
+            <div class="mb-6 flex flex-wrap gap-2">
+                <button onclick="filterScenarios('all')" class="px-4 py-2 bg-gray-200 hover:bg-gray-300 rounded-lg transition">
+                    Alle anzeigen
+                </button>
+                <button onclick="filterScenarios('high')" class="px-4 py-2 bg-red-100 hover:bg-red-200 rounded-lg transition">
+                    <i class="fas fa-fire mr-1"></i>Hohe Priorität
+                </button>
+                <button onclick="filterScenarios('innovation')" class="px-4 py-2 bg-purple-100 hover:bg-purple-200 rounded-lg transition">
+                    <i class="fas fa-rocket mr-1"></i>Innovation
+                </button>
+                <button onclick="filterScenarios('quick-win')" class="px-4 py-2 bg-green-100 hover:bg-green-200 rounded-lg transition">
+                    <i class="fas fa-bolt mr-1"></i>Quick Wins
+                </button>
+            </div>
+
+            <div id="scenarios-container" class="space-y-6">
+                <!-- Scenarios will be loaded dynamically -->
+            </div>
+        </section>
+
+        <!-- Company Section -->
+        <section id="company" class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">
+                <i class="fas fa-building mr-3 text-blue-600"></i>Unternehmensdaten
+            </h2>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-xl font-semibold mb-4">Firmenprofil</h3>
+                    <div id="company-profile" class="space-y-3">
+                        <!-- Company data will be loaded dynamically -->
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-xl font-semibold mb-4">Kennzahlen & Prognosen</h3>
+                    <div id="company-metrics" class="space-y-3">
+                        <!-- Metrics will be loaded dynamically -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Market Section -->
+        <section id="market" class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">
+                <i class="fas fa-chart-line mr-3 text-green-600"></i>Marktanalyse
+            </h2>
+            
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <div id="market-analysis">
+                    <!-- Market data will be loaded dynamically -->
+                </div>
+            </div>
+        </section>
+
+            <!-- Export Section -->
+            <section id="export" class="mb-12 no-print">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6">
+                    <i class="fas fa-download mr-3 text-purple-600"></i>Export & Berichte
+                </h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-white rounded-lg shadow-md p-6 text-center card-hover">
+                        <i class="fas fa-file-pdf text-5xl text-red-500 mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2">PDF Export</h3>
+                        <p class="text-gray-600 mb-4">Gesamtbericht als PDF</p>
+                        <button onclick="window.print()" class="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600 transition">
+                            <i class="fas fa-print mr-2"></i>PDF erstellen
+                        </button>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow-md p-6 text-center card-hover">
+                        <i class="fas fa-file-excel text-5xl text-green-500 mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2">Excel Export</h3>
+                        <p class="text-gray-600 mb-4">Kennzahlen als Tabelle</p>
+                        <button onclick="exportToExcel()" class="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600 transition">
+                            <i class="fas fa-download mr-2"></i>Excel Download
+                        </button>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow-md p-6 text-center card-hover">
+                        <i class="fas fa-comments text-5xl text-blue-500 mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2">Kommentare</h3>
+                        <p class="text-gray-600 mb-4">Alle Bewertungen exportieren</p>
+                        <button onclick="exportComments()" class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition">
+                            <i class="fas fa-save mr-2"></i>Kommentare speichern
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Tab Content: All Scenarios Tab -->
+        <div id="tab-content-scenarios" class="tab-content hidden">
+            <div class="mb-8">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">
+                    <i class="fas fa-project-diagram mr-3 text-blue-600"></i>Alle Förderszenarien
+                </h2>
+                <p class="text-gray-600 mb-6">
+                    Übersicht aller verfügbaren Förderszenarien für SimpliMed. Bewerten und kommentieren Sie jedes Szenario 
+                    für eine strukturierte Entscheidungsfindung.
+                </p>
+
+                <!-- Filter & Actions -->
+                <div class="flex flex-wrap gap-3 mb-6">
+                    <button onclick="filterAllScenarios('all')" class="px-4 py-2 bg-blue-100 hover:bg-blue-200 rounded-lg transition text-sm font-medium">
+                        <i class="fas fa-list mr-1"></i>Alle anzeigen
+                    </button>
+                    <button onclick="filterAllScenarios('high')" class="px-4 py-2 bg-red-100 hover:bg-red-200 rounded-lg transition text-sm font-medium">
+                        <i class="fas fa-fire mr-1"></i>Hohe Priorität
+                    </button>
+                    <button onclick="filterAllScenarios('innovation')" class="px-4 py-2 bg-purple-100 hover:bg-purple-200 rounded-lg transition text-sm font-medium">
+                        <i class="fas fa-lightbulb mr-1"></i>Innovation
+                    </button>
+                    <button onclick="filterAllScenarios('commented')" class="px-4 py-2 bg-green-100 hover:bg-green-200 rounded-lg transition text-sm font-medium">
+                        <i class="fas fa-comments mr-1"></i>Kommentiert
+                    </button>
+                    <div class="ml-auto">
+                        <button onclick="exportAllScenarioComments()" class="px-4 py-2 bg-gray-700 text-white rounded-lg hover:bg-gray-800 transition text-sm font-medium">
+                            <i class="fas fa-download mr-1"></i>Alle Kommentare exportieren
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Scenarios Grid -->
+                <div id="all-scenarios-container" class="space-y-6">
+                    <!-- All scenarios will be rendered here -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 mt-12">
+        <div class="container mx-auto px-4 text-center">
+            <p class="mb-2">© 2025 SimpliMed GmbH - Förderstrategie Dashboard</p>
+            <p class="text-gray-400 text-sm">Entwickelt für interne Strategieplanung und Entscheidungsfindung</p>
+        </div>
+    </footer>
+
+    <!-- Checklist Modal -->
+    <div id="checklistModal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center overflow-y-auto">
+        <div class="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 my-8 max-h-[90vh] overflow-y-auto">
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="text-2xl font-bold">Antragsunterlagen & Checkliste</h2>
+                <button onclick="closeChecklistModal()" class="text-gray-500 hover:text-gray-700">
+                    <i class="fas fa-times text-2xl"></i>
+                </button>
+            </div>
+            <div id="checklistContent">
+                <!-- Checklist content will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Comment Modal -->
+    <div id="commentModal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center">
+        <div class="bg-white rounded-lg p-6 max-w-lg w-full mx-4">
+            <h3 class="text-xl font-semibold mb-4">Kommentar hinzufügen</h3>
+            <form id="commentForm">
+                <input type="hidden" id="scenarioId">
+                <div class="mb-4">
+                    <label class="block text-gray-700 mb-2">Bewertung</label>
+                    <select id="commentRating" class="w-full p-2 border rounded">
+                        <option value="pending">🔵 Noch prüfen</option>
+                        <option value="good">🟢 Gut / Umsetzen</option>
+                        <option value="discuss">🟡 Diskutieren</option>
+                        <option value="reject">🔴 Nicht umsetzbar</option>
+                    </select>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 mb-2">Kommentar</label>
+                    <textarea id="commentText" rows="4" class="w-full p-2 border rounded" placeholder="Ihre Einschätzung..."></textarea>
+                </div>
+                <div class="flex justify-end space-x-2">
+                    <button type="button" onclick="closeCommentModal()" class="px-4 py-2 bg-gray-300 rounded hover:bg-gray-400 transition">
+                        Abbrechen
+                    </button>
+                    <button type="submit" class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition">
+                        Speichern
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Alle Daten und Funktionen direkt in der HTML-Datei
+        
+        // Unternehmensdaten
+        const firmenprofil = {
+            "firma": "SimpliMed GmbH",
+            "rechtsform": "GmbH",
+            "gruendungsjahr": 1998,
+            "website": "https://www.simplimed.de",
+            "adresse": {
+                "strasse": "Am Ehrenmal 19",
+                "plz": "51588",
+                "ort": "Nümbrecht",
+                "bundesland": "Nordrhein-Westfalen"
+            },
+            "geschaeftsfuehrer": "Marcus Schmitz",
+            "registereintrag": {
+                "handelsregister": "HRB 11878",
+                "registergericht": "Amtsgericht Siegburg",
+                "stammkapital": "25.000 EUR"
+            },
+            "mitarbeiter": {
+                "gesamt": 10,
+                "entwicklung": 5,
+                "vertrieb": 2,
+                "support": 2,
+                "verwaltung": 1
+            },
+            "kunden": {
+                "anzahl": "8.500+",
+                "zielgruppen": ["Heilpraktiker", "Ärzte", "Osteopathen"],
+                "marktanteil_heilpraktiker": "15-18%"
+            }
+        };
+
+        const kennzahlen = {
+            "umsatz": {
+                "2024_geschaetzt": "2.200.000 - 3.000.000 EUR",
+                "berechnungsgrundlage": {
+                    "kunden": 8500,
+                    "durchschnittslizenz": "25-35 EUR/Monat",
+                    "jahresumsatz_pro_kunde": "300-420 EUR"
+                }
+            },
+            "marktposition": {
+                "heilpraktiker_markt": {
+                    "gesamtmarkt": "47.000 Heilpraktiker in Deutschland",
+                    "marktanteil": "15-18%",
+                    "hauptkonkurrenten": ["Praxis-Software XY", "MediSoft", "PraxisPro"]
+                },
+                "gesamtmarkt_praxissoftware": {
+                    "marktvolumen": "1 Mrd. EUR",
+                    "wachstumsrate": "8-10% p.a."
+                }
+            },
+            "wachstumspotenzial": {
+                "kurzfristig_2025": {
+                    "neue_kunden": 1000,
+                    "umsatzsteigerung": "15%"
+                },
+                "mittelfristig_2027": {
+                    "neue_kunden": 3500,
+                    "umsatzsteigerung": "45%"
+                },
+                "langfristig_2029": {
+                    "neue_kunden": 6000,
+                    "umsatzsteigerung": "80%",
+                    "zielkundenzahl": 15000
+                }
+            }
+        };
+
+        const marktanalyse = {
+            "digitalisierung_gesundheitswesen": {
+                "marktvolumen_2025": "57 Mrd. EUR",
+                "wachstumsrate": "15.3% CAGR",
+                "treiber": [
+                    "Telematikinfrastruktur",
+                    "ePA (elektronische Patientenakte)",
+                    "eRezept",
+                    "Telemedizin-Boom"
+                ]
+            },
+            "zielgruppen": {
+                "heilpraktiker": {
+                    "anzahl_deutschland": 47000,
+                    "digitalisierungsgrad": "mittel",
+                    "durchschnittspraxisgroesse": "1-2 Personen",
+                    "software_budget": "200-500 EUR/Monat"
+                },
+                "osteopathen": {
+                    "anzahl_deutschland": 6900,
+                    "wachstumsrate": "10% p.a.",
+                    "digitalisierungsgrad": "hoch",
+                    "software_budget": "300-600 EUR/Monat"
+                }
+            },
+            "trends": [
+                "Cloud-basierte Lösungen",
+                "Mobile Apps für Therapeuten",
+                "KI-gestützte Diagnostik",
+                "Integrierte Terminbuchung",
+                "Datenschutz/DSGVO-Compliance"
+            ],
+            "chancen": [
+                "Konsolidierung im Markt",
+                "Neue EU-Regularien schaffen Nachfrage",
+                "Integration mit Gesundheitsplattformen",
+                "Internationale Expansion"
+            ]
+        };
+
+        const foerderstrategie = {
+            "gesamtfoerdersumme": "1.790.000 EUR",
+            "anzahl_szenarien": 8,
+            "szenarien": [
+                {
+                    "id": 1,
+                    "titel": "KI-gestützte Diagnostik-Assistenz",
+                    "foerderprogramm": "ZIM",
+                    "foerdersumme_geschaetzt": "350000",
+                    "dauer_monate": 24,
+                    "prioritaet": "hoch",
+                    "innovationsgrad": "sehr hoch",
+                    "beschreibung": "Entwicklung eines KI-Systems zur Unterstützung bei der Diagnosestellung und Therapieempfehlung"
+                },
+                {
+                    "id": 2,
+                    "titel": "Telemedizin-Plattform Integration",
+                    "foerderprogramm": "Innovationsfonds",
+                    "foerdersumme_geschaetzt": "280000",
+                    "dauer_monate": 18,
+                    "prioritaet": "hoch",
+                    "innovationsgrad": "hoch",
+                    "beschreibung": "Nahtlose Integration von Videosprechstunden und digitaler Patientenbetreuung"
+                },
+                {
+                    "id": 3,
+                    "titel": "Datenbank-Infrastruktur ausbauen",
+                    "foerderprogramm": "ZIM",
+                    "foerdersumme_geschaetzt": "285000",
+                    "dauer_monate": 18,
+                    "prioritaet": "sehr hoch",
+                    "innovationsgrad": "hoch",
+                    "beschreibung": "Migration zu einer cloud-nativen Microservices-Architektur für bessere Skalierbarkeit"
+                },
+                {
+                    "id": 4,
+                    "titel": "Mitarbeiter-Weiterbildung Digitalisierung",
+                    "foerderprogramm": "Bildungsscheck NRW",
+                    "foerdersumme_geschaetzt": "25000",
+                    "dauer_monate": 6,
+                    "prioritaet": "mittel",
+                    "innovationsgrad": "niedrig",
+                    "beschreibung": "Schulungsprogramm für neue Technologien und agile Methoden"
+                },
+                {
+                    "id": 5,
+                    "titel": "Europäische Expansion vorbereiten",
+                    "foerderprogramm": "EFRE",
+                    "foerdersumme_geschaetzt": "200000",
+                    "dauer_monate": 12,
+                    "prioritaet": "mittel",
+                    "innovationsgrad": "mittel",
+                    "beschreibung": "Anpassung der Software für internationale Märkte (DACH-Region)"
+                },
+                {
+                    "id": 6,
+                    "titel": "Barrierefreie Software-Optimierung",
+                    "foerderprogramm": "go-digital",
+                    "foerdersumme_geschaetzt": "50000",
+                    "dauer_monate": 6,
+                    "prioritaet": "niedrig",
+                    "innovationsgrad": "niedrig",
+                    "beschreibung": "Umsetzung von Barrierefreiheitsstandards nach WCAG 2.1"
+                },
+                {
+                    "id": 7,
+                    "titel": "Blockchain-Patientenakte",
+                    "foerderprogramm": "Horizont Europa",
+                    "foerdersumme_geschaetzt": "450000",
+                    "dauer_monate": 36,
+                    "prioritaet": "niedrig",
+                    "innovationsgrad": "sehr hoch",
+                    "beschreibung": "Forschungsprojekt für sichere, dezentrale Patientendatenverwaltung"
+                },
+                {
+                    "id": 8,
+                    "titel": "Nachhaltigkeitsinitiative: Green-IT Infrastruktur",
+                    "foerderprogramm": "EFRE",
+                    "foerdersumme_geschaetzt": "150000",
+                    "dauer_monate": 12,
+                    "prioritaet": "mittel",
+                    "innovationsgrad": "mittel",
+                    "beschreibung": "Optimierung der IT-Infrastruktur für reduzierten Energieverbrauch und CO2-Neutralität"
+                },
+                {
+                    "id": 9,
+                    "titel": "🚀 KOMBINATION: ZIM + Digitalbonus NRW für maximale Förderung",
+                    "foerderprogramm": "ZIM + Digitalbonus NRW",
+                    "foerdersumme_geschaetzt": "335000",
+                    "dauer_monate": 18,
+                    "prioritaet": "sehr hoch",
+                    "innovationsgrad": "sehr hoch",
+                    "beschreibung": "Optimale Kombination zweier Förderprogramme für Technologie-Innovation und erfolgreiche Markteinführung. 46,3% staatliche Förderung bei nur 100.000 EUR Kreditbedarf.",
+                    "kombinationsvorteil": true,
+                    "details": {
+                        "gesamtinvestition": 723000,
+                        "foerderprogramm_1": {
+                            "name": "ZIM-Einzelprojekt",
+                            "fokus": "KI-gestützte Praxisassistenz & Cloud-Infrastruktur",
+                            "foerdersumme": 285000,
+                            "foerderquote": "45%"
+                        },
+                        "foerderprogramm_2": {
+                            "name": "Digitalbonus NRW",
+                            "fokus": "Digitale Markterschließung & IT-Sicherheit",
+                            "foerdersumme": 50000,
+                            "foerderquote": "50%"
+                        },
+                        "finanzierung": {
+                            "eigenanteil": 288000,
+                            "bankdarlehen": 100000
+                        },
+                        "wirtschaftlichkeit": {
+                            "break_even_monat": 22,
+                            "roi_5_jahre": "280%",
+                            "neue_arbeitsplaetze": 10
+                        }
+                    }
+                }
+            ]
+        };
+
+        // App-Funktionen
+        let currentFilter = 'all';
+        let currentTab = 'decision';
+
+        function hideLoader() {
+            document.getElementById('loader').style.display = 'none';
+        }
+
+        function loadScenarios() {
+            const container = document.getElementById('scenarios-container');
+            const scenarios = foerderstrategie.szenarien;
+            
+            container.innerHTML = scenarios.map(scenario => {
+                const priorityClass = scenario.prioritaet === 'hoch' || scenario.prioritaet === 'sehr hoch' ? 'priority-high' : 
+                                    scenario.prioritaet === 'mittel' ? 'priority-medium' : 'priority-low';
+                
+                const comments = getComments(scenario.id);
+                const rating = comments.length > 0 ? comments[comments.length - 1].rating : 'pending';
+                const ratingIcon = getRatingIcon(rating);
+                
+                const isKombination = scenario.kombinationsvorteil;
+                const cardClass = isKombination ? 'bg-gradient-to-r from-blue-50 to-green-50 border-2 border-blue-400' : 'bg-white';
+                
+                return `
+                    <div class="${cardClass} rounded-lg shadow-md p-6 scenario-card ${priorityClass} card-hover" data-priority="${scenario.prioritaet}" data-innovation="${scenario.innovationsgrad}">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="text-xl font-semibold mb-2">${scenario.titel}</h3>
+                                <div class="flex items-center space-x-4 text-sm text-gray-600">
+                                    <span><i class="fas fa-tag mr-1"></i>${scenario.foerderprogramm}</span>
+                                    <span><i class="fas fa-euro-sign mr-1"></i>${parseInt(scenario.foerdersumme_geschaetzt).toLocaleString('de-DE')} EUR</span>
+                                    <span><i class="fas fa-clock mr-1"></i>${scenario.dauer_monate} Monate</span>
+                                </div>
+                            </div>
+                            <div class="text-2xl">${ratingIcon}</div>
+                        </div>
+                        
+                        <p class="text-gray-700 mb-4">${scenario.beschreibung}</p>
+                        
+                        ${scenario.details ? `
+                        <div class="bg-blue-50 rounded p-4 mb-4">
+                            <h4 class="font-semibold mb-2">💡 Förderdetails:</h4>
+                            <div class="grid grid-cols-2 gap-4 text-sm">
+                                <div>
+                                    <p><strong>${scenario.details.foerderprogramm_1.name}:</strong> ${scenario.details.foerderprogramm_1.foerdersumme.toLocaleString('de-DE')} EUR</p>
+                                    <p class="text-gray-600">${scenario.details.foerderprogramm_1.fokus}</p>
+                                </div>
+                                <div>
+                                    <p><strong>${scenario.details.foerderprogramm_2.name}:</strong> ${scenario.details.foerderprogramm_2.foerdersumme.toLocaleString('de-DE')} EUR</p>
+                                    <p class="text-gray-600">${scenario.details.foerderprogramm_2.fokus}</p>
+                                </div>
+                            </div>
+                            <div class="mt-3 pt-3 border-t border-blue-200">
+                                <p class="text-sm"><strong>Gesamtinvestition:</strong> ${scenario.details.gesamtinvestition.toLocaleString('de-DE')} EUR</p>
+                                <p class="text-sm"><strong>Bankdarlehen benötigt:</strong> nur ${scenario.details.finanzierung.bankdarlehen.toLocaleString('de-DE')} EUR</p>
+                                <p class="text-sm"><strong>ROI nach 5 Jahren:</strong> ${scenario.details.wirtschaftlichkeit.roi_5_jahre}</p>
+                            </div>
+                        </div>
+                        ` : ''}
+                        
+                        <div class="flex justify-between items-center">
+                            <div class="flex space-x-2">
+                                <span class="status-badge ${scenario.prioritaet === 'hoch' || scenario.prioritaet === 'sehr hoch' ? 'bg-red-100 text-red-800' : scenario.prioritaet === 'mittel' ? 'bg-yellow-100 text-yellow-800' : 'bg-green-100 text-green-800'}">
+                                    Priorität: ${scenario.prioritaet}
+                                </span>
+                                <span class="status-badge bg-purple-100 text-purple-800">
+                                    Innovation: ${scenario.innovationsgrad}
+                                </span>
+                            </div>
+                            <div class="flex space-x-2">
+                                <button onclick="openChecklistModal('${scenario.foerderprogramm}')" class="px-3 py-1 bg-blue-500 text-white rounded hover:bg-blue-600 transition text-sm">
+                                    <i class="fas fa-clipboard-check mr-1"></i>Checkliste
+                                </button>
+                                <button onclick="openCommentModal(${scenario.id})" class="px-3 py-1 bg-gray-500 text-white rounded hover:bg-gray-600 transition text-sm">
+                                    <i class="fas fa-comment mr-1"></i>Bewerten
+                                </button>
+                            </div>
+                        </div>
+                        
+                        ${comments.length > 0 ? `
+                        <div class="comment-section mt-4">
+                            <h4 class="font-semibold mb-2">Bewertungen (${comments.length})</h4>
+                            <div class="space-y-2">
+                                ${comments.map(comment => `
+                                    <div class="text-sm">
+                                        <span class="font-medium">${getRatingIcon(comment.rating)} ${comment.date}</span>
+                                        <p class="text-gray-600">${comment.text}</p>
+                                    </div>
+                                `).join('')}
+                            </div>
+                        </div>
+                        ` : ''}
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function loadCompanyData() {
+            const profileContainer = document.getElementById('company-profile');
+            const metricsContainer = document.getElementById('company-metrics');
+            
+            profileContainer.innerHTML = `
+                <div class="space-y-2">
+                    <p><strong>Firma:</strong> ${firmenprofil.firma}</p>
+                    <p><strong>Geschäftsführer:</strong> ${firmenprofil.geschaeftsfuehrer}</p>
+                    <p><strong>Gründungsjahr:</strong> ${firmenprofil.gruendungsjahr}</p>
+                    <p><strong>Handelsregister:</strong> ${firmenprofil.registereintrag.handelsregister}</p>
+                    <p><strong>Stammkapital:</strong> ${firmenprofil.registereintrag.stammkapital}</p>
+                    <p><strong>Mitarbeiter:</strong> ${firmenprofil.mitarbeiter.gesamt}</p>
+                    <p><strong>Kunden:</strong> ${firmenprofil.kunden.anzahl}</p>
+                    <p><strong>Marktanteil Heilpraktiker:</strong> ${firmenprofil.kunden.marktanteil_heilpraktiker}</p>
+                </div>
+            `;
+            
+            metricsContainer.innerHTML = `
+                <div class="space-y-3">
+                    <div>
+                        <h4 class="font-semibold">Geschätzter Jahresumsatz 2024</h4>
+                        <p class="text-2xl font-bold text-green-600">${kennzahlen.umsatz['2024_geschaetzt']}</p>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold">Wachstumsprognose</h4>
+                        <ul class="text-sm space-y-1">
+                            <li>2025: +${kennzahlen.wachstumspotenzial.kurzfristig_2025.umsatzsteigerung} (${kennzahlen.wachstumspotenzial.kurzfristig_2025.neue_kunden} neue Kunden)</li>
+                            <li>2027: +${kennzahlen.wachstumspotenzial.mittelfristig_2027.umsatzsteigerung} (${kennzahlen.wachstumspotenzial.mittelfristig_2027.neue_kunden} neue Kunden)</li>
+                            <li>2029: +${kennzahlen.wachstumspotenzial.langfristig_2029.umsatzsteigerung} (${kennzahlen.wachstumspotenzial.langfristig_2029.neue_kunden} neue Kunden)</li>
+                        </ul>
+                    </div>
+                </div>
+            `;
+        }
+
+        function loadMarketAnalysis() {
+            const container = document.getElementById('market-analysis');
+            
+            container.innerHTML = `
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <h4 class="text-lg font-semibold mb-3">Digital Health Markt</h4>
+                        <p class="mb-2"><strong>Marktvolumen 2025:</strong> ${marktanalyse.digitalisierung_gesundheitswesen.marktvolumen_2025}</p>
+                        <p class="mb-2"><strong>Wachstumsrate:</strong> ${marktanalyse.digitalisierung_gesundheitswesen.wachstumsrate}</p>
+                        <h5 class="font-semibold mt-3 mb-2">Markttreiber:</h5>
+                        <ul class="list-disc list-inside text-sm space-y-1">
+                            ${marktanalyse.digitalisierung_gesundheitswesen.treiber.map(t => `<li>${t}</li>`).join('')}
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-semibold mb-3">Zielgruppen</h4>
+                        <div class="space-y-3">
+                            <div>
+                                <h5 class="font-semibold">Heilpraktiker</h5>
+                                <p class="text-sm">Anzahl: ${marktanalyse.zielgruppen.heilpraktiker.anzahl_deutschland.toLocaleString('de-DE')}</p>
+                                <p class="text-sm">Budget: ${marktanalyse.zielgruppen.heilpraktiker.software_budget}</p>
+                            </div>
+                            <div>
+                                <h5 class="font-semibold">Osteopathen</h5>
+                                <p class="text-sm">Anzahl: ${marktanalyse.zielgruppen.osteopathen.anzahl_deutschland.toLocaleString('de-DE')}</p>
+                                <p class="text-sm">Wachstum: ${marktanalyse.zielgruppen.osteopathen.wachstumsrate}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-6">
+                    <h4 class="text-lg font-semibold mb-3">Markttrends & Chancen</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <h5 class="font-semibold mb-2">Trends</h5>
+                            <ul class="list-disc list-inside text-sm space-y-1">
+                                ${marktanalyse.trends.map(t => `<li>${t}</li>`).join('')}
+                            </ul>
+                        </div>
+                        <div>
+                            <h5 class="font-semibold mb-2">Chancen</h5>
+                            <ul class="list-disc list-inside text-sm space-y-1">
+                                ${marktanalyse.chancen.map(c => `<li>${c}</li>`).join('')}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function filterScenarios(filter) {
+            currentFilter = filter;
+            const scenarios = document.querySelectorAll('.scenario-card');
+            
+            scenarios.forEach(scenario => {
+                if (filter === 'all') {
+                    scenario.style.display = 'block';
+                } else if (filter === 'high') {
+                    const priority = scenario.getAttribute('data-priority');
+                    scenario.style.display = (priority === 'hoch' || priority === 'sehr hoch') ? 'block' : 'none';
+                } else if (filter === 'innovation') {
+                    const innovation = scenario.getAttribute('data-innovation');
+                    scenario.style.display = (innovation === 'hoch' || innovation === 'sehr hoch') ? 'block' : 'none';
+                } else if (filter === 'quick-win') {
+                    const priority = scenario.getAttribute('data-priority');
+                    const innovation = scenario.getAttribute('data-innovation');
+                    scenario.style.display = (priority !== 'hoch' && priority !== 'sehr hoch' && innovation !== 'sehr hoch') ? 'block' : 'none';
+                }
+            });
+        }
+
+        function openChecklistModal(foerderprogramm) {
+            const modal = document.getElementById('checklistModal');
+            const content = document.getElementById('checklistContent');
+            content.innerHTML = `
+                <div class="text-center py-8">
+                    <p class="text-gray-600">Checkliste für ${foerderprogramm}</p>
+                    <p class="text-sm text-gray-500 mt-2">Diese Funktion benötigt die externen JavaScript-Dateien.</p>
+                </div>
+            `;
+            modal.classList.remove('hidden');
+        }
+
+        function closeChecklistModal() {
+            document.getElementById('checklistModal').classList.add('hidden');
+        }
+
+        function openCommentModal(scenarioId) {
+            document.getElementById('scenarioId').value = scenarioId;
+            document.getElementById('commentModal').classList.remove('hidden');
+        }
+
+        function closeCommentModal() {
+            document.getElementById('commentModal').classList.add('hidden');
+            document.getElementById('commentForm').reset();
+        }
+
+        function getComments(scenarioId) {
+            const comments = JSON.parse(localStorage.getItem('scenario_comments') || '{}');
+            return comments[scenarioId] || [];
+        }
+
+        function saveComment(scenarioId, rating, text) {
+            const comments = JSON.parse(localStorage.getItem('scenario_comments') || '{}');
+            if (!comments[scenarioId]) {
+                comments[scenarioId] = [];
+            }
+            comments[scenarioId].push({
+                rating: rating,
+                text: text,
+                date: new Date().toLocaleDateString('de-DE')
+            });
+            localStorage.setItem('scenario_comments', JSON.stringify(comments));
+        }
+
+        function getRatingIcon(rating) {
+            const icons = {
+                'pending': '🔵',
+                'good': '🟢',
+                'discuss': '🟡',
+                'reject': '🔴'
+            };
+            return icons[rating] || '🔵';
+        }
+
+        function exportToExcel() {
+            alert('Excel-Export wird vorbereitet...\nDiese Funktion benötigt die vollständige Version mit allen JavaScript-Dateien.');
+        }
+
+        function exportComments() {
+            const comments = localStorage.getItem('scenario_comments') || '{}';
+            const blob = new Blob([comments], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'simplimed_kommentare_' + new Date().toISOString().split('T')[0] + '.json';
+            a.click();
+            URL.revokeObjectURL(url);
+        }
+
+        // Tab Management Functions
+        function showTab(tabId) {
+            currentTab = tabId;
+            
+            // Hide all tab contents
+            document.querySelectorAll('.tab-content').forEach(content => {
+                content.classList.add('hidden');
+            });
+            
+            // Remove active class from all tab buttons
+            document.querySelectorAll('.tab-button').forEach(button => {
+                button.classList.remove('active');
+            });
+            
+            // Show selected tab content
+            document.getElementById(`tab-content-${tabId}`).classList.remove('hidden');
+            
+            // Add active class to selected tab button
+            document.getElementById(`tab-${tabId}`).classList.add('active');
+            
+            // Load content based on tab
+            if (tabId === 'scenarios') {
+                renderAllScenarios();
+            }
+        }
+
+        function renderAllScenarios() {
+            const container = document.getElementById('all-scenarios-container');
+            const scenarios = foerderstrategie.szenarien;
+            
+            container.innerHTML = scenarios.map(scenario => {
+                const comments = getScenarioComments(scenario.id);
+                const latestComment = comments.length > 0 ? comments[comments.length - 1] : null;
+                const ratingClass = latestComment ? `rated-${latestComment.rating}` : '';
+                const ratingIcon = latestComment ? getRatingIcon(latestComment.rating) : '⚪';
+                
+                const priorityColor = scenario.prioritaet === 'hoch' || scenario.prioritaet === 'sehr hoch' ? 'text-red-600' : 
+                                    scenario.prioritaet === 'mittel' ? 'text-yellow-600' : 'text-green-600';
+                
+                const innovationColor = scenario.innovationsgrad === 'sehr hoch' ? 'text-purple-600' : 
+                                       scenario.innovationsgrad === 'hoch' ? 'text-blue-600' : 'text-gray-600';
+                
+                return `
+                    <div class="scenario-card-all bg-white rounded-lg shadow-md overflow-hidden" data-scenario-id="${scenario.id}" data-priority="${scenario.prioritaet}" data-innovation="${scenario.innovationsgrad}" data-commented="${comments.length > 0}">
+                        <div class="p-6">
+                            <!-- Header -->
+                            <div class="flex justify-between items-start mb-4">
+                                <div class="flex-1">
+                                    <h3 class="text-xl font-bold text-gray-800 mb-2">${scenario.titel}</h3>
+                                    <div class="flex flex-wrap gap-3 text-sm">
+                                        <span class="inline-flex items-center px-2 py-1 rounded-full bg-blue-100 text-blue-800">
+                                            <i class="fas fa-tag mr-1"></i>${scenario.foerderprogramm}
+                                        </span>
+                                        <span class="inline-flex items-center px-2 py-1 rounded-full bg-green-100 text-green-800">
+                                            <i class="fas fa-euro-sign mr-1"></i>${parseInt(scenario.foerdersumme_geschaetzt).toLocaleString('de-DE')} EUR
+                                        </span>
+                                        <span class="inline-flex items-center px-2 py-1 rounded-full bg-gray-100 text-gray-800">
+                                            <i class="fas fa-clock mr-1"></i>${scenario.dauer_monate} Monate
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="text-3xl ml-4">${ratingIcon}</div>
+                            </div>
+
+                            <!-- Description -->
+                            <p class="text-gray-700 mb-4">${scenario.beschreibung}</p>
+
+                            <!-- Tags -->
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 rounded-full text-sm font-medium bg-red-50 ${priorityColor}">
+                                    Priorität: ${scenario.prioritaet}
+                                </span>
+                                <span class="px-3 py-1 rounded-full text-sm font-medium bg-purple-50 ${innovationColor}">
+                                    Innovation: ${scenario.innovationsgrad}
+                                </span>
+                            </div>
+
+                            ${scenario.details ? `
+                            <!-- Combination Details -->
+                            <div class="bg-gradient-to-r from-blue-50 to-green-50 rounded-lg p-4 mb-4 border border-blue-200">
+                                <h4 class="font-bold text-blue-800 mb-3"><i class="fas fa-rocket mr-2"></i>Kombinationsdetails</h4>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                                    <div>
+                                        <p class="font-semibold">${scenario.details.foerderprogramm_1.name}</p>
+                                        <p class="text-gray-600">${scenario.details.foerderprogramm_1.fokus}</p>
+                                        <p class="font-medium text-green-600">${scenario.details.foerderprogramm_1.foerdersumme.toLocaleString('de-DE')} EUR</p>
+                                    </div>
+                                    <div>
+                                        <p class="font-semibold">${scenario.details.foerderprogramm_2.name}</p>
+                                        <p class="text-gray-600">${scenario.details.foerderprogramm_2.fokus}</p>
+                                        <p class="font-medium text-green-600">${scenario.details.foerderprogramm_2.foerdersumme.toLocaleString('de-DE')} EUR</p>
+                                    </div>
+                                </div>
+                                <div class="mt-3 pt-3 border-t border-blue-200 text-center">
+                                    <p class="text-sm"><strong>Gesamtinvestition:</strong> ${scenario.details.gesamtinvestition.toLocaleString('de-DE')} EUR</p>
+                                    <p class="text-sm"><strong>ROI nach 5 Jahren:</strong> ${scenario.details.wirtschaftlichkeit.roi_5_jahre}</p>
+                                </div>
+                            </div>
+                            ` : ''}
+
+                            <!-- Rating Section -->
+                            <div class="scenario-rating-section ${ratingClass}">
+                                <div class="flex justify-between items-start mb-3">
+                                    <h4 class="font-semibold text-gray-800">Bewertung & Kommentare</h4>
+                                    <button onclick="openScenarioCommentModal(${scenario.id})" 
+                                        class="px-3 py-1 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition text-sm">
+                                        <i class="fas fa-comment mr-1"></i>Kommentieren
+                                    </button>
+                                </div>
+                                
+                                <div class="grid grid-cols-4 gap-2 mb-3">
+                                    <button onclick="quickRate(${scenario.id}, 'good')" 
+                                        class="quick-rate-btn px-3 py-2 rounded text-sm transition ${latestComment?.rating === 'good' ? 'bg-green-600 text-white' : 'bg-green-100 text-green-800 hover:bg-green-200'}">
+                                        🟢 Gut
+                                    </button>
+                                    <button onclick="quickRate(${scenario.id}, 'discuss')" 
+                                        class="quick-rate-btn px-3 py-2 rounded text-sm transition ${latestComment?.rating === 'discuss' ? 'bg-yellow-600 text-white' : 'bg-yellow-100 text-yellow-800 hover:bg-yellow-200'}">
+                                        🟡 Diskutieren
+                                    </button>
+                                    <button onclick="quickRate(${scenario.id}, 'reject')" 
+                                        class="quick-rate-btn px-3 py-2 rounded text-sm transition ${latestComment?.rating === 'reject' ? 'bg-red-600 text-white' : 'bg-red-100 text-red-800 hover:bg-red-200'}">
+                                        🔴 Ablehnen
+                                    </button>
+                                    <button onclick="quickRate(${scenario.id}, 'pending')" 
+                                        class="quick-rate-btn px-3 py-2 rounded text-sm transition ${latestComment?.rating === 'pending' || !latestComment ? 'bg-blue-600 text-white' : 'bg-blue-100 text-blue-800 hover:bg-blue-200'}">
+                                        🔵 Prüfen
+                                    </button>
+                                </div>
+
+                                ${comments.length > 0 ? `
+                                <div class="space-y-2">
+                                    ${comments.slice(-2).map(comment => `
+                                        <div class="text-sm bg-white rounded p-2">
+                                            <div class="flex justify-between items-center mb-1">
+                                                <span class="font-medium">${getRatingIcon(comment.rating)} ${getRatingLabel(comment.rating)}</span>
+                                                <span class="text-xs text-gray-500">${comment.date}</span>
+                                            </div>
+                                            <p class="text-gray-700">${comment.text}</p>
+                                        </div>
+                                    `).join('')}
+                                    ${comments.length > 2 ? `
+                                        <p class="text-xs text-gray-500 text-center">... und ${comments.length - 2} weitere Kommentare</p>
+                                    ` : ''}
+                                </div>
+                                ` : `
+                                <p class="text-sm text-gray-500 italic">Noch keine Bewertung vorhanden</p>
+                                `}
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function filterAllScenarios(filter) {
+            const scenarios = document.querySelectorAll('.scenario-card-all');
+            
+            scenarios.forEach(card => {
+                const priority = card.getAttribute('data-priority');
+                const innovation = card.getAttribute('data-innovation');
+                const commented = card.getAttribute('data-commented') === 'true';
+                
+                let show = false;
+                
+                switch(filter) {
+                    case 'all':
+                        show = true;
+                        break;
+                    case 'high':
+                        show = priority === 'hoch' || priority === 'sehr hoch';
+                        break;
+                    case 'innovation':
+                        show = innovation === 'hoch' || innovation === 'sehr hoch';
+                        break;
+                    case 'commented':
+                        show = commented;
+                        break;
+                }
+                
+                card.style.display = show ? 'block' : 'none';
+            });
+        }
+
+        function getScenarioComments(scenarioId) {
+            const comments = JSON.parse(localStorage.getItem('all_scenario_comments') || '{}');
+            return comments[scenarioId] || [];
+        }
+
+        function saveScenarioComment(scenarioId, rating, text) {
+            const comments = JSON.parse(localStorage.getItem('all_scenario_comments') || '{}');
+            if (!comments[scenarioId]) {
+                comments[scenarioId] = [];
+            }
+            comments[scenarioId].push({
+                rating: rating,
+                text: text,
+                date: new Date().toLocaleString('de-DE'),
+                timestamp: new Date().toISOString()
+            });
+            localStorage.setItem('all_scenario_comments', JSON.stringify(comments));
+        }
+
+        function quickRate(scenarioId, rating) {
+            const defaultTexts = {
+                'good': 'Für Umsetzung empfohlen',
+                'discuss': 'Weitere Diskussion erforderlich',
+                'reject': 'Nicht empfehlenswert',
+                'pending': 'Zur späteren Prüfung vorgemerkt'
+            };
+            
+            saveScenarioComment(scenarioId, rating, defaultTexts[rating]);
+            renderAllScenarios();
+        }
+
+        function openScenarioCommentModal(scenarioId) {
+            document.getElementById('scenarioId').value = scenarioId;
+            
+            // Pre-fill with latest comment if exists
+            const comments = getScenarioComments(scenarioId);
+            if (comments.length > 0) {
+                const latest = comments[comments.length - 1];
+                document.getElementById('commentRating').value = latest.rating;
+                document.getElementById('commentText').value = '';
+            } else {
+                document.getElementById('commentRating').value = 'pending';
+                document.getElementById('commentText').value = '';
+            }
+            
+            document.getElementById('commentModal').classList.remove('hidden');
+        }
+
+        function getRatingLabel(rating) {
+            const labels = {
+                'good': 'Empfohlen',
+                'discuss': 'Diskutieren',
+                'reject': 'Ablehnen',
+                'pending': 'Prüfen'
+            };
+            return labels[rating] || 'Unbekannt';
+        }
+
+        function exportAllScenarioComments() {
+            const comments = JSON.parse(localStorage.getItem('all_scenario_comments') || '{}');
+            const scenarios = foerderstrategie.szenarien;
+            
+            // Create detailed export with scenario information
+            const exportData = {
+                exportDate: new Date().toISOString(),
+                totalScenarios: scenarios.length,
+                totalComments: Object.values(comments).reduce((sum, commentList) => sum + commentList.length, 0),
+                scenarios: scenarios.map(scenario => ({
+                    id: scenario.id,
+                    titel: scenario.titel,
+                    foerderprogramm: scenario.foerderprogramm,
+                    foerdersumme: scenario.foerdersumme_geschaetzt,
+                    prioritaet: scenario.prioritaet,
+                    innovationsgrad: scenario.innovationsgrad,
+                    comments: comments[scenario.id] || []
+                }))
+            };
+            
+            const blob = new Blob([JSON.stringify(exportData, null, 2)], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `simplimed_alle_szenarien_kommentare_${new Date().toISOString().split('T')[0]}.json`;
+            a.click();
+            URL.revokeObjectURL(url);
+        }
+
+        // Event Listeners
+        document.getElementById('commentForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const scenarioId = parseInt(document.getElementById('scenarioId').value);
+            const rating = document.getElementById('commentRating').value;
+            const text = document.getElementById('commentText').value;
+            
+            if (currentTab === 'scenarios') {
+                saveScenarioComment(scenarioId, rating, text);
+                renderAllScenarios();
+            } else {
+                saveComment(scenarioId, rating, text);
+                loadScenarios();
+            }
+            
+            closeCommentModal();
+        });
+
+        // Initialize on load
+        window.addEventListener('DOMContentLoaded', function() {
+            setTimeout(() => {
+                hideLoader();
+                loadScenarios();
+                loadCompanyData();
+                loadMarketAnalysis();
+            }, 500);
+        });
+
+        // Smooth scrolling for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

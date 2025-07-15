@@ -1,0 +1,56 @@
+{
+  "recherchierte_quellen": [
+    {
+      "quelle": "SimpliMed Website",
+      "url": "https://www.simplimed.de",
+      "datum_abruf": "2025-07-14",
+      "informationen": [
+        "Produktübersicht",
+        "Kundenbasis",
+        "Funktionalitäten",
+        "Gründungsjahr Software (1998)"
+      ]
+    },
+    {
+      "quelle": "Northdata - Handelsregister",
+      "url": "https://www.northdata.de/SimpliMed+GmbH,+N%C3%BCmbrecht/Amtsgericht+Siegburg+HRB+11878",
+      "datum_abruf": "2025-07-14",
+      "informationen": [
+        "Geschäftsführer",
+        "Handelsregisternummer",
+        "Stammkapital",
+        "Gründungsdatum GmbH",
+        "Geschäftszweck"
+      ]
+    },
+    {
+      "quelle": "Cylex Branchenbuch",
+      "url": "https://web2.cylex.de/firma-home/simplimed-gmbh-8040721.html",
+      "datum_abruf": "2025-07-14",
+      "informationen": [
+        "Kontaktdaten",
+        "Branchenzuordnung"
+      ]
+    },
+    {
+      "quelle": "Stadtbranche.de",
+      "url": "https://stadtbranche.de/w-simplimed.de",
+      "datum_abruf": "2025-07-14",
+      "informationen": [
+        "Detaillierte Produktbeschreibung",
+        "Kundenfeedback"
+      ]
+    }
+  ],
+  "weitere_verlinkungen": [
+    "https://www.reviewhero.io/simplimed-gmbh-am-ehrenmal-19-nuembrecht-cdd0",
+    "https://www.11880.com/branchenbuch/nuembrecht/052094857B107497089/simplimed-gmbh.html",
+    "https://www.dialo.de/computer/nuembrecht/simplimed-gmbh-m45582044700",
+    "https://www.webvalid.de/company/SimpliMed+GmbH,+N%C3%BCmbrecht/HRB+11878"
+  ],
+  "hinweise": {
+    "linkedin": "Kein offizielles LinkedIn-Profil der SimpliMed GmbH gefunden",
+    "finanzdaten": "Detaillierte Finanzinformationen (Umsatz, Bilanzen) nicht öffentlich verfügbar",
+    "mitarbeiterzahl": "Keine exakte Mitarbeiterzahl öffentlich angegeben"
+  }
+}

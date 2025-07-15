@@ -1,0 +1,419 @@
+{
+  "szenarien": [
+    {
+      "titel": "Datenbank-Infrastruktur ausbauen",
+      "beschreibung": "Erweiterung der bestehenden Cloud-Datenbank-Architektur zur Steigerung von Performance, Datenschutz und Interoperabilität für 8.500+ Kunden.",
+      "förderprogramme": ["ZIM", "Digital Jetzt"],
+      "foerdersumme_geschaetzt": "285000",
+      "eigenanteil": "215000",
+      "projektdauer_monate": "18",
+      "vorteile": [
+        "Skalierbarkeit für 20.000+ Kunden bis 2029",
+        "DSGVO-optimierte Datenspeicherung mit Ende-zu-Ende-Verschlüsselung",
+        "50% Performance-Steigerung bei Abrechnungsprozessen",
+        "Grundlage für KI-Integration und Big Data Analytics"
+      ],
+      "konkrete_massnahmen": [
+        "Migration auf moderne Cloud-Native Architektur",
+        "Implementierung von Microservices",
+        "Aufbau redundanter Systeme für 99.9% Verfügbarkeit",
+        "FHIR-Standard Integration für Interoperabilität"
+      ],
+      "bewertung": {
+        "break_even_berechnung": {
+          "wichtigkeit": "🔶 Mittel",
+          "lösung": "Excel-Modell: 285k Investition amortisiert sich in 24 Monaten durch 15% mehr Neukunden + 20% geringere Betriebskosten",
+          "break_even_zeitpunkt": "Q3 2027"
+        },
+        "visualisierung": {
+          "wichtigkeit": "🔶 Mittel",
+          "lösung": "Dashboard mit Echtzeit-Metriken: Speicherbedarf, System-Load, Response-Zeiten, Nutzerwachstum",
+          "tools": ["Grafana", "PowerBI", "Custom React Dashboard"]
+        },
+        "executive_pitch": {
+          "wichtigkeit": "🔴 Hoch",
+          "lösung": "5-seitiges Executive Summary PDF + 15-Folien Präsentation für Investoren, Förderträger, Banken",
+          "inhalte": ["ROI-Berechnung", "Technologie-Roadmap", "Marktpotenzial", "Risikobewertung"]
+        },
+        "verantwortlicher": {
+          "intern": "Marcus Schmitz (Geschäftsführer)",
+          "extern": "TBD – IT-Infrastruktur Berater + ZIM-Förderberater",
+          "projektleiter": "Neuer CTO (zu rekrutieren)"
+        },
+        "erfolgswahrscheinlichkeit": "85%",
+        "reifegrad": "🟢 Hoch - Technologie etabliert, Bedarf klar definiert"
+      }
+    },
+    {
+      "titel": "Digitales Marketing & Vertriebsautomatisierung",
+      "beschreibung": "Implementierung eines CRM-gestützten Marketing- und Vertriebssystems zur systematischen Kundengewinnung im Heilpraktiker-Markt.",
+      "förderprogramme": ["Digitalbonus NRW", "Digital Jetzt"],
+      "foerdersumme_geschaetzt": "45000",
+      "eigenanteil": "35000",
+      "projektdauer_monate": "9",
+      "vorteile": [
+        "30% Steigerung der Lead-Generierung",
+        "Automatisierte Nurturing-Kampagnen für 47.000 potenzielle Kunden",
+        "Reduzierung der Kundenakquisitionskosten um 40%",
+        "Datengetriebene Vertriebssteuerung"
+      ],
+      "konkrete_massnahmen": [
+        "HubSpot CRM Implementation",
+        "Marketing Automation für E-Mail-Kampagnen",
+        "Lead-Scoring-System entwickeln",
+        "Integration mit bestehender SimpliMed-Software"
+      ],
+      "bewertung": {
+        "break_even_berechnung": {
+          "wichtigkeit": "🔴 Hoch",
+          "lösung": "Break-Even bei 150 Neukunden (1,8% Conversion Rate), erreichbar in 12 Monaten",
+          "break_even_zeitpunkt": "Q4 2026"
+        },
+        "visualisierung": {
+          "wichtigkeit": "🔴 Hoch",
+          "lösung": "Sales-Funnel-Dashboard, Conversion-Tracking, Customer Journey Maps",
+          "tools": ["HubSpot Analytics", "Google Data Studio", "Tableau"]
+        },
+        "executive_pitch": {
+          "wichtigkeit": "🔶 Mittel",
+          "lösung": "3-seitiger Business Case + ROI-Kalkulation für Digitalbonus NRW Antrag",
+          "inhalte": ["Marktpotenzial-Analyse", "Wettbewerbsvorteile", "Umsatzprognose"]
+        },
+        "verantwortlicher": {
+          "intern": "Neuer Marketing Manager (zu rekrutieren)",
+          "extern": "Digitalbonus NRW autorisiertes Beratungsunternehmen",
+          "projektleiter": "Marcus Schmitz (übergangsweise)"
+        },
+        "erfolgswahrscheinlichkeit": "90%",
+        "reifegrad": "🟢 Hoch - Bewährte Technologien, klarer Business Case"
+      }
+    },
+    {
+      "titel": "Cybersecurity & Compliance Upgrade",
+      "beschreibung": "Umfassendes IT-Sicherheitsaudit und Implementierung von Enterprise-Security-Standards für sensible Gesundheitsdaten.",
+      "förderprogramme": ["Digitalbonus NRW", "ZIM"],
+      "foerdersumme_geschaetzt": "125000",
+      "eigenanteil": "95000",
+      "projektdauer_monate": "12",
+      "vorteile": [
+        "BSI-Grundschutz-Zertifizierung angestrebt",
+        "Zero-Trust-Security-Architektur",
+        "Erfüllung aller DSGVO-Anforderungen für Gesundheitsdaten",
+        "Wettbewerbsvorteil durch Sicherheitszertifikate"
+      ],
+      "konkrete_massnahmen": [
+        "Penetration Testing und Vulnerability Assessment",
+        "Implementierung von SIEM-System",
+        "Ende-zu-Ende-Verschlüsselung aller Patientendaten",
+        "ISO 27001 Vorbereitung"
+      ],
+      "bewertung": {
+        "break_even_berechnung": {
+          "wichtigkeit": "🔶 Mittel",
+          "lösung": "Indirekte Amortisation durch Risikominimierung, vermiedene Strafen (bis zu 4% Jahresumsatz), Vertrauensgewinn",
+          "break_even_zeitpunkt": "Präventivmaßnahme - ROI schwer quantifizierbar"
+        },
+        "visualisierung": {
+          "wichtigkeit": "🟡 Niedrig",
+          "lösung": "Security-Dashboard mit Threat-Monitoring, Compliance-Status",
+          "tools": ["Splunk", "ELK Stack", "Custom Security Dashboard"]
+        },
+        "executive_pitch": {
+          "wichtigkeit": "🔴 Hoch",
+          "lösung": "Whitepaper 'Datensicherheit in der Praxissoftware' + Compliance-Roadmap",
+          "inhalte": ["Risikoanalyse", "Compliance-Matrix", "Investitionsplan", "Zertifizierungspfad"]
+        },
+        "verantwortlicher": {
+          "intern": "IT-Sicherheitsbeauftragter (zu benennen)",
+          "extern": "Spezialisiertes IT-Security Beratungshaus",
+          "projektleiter": "Marcus Schmitz + externer CISO"
+        },
+        "erfolgswahrscheinlichkeit": "95%",
+        "reifegrad": "🟢 Hoch - Notwendigkeit klar, Lösungen am Markt verfügbar"
+      }
+    },
+    {
+      "titel": "Weiterbildung für digitale Transformation",
+      "beschreibung": "Systematisches Qualifizierungsprogramm für alle 10 Mitarbeiter zu KI, Cloud-Technologien und agilen Methoden.",
+      "förderprogramme": ["Bildungsscheck NRW", "Qualifizierungschancengesetz", "Digital Jetzt"],
+      "foerdersumme_geschaetzt": "35000",
+      "eigenanteil": "25000",
+      "projektdauer_monate": "24",
+      "vorteile": [
+        "Innovationsfähigkeit des Teams steigern",
+        "Mitarbeiterbindung durch Entwicklungsperspektiven",
+        "Interne Expertise für neue Technologien aufbauen",
+        "Agilität und Reaktionsfähigkeit erhöhen"
+      ],
+      "konkrete_massnahmen": [
+        "KI/ML-Grundlagen für Entwickler (40h)",
+        "Cloud-Architekturen (AWS/Azure Zertifizierungen)",
+        "Agile/Scrum Master Ausbildungen",
+        "Datenschutz-Fachkunde für Gesundheitswesen"
+      ],
+      "bewertung": {
+        "break_even_berechnung": {
+          "wichtigkeit": "🟡 Niedrig",
+          "lösung": "Qualitative Benefits: 30% höhere Entwicklungsgeschwindigkeit, 50% weniger externe Beratungskosten",
+          "break_even_zeitpunkt": "Langfristige Investition in Humankapital"
+        },
+        "visualisierung": {
+          "wichtigkeit": "🟡 Niedrig",
+          "lösung": "Skill-Matrix, Lernfortschritts-Tracking, Zertifizierungsübersicht",
+          "tools": ["Excel-basierte Kompetenzmatrix", "Moodle LMS"]
+        },
+        "executive_pitch": {
+          "wichtigkeit": "🔶 Mittel",
+          "lösung": "Personalentwicklungskonzept für Förderantrag",
+          "inhalte": ["Qualifizierungsmatrix", "Schulungsplan", "ROI durch Produktivitätssteigerung"]
+        },
+        "verantwortlicher": {
+          "intern": "HR-Verantwortlicher (Marcus Schmitz)",
+          "extern": "Zertifizierte Bildungsträger",
+          "projektleiter": "Team Lead Development"
+        },
+        "erfolgswahrscheinlichkeit": "100%",
+        "reifegrad": "🟢 Hoch - Förderprogramme etabliert, hohe Erfolgsquote"
+      }
+    },
+    {
+      "titel": "KI-Assistenzsystem für Heilpraktiker-Software",
+      "beschreibung": "Entwicklung eines KI-basierten Assistenzsystems für automatisierte Dokumentation, intelligente Abrechnungsoptimierung und Therapieempfehlungen.",
+      "förderprogramme": ["ZIM", "KMU-innovativ", "Horizont Europa"],
+      "foerdersumme_geschaetzt": "450000",
+      "eigenanteil": "350000",
+      "projektdauer_monate": "36",
+      "vorteile": [
+        "Alleinstellungsmerkmal im Heilpraktiker-Software-Markt",
+        "70% Zeitersparnis bei Dokumentation",
+        "Umsatzsteigerung der Praxen um 15-20%",
+        "Grundlage für Platform-as-a-Service Modell"
+      ],
+      "konkrete_massnahmen": [
+        "NLP-Engine für medizinische Dokumentation",
+        "Machine Learning für Abrechnungsoptimierung",
+        "Therapieempfehlungs-Algorithmen",
+        "Integration mit bestehender SimpliMed-Plattform"
+      ],
+      "bewertung": {
+        "break_even_berechnung": {
+          "wichtigkeit": "🔴 Hoch",
+          "lösung": "Detailliertes Financial Model: Premium-Feature für 30€/Monat Aufpreis, Break-Even bei 1.000 Nutzern",
+          "break_even_zeitpunkt": "Q2 2028"
+        },
+        "visualisierung": {
+          "wichtigkeit": "🔴 Hoch",
+          "lösung": "Interaktive Demos, Use-Case-Videos, ROI-Calculator für Praxen",
+          "tools": ["Figma Prototypes", "After Effects", "Interactive Web Demo"]
+        },
+        "executive_pitch": {
+          "wichtigkeit": "🔴 Hoch",
+          "lösung": "20-seitiger ZIM-Projektantrag + Investor Pitch Deck",
+          "inhalte": ["Technologie-Roadmap", "Marktanalyse", "IP-Strategie", "Kommerzialisierungsplan"]
+        },
+        "verantwortlicher": {
+          "intern": "CTO (zu rekrutieren) + Marcus Schmitz",
+          "extern": "KI-Forschungsinstitut (Fraunhofer/Hochschule)",
+          "projektleiter": "Dedizierter Innovationsmanager"
+        },
+        "erfolgswahrscheinlichkeit": "70%",
+        "reifegrad": "🟡 Mittel - Innovative Technologie, Marktakzeptanz zu validieren"
+      }
+    },
+    {
+      "titel": "Telemedizin-Plattform Integration",
+      "beschreibung": "Entwicklung eines Telemedizin-Moduls für Videosprechstunden, digitale Rezepte und Remote-Patientenbetreuung.",
+      "förderprogramme": ["Innovationsfonds", "Digital Jetzt", "EFRE"],
+      "foerdersumme_geschaetzt": "320000",
+      "eigenanteil": "180000",
+      "projektdauer_monate": "24",
+      "vorteile": [
+        "Erschließung neuer Geschäftsfelder",
+        "Reaktion auf Post-COVID Marktanforderungen",
+        "Erhöhung der Praxis-Reichweite",
+        "Zusätzliche Einnahmequelle für SimpliMed"
+      ],
+      "konkrete_massnahmen": [
+        "WebRTC-basierte Videosprechstunden",
+        "E-Rezept-Integration",
+        "Digitale Patientenakte",
+        "Mobile Apps für Patienten"
+      ],
+      "bewertung": {
+        "break_even_berechnung": {
+          "wichtigkeit": "🔴 Hoch",
+          "lösung": "Lizenzmodell: 50€/Monat pro Praxis, Break-Even bei 500 aktiven Nutzern",
+          "break_even_zeitpunkt": "Q4 2027"
+        },
+        "visualisierung": {
+          "wichtigkeit": "🔴 Hoch",
+          "lösung": "Live-Demo-System, Nutzungsstatistiken, Patientenzufriedenheits-Dashboard",
+          "tools": ["React Native Apps", "WebRTC Demo", "Analytics Dashboard"]
+        },
+        "executive_pitch": {
+          "wichtigkeit": "🔴 Hoch",
+          "lösung": "Innovationsfonds-Konzeptpapier + Krankenkassen-Kooperationsvorschlag",
+          "inhalte": ["Versorgungskonzept", "Evaluation-Design", "Wirtschaftlichkeitsberechnung"]
+        },
+        "verantwortlicher": {
+          "intern": "Produktmanager Digital Health (zu rekrutieren)",
+          "extern": "Telemedizin-Experten + Krankenkassen-Partner",
+          "projektleiter": "Marcus Schmitz + Med. Beirat"
+        },
+        "erfolgswahrscheinlichkeit": "75%",
+        "reifegrad": "🟢 Hoch - Marktbedarf validiert, Technologie verfügbar"
+      }
+    },
+    {
+      "titel": "Internationale Expansion DACH-Region",
+      "beschreibung": "Markterschließung Österreich und Schweiz mit lokalisierten Versionen der SimpliMed-Software.",
+      "förderprogramme": ["go-international", "EFRE", "Digitalbonus NRW"],
+      "foerdersumme_geschaetzt": "180000",
+      "eigenanteil": "120000",
+      "projektdauer_monate": "18",
+      "vorteile": [
+        "Verdopplung des adressierbaren Marktes",
+        "Diversifizierung der Einnahmequellen",
+        "Skaleneffekte nutzen",
+        "Erste Schritte zur EU-weiten Expansion"
+      ],
+      "konkrete_massnahmen": [
+        "Lokalisierung für AT/CH Abrechnungssysteme",
+        "Partnerschaften mit lokalen Verbänden",
+        "Compliance mit nationalen Regelungen",
+        "Lokale Cloud-Infrastruktur"
+      ],
+      "bewertung": {
+        "break_even_berechnung": {
+          "wichtigkeit": "🔴 Hoch",
+          "lösung": "Markteintrittskalkulation: 200 Kunden in 24 Monaten für Break-Even",
+          "break_even_zeitpunkt": "Q2 2028"
+        },
+        "visualisierung": {
+          "wichtigkeit": "🔶 Mittel",
+          "lösung": "Marktpotenzial-Maps, Wettbewerbsanalyse-Dashboard",
+          "tools": ["Tableau Geo-Analytics", "Market Intelligence Platform"]
+        },
+        "executive_pitch": {
+          "wichtigkeit": "🔶 Mittel",
+          "lösung": "Internationalisierungsstrategie + Markteintrittsplan",
+          "inhalte": ["Marktanalyse DACH", "Go-to-Market Strategie", "Investitionsplan"]
+        },
+        "verantwortlicher": {
+          "intern": "Business Development Manager (zu rekrutieren)",
+          "extern": "Lokale Marktexperten + Rechtsberater",
+          "projektleiter": "Marcus Schmitz"
+        },
+        "erfolgswahrscheinlichkeit": "80%",
+        "reifegrad": "🟡 Mittel - Produkt ready, Marktkenntnis aufzubauen"
+      }
+    },
+    {
+      "titel": "Nachhaltigkeitsinitiative: Green-IT Infrastruktur",
+      "beschreibung": "Aufbau einer energieeffizienten, CO2-reduzierten IT-Infrastruktur für langfristig nachhaltige Softwareentwicklung und Betrieb.",
+      "förderprogramme": ["EFRE", "Umweltinnovationsprogramm", "Digital Jetzt"],
+      "foerdersumme_geschaetzt": "150000",
+      "eigenanteil": "100000",
+      "projektdauer_monate": "15",
+      "vorteile": [
+        "60% Reduzierung des Stromverbrauchs",
+        "CO2-neutrale Cloud-Infrastruktur bis 2027",
+        "Nachhaltigkeitsimage stärkt Marke und Kundenbindung",
+        "Förderfähigkeit für EU-Green-Deal-Projekte",
+        "Kosteneinsparungen von 40.000 EUR/Jahr bei Energiekosten"
+      ],
+      "konkrete_massnahmen": [
+        "Migration zu Green-Cloud-Providern (100% Ökostrom)",
+        "Implementierung von Energy-Efficient-Coding-Standards",
+        "Server-Konsolidierung und Virtualisierung",
+        "Nachhaltigkeits-Monitoring und CO2-Reporting",
+        "Zertifizierung nach ISO 14001 Umweltmanagement"
+      ],
+      "bewertung": {
+        "break_even_berechnung": {
+          "wichtigkeit": "🔶 Mittel",
+          "lösung": "ROI durch Energiekosteneinsparung 40k/Jahr + Imagegewinn + neue Kundengruppen, Amortisation in 3,5 Jahren",
+          "break_even_zeitpunkt": "Q2 2028"
+        },
+        "visualisierung": {
+          "wichtigkeit": "🔴 Hoch",
+          "lösung": "Echtzeit CO2-Dashboard, Energieverbrauch-Monitoring, Nachhaltigkeits-KPIs",
+          "tools": ["Grafana Green Metrics", "Carbon Footprint Calculator", "Sustainability Dashboard"]
+        },
+        "executive_pitch": {
+          "wichtigkeit": "🔴 Hoch",
+          "lösung": "Green-IT-Strategie + ESG-Report für Investoren und Förderträger",
+          "inhalte": ["CO2-Reduktionsziele", "Nachhaltigkeits-Roadmap", "ESG-Compliance", "Green-Deal-Alignment"]
+        },
+        "verantwortlicher": {
+          "intern": "Nachhaltigkeitsbeauftragter (zu benennen)",
+          "extern": "Energieberater + Green-IT-Consultants",
+          "projektleiter": "IT-Leitung + Marcus Schmitz"
+        },
+        "erfolgswahrscheinlichkeit": "90%",
+        "reifegrad": "🟢 Hoch - Technologien verfügbar, hohe Förderpriorität"
+      }
+    }
+  ],
+  "meta": {
+    "erstellt_am": "2025-07-14",
+    "version": "1.1",
+    "gesamt_foerdersumme_potenzial": "1790000",
+    "priorisierung": [
+      "1. KI-Assistenzsystem (Innovationsführerschaft)",
+      "2. Datenbank-Infrastruktur (Technische Basis)",
+      "3. Cybersecurity (Risikominimierung)",
+      "4. Telemedizin-Plattform (Markterweiterung)",
+      "5. Nachhaltigkeitsinitiative (ESG-Compliance + Kosteneinsparung)",
+      "6. Digitales Marketing (Wachstumsbeschleunigung)",
+      "7. Internationale Expansion (Skalierung)",
+      "8. Weiterbildung (Enabler für alle Projekte)"
+    ],
+    "empfehlung": "Parallelstart von 2-3 Projekten mit gestaffelten Förderprogrammen zur Maximierung der Förderquote bei Einhaltung der De-minimis-Grenzen"
+  },
+  "kombiniertes_foerderszenario": {
+    "titel": "KOMBINATION: ZIM + Digitalbonus NRW für maximale Förderung",
+    "beschreibung": "Optimale Kombination zweier Förderprogramme für Technologie-Innovation und erfolgreiche Markteinführung. 46,3% staatliche Förderung bei nur 100.000 EUR Kreditbedarf.",
+    "gesamtinvestition": 723000,
+    "foerderprogramm_1": {
+      "name": "ZIM-Einzelprojekt",
+      "fokus": "KI-gestützte Praxisassistenz & Cloud-Infrastruktur",
+      "foerdersumme": 285000,
+      "foerderquote": "45%",
+      "projektvolumen": 633000,
+      "laufzeit_monate": 18
+    },
+    "foerderprogramm_2": {
+      "name": "Digitalbonus NRW",
+      "fokus": "Digitale Markterschließung & IT-Sicherheit",
+      "foerdersumme": 50000,
+      "foerderquote": "50%",
+      "projektvolumen": 100000,
+      "laufzeit_monate": 6,
+      "kommentar": "Förderung des Landes NRW für Digitalisierungsvorhaben, antragsberechtigt sind KMU mit Sitz in NRW. Zuschuss bis zu 50% der Ausgaben, max. 50.000 €."
+    },
+    "finanzierung": {
+      "foerderungen_gesamt": 335000,
+      "foerderquote_gesamt": "46.3%",
+      "eigenanteil": 288000,
+      "bankdarlehen": 100000
+    },
+    "vorteile": [
+      "Synergieeffekte: ZIM entwickelt Innovation, Digitalbonus NRW sichert Markteinführung",
+      "Minimaler Kreditbedarf durch hohe Förderquote (46,3%)",
+      "Parallele Ausführung verkürzt Time-to-Market",
+      "Zwei unabhängige Förderzusagen reduzieren Risiko"
+    ],
+    "wirtschaftlichkeit": {
+      "break_even_monat": 22,
+      "roi_5_jahre": "280%",
+      "neue_arbeitsplaetze": 10,
+      "umsatzsteigerung_2029": "150%"
+    },
+    "status": "⚠️ Hinweis: go-digital wurde zum 31.12.2024 eingestellt – ersetzt durch Digitalbonus NRW (bis zu 50.000 € Zuschuss)",
+    "bewertung": {
+      "erfolgswahrscheinlichkeit": "90%",
+      "reifegrad": "🟢 Hoch - Optimale Förderkombination mit minimalen Hürden"
+    }
+  }
+}

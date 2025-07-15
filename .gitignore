@@ -1,0 +1,49 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Dependencies
+node_modules/
+
+# Temp files
+*.tmp
+*.temp
+.cache/
+
+# Backup files
+*.bak
+*.backup
+*_backup.html
+*_old.html
+
+# Personal notes
+NOTIZEN.md
+TODO.md
+personal/
+
+# Sensitive data
+config.json
+credentials.json
+.env
+
+# Build artifacts
+dist/
+build/

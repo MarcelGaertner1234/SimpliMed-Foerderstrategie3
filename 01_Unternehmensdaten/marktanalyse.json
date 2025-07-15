@@ -1,0 +1,114 @@
+{
+  "marktanalyse": {
+    "gesamtmarkt_digital_health": {
+      "deutschland": {
+        "volumen_2024": "32.69 Mrd. USD",
+        "volumen_2025": "57 Mrd. EUR",
+        "wachstumsrate": "15.30% CAGR (2023-2033)",
+        "treiber": [
+          "Demografischer Wandel",
+          "Digitalisierungsdruck",
+          "Regulatorische Anforderungen (ePA, eRezept)",
+          "Fachkräftemangel",
+          "COVID-19 Nachwirkungen"
+        ]
+      },
+      "praxissoftware_segment": {
+        "marktvolumen_global_2024": "11.69 Mrd. USD",
+        "marktvolumen_global_2029": "17.92 Mrd. USD",
+        "wachstumsrate": "8.92% CAGR",
+        "deutschland_anteil": "ca. 12-15% des Weltmarkts"
+      }
+    },
+    "zielmarkt_analyse": {
+      "heilpraktiker": {
+        "anzahl_praktiker": "47.000",
+        "anzahl_praxen": "33.275",
+        "patientenkontakte_jahr": "46 Millionen",
+        "marktvolumen": "1 Mrd. EUR/Jahr",
+        "trends": [
+          "Zunehmende Digitalisierung",
+          "Professionalisierung der Praxisführung",
+          "Integration von Telemedizin"
+        ]
+      },
+      "osteopathen": {
+        "anzahl_registriert": "6.900+ (VOD)",
+        "wachstum": "Stark wachsender Markt",
+        "ausbildungsdauer": "4-5 Jahre",
+        "regulierung": "Zunehmende Professionalisierung"
+      },
+      "ärzte_privatpraxen": {
+        "gesamtzahl_arztpraxen": "64.318",
+        "privatärzte_anteil": "ca. 5-10%",
+        "potenzial": "3.000-6.000 Praxen"
+      }
+    },
+    "wettbewerbsanalyse": {
+      "marktführer": {
+        "cgm": "ca. 25% Marktanteil",
+        "top_10_anbieter": "78.6% Marktanteil kombiniert",
+        "gesamtanbieter": "50-60 verschiedene Lösungen"
+      },
+      "simplimed_position": {
+        "marktanteil_geschätzt": "15-18% im Heilpraktiker-Segment",
+        "unique_selling_points": [
+          "Spezialisierung auf Heilpraktiker/Osteopathen",
+          "25+ Jahre Markterfahrung",
+          "Expertise in GebüH/Hufeland-Abrechnung",
+          "Hybrid-Modell (Cloud + On-Premises)"
+        ],
+        "wettbewerbsvorteile": [
+          "Etablierte Kundenbasis (8.500+)",
+          "Spezialisierte Abrechnungskompetenz",
+          "Niedrige Wechselbarrieren für Neukunden",
+          "Preis-Leistungs-Verhältnis"
+        ]
+      }
+    },
+    "marktchancen": {
+      "kurzfristig": [
+        "Integration von KI-Funktionen",
+        "Telemedizin-Module",
+        "Mobile Apps Ausbau",
+        "Schnittstellen zu Krankenkassen"
+      ],
+      "mittelfristig": [
+        "Expansion in angrenzende Märkte (Physiotherapie, Logopädie)",
+        "Internationale Expansion (AT, CH)",
+        "Plattform-Ökosystem aufbauen",
+        "Datenanalyse-Tools für Praxen"
+      ],
+      "langfristig": [
+        "Marktkonsolidierung nutzen",
+        "Strategische Partnerschaften",
+        "Exit-Optionen vorbereiten"
+      ]
+    },
+    "marktrisiken": {
+      "regulatorisch": [
+        "Verschärfung Datenschutzanforderungen",
+        "Änderungen im Heilpraktikergesetz",
+        "EU-Medizinprodukteverordnung"
+      ],
+      "technologisch": [
+        "Disruptive Technologien (Big Tech Einstieg)",
+        "Open-Source Alternativen",
+        "Plattformmonopole"
+      ],
+      "wirtschaftlich": [
+        "Preisdruck durch Wettbewerb",
+        "Konsolidierung im Markt",
+        "Wirtschaftliche Unsicherheit"
+      ]
+    },
+    "förderrelevanz": {
+      "innovationspotenzial": "SEHR HOCH",
+      "marktrelevanz": "HOCH",
+      "wachstumspotenzial": "SEHR HOCH",
+      "arbeitsplatzeffekte": "POSITIV (15-20 neue Stellen bis 2029)",
+      "digitalisierungsbeitrag": "SEHR HOCH",
+      "nachhaltigkeit": "Cloud-Lösungen reduzieren CO2-Footprint"
+    }
+  }
+}

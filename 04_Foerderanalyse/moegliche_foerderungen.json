@@ -1,0 +1,146 @@
+{
+  "potenzielle_foerderprogramme": {
+    "digitalisierung": [
+      {
+        "name": "go-digital",
+        "foerdergeber": "BMWi",
+        "foerderhoehe": "bis zu 16.500 EUR",
+        "foerderquote": "50%",
+        "eignung": "HOCH",
+        "begründung": "Als Software-KMU mit Fokus auf Digitalisierung im Gesundheitswesen perfekt geeignet",
+        "schwerpunkte": [
+          "IT-Sicherheit",
+          "Digitale Markterschließung",
+          "Digitalisierte Geschäftsprozesse"
+        ]
+      },
+      {
+        "name": "Digital Jetzt",
+        "foerdergeber": "BMWi",
+        "foerderhoehe": "bis zu 70.000 EUR",
+        "foerderquote": "40-50%",
+        "eignung": "HOCH",
+        "begründung": "Investitionen in digitale Technologien und Mitarbeiterqualifizierung"
+      }
+    ],
+    "innovation": [
+      {
+        "name": "ZIM - Zentrales Innovationsprogramm Mittelstand",
+        "foerdergeber": "BMWi",
+        "foerderhoehe": "bis zu 550.000 EUR",
+        "foerderquote": "25-45%",
+        "eignung": "SEHR HOCH",
+        "begründung": "Für Weiterentwicklung der Praxissoftware, KI-Integration, neue Features",
+        "projekttypen": [
+          "Einzelprojekte",
+          "Kooperationsprojekte",
+          "Innovationsnetzwerke"
+        ]
+      },
+      {
+        "name": "KMU-innovativ",
+        "foerdergeber": "BMBF",
+        "foerderhoehe": "projektabhängig",
+        "foerderquote": "bis zu 50%",
+        "eignung": "HOCH",
+        "begründung": "Speziell für Software/IKT-Bereich, Gesundheitsforschung"
+      }
+    ],
+    "regionalfoerderung_nrw": [
+      {
+        "name": "Innovationsgutscheine NRW",
+        "foerdergeber": "Land NRW",
+        "foerderhoehe": "bis zu 15.000 EUR",
+        "foerderquote": "50%",
+        "eignung": "MITTEL",
+        "begründung": "Für externe Beratung und Entwicklungsdienstleistungen"
+      },
+      {
+        "name": "progres.nrw - Digitalisierung",
+        "foerdergeber": "Land NRW",
+        "foerderhoehe": "projektabhängig",
+        "foerderquote": "bis zu 50%",
+        "eignung": "HOCH",
+        "begründung": "Digitalisierungsprojekte in NRW"
+      }
+    ],
+    "eu_foerderung": [
+      {
+        "name": "Horizont Europa - Digital Europe Programme",
+        "foerdergeber": "EU",
+        "foerderhoehe": "projektabhängig",
+        "foerderquote": "bis zu 100%",
+        "eignung": "MITTEL",
+        "begründung": "Für größere Digitalisierungsprojekte im Gesundheitswesen",
+        "voraussetzung": "Meist Konsortium erforderlich"
+      },
+      {
+        "name": "EFRE - Europäischer Fonds für regionale Entwicklung",
+        "foerdergeber": "EU/Land NRW",
+        "foerderhoehe": "projektabhängig",
+        "foerderquote": "30-70%",
+        "eignung": "HOCH",
+        "begründung": "Innovationsförderung für KMU in NRW"
+      }
+    ],
+    "spezialfoerderung_gesundheit": [
+      {
+        "name": "Innovationsfonds Gesundheit",
+        "foerdergeber": "G-BA",
+        "foerderhoehe": "projektabhängig",
+        "foerderquote": "bis zu 100%",
+        "eignung": "MITTEL-HOCH",
+        "begründung": "Neue Versorgungsformen, Digitalisierung im Gesundheitswesen",
+        "hinweis": "Oft Kooperation mit Krankenkassen erforderlich"
+      },
+      {
+        "name": "eHealth-Förderung",
+        "foerdergeber": "BMG",
+        "foerderhoehe": "projektabhängig",
+        "foerderquote": "variabel",
+        "eignung": "HOCH",
+        "begründung": "Digitale Gesundheitsanwendungen"
+      }
+    ],
+    "qualifizierung": [
+      {
+        "name": "Bildungsscheck NRW",
+        "foerdergeber": "Land NRW",
+        "foerderhoehe": "bis zu 500 EUR pro Mitarbeiter",
+        "foerderquote": "50%",
+        "eignung": "HOCH",
+        "begründung": "Weiterbildung der Mitarbeiter"
+      },
+      {
+        "name": "Qualifizierungschancengesetz",
+        "foerdergeber": "Arbeitsagentur",
+        "foerderhoehe": "Weiterbildungskosten",
+        "foerderquote": "15-100%",
+        "eignung": "MITTEL",
+        "begründung": "Digitalisierungsschulungen für Mitarbeiter"
+      }
+    ]
+  },
+  "handlungsempfehlungen": {
+    "kurzfristig": [
+      "1. ZIM-Einzelprojekt für Software-Weiterentwicklung beantragen",
+      "2. go-digital für IT-Sicherheit und digitale Markterschließung prüfen",
+      "3. Bildungsschecks für Mitarbeiterqualifizierung nutzen"
+    ],
+    "mittelfristig": [
+      "1. Kooperationsprojekt mit Hochschule/Forschungseinrichtung initiieren",
+      "2. Innovationsfonds-Projekt mit Krankenkassen entwickeln",
+      "3. EFRE-Förderung für größere Innovationsprojekte"
+    ],
+    "langfristig": [
+      "1. EU-Konsortium für Horizont Europa aufbauen",
+      "2. Strategische Partnerschaften für Großprojekte"
+    ]
+  },
+  "voraussetzungen_prüfen": {
+    "kmu_status": "Ja (< 250 Mitarbeiter, < 50 Mio. EUR Umsatz)",
+    "de_minimis": "Prüfung der erhaltenen Beihilfen der letzten 3 Jahre erforderlich",
+    "eigenanteil": "Liquidität für 30-50% Eigenanteil sicherstellen",
+    "projektplanung": "Detaillierte Projektbeschreibungen erforderlich"
+  }
+}

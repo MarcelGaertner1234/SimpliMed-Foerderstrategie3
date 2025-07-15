@@ -1,0 +1,249 @@
+{
+  "erweiterte_foerderprogramme": {
+    "bafa_programme": [
+      {
+        "name": "Förderung unternehmerischen Know-hows",
+        "foerdergeber": "BAFA",
+        "status": "✅ Aktiv bis 31.12.2026",
+        "foerderhoehe": "1.750-2.800 EUR",
+        "foerderquote": "50-80%",
+        "eignung": "HOCH",
+        "verwendung": [
+          "Beratung zur SaaS-Migration",
+          "Digitalisierungsstrategie",
+          "Organisationsentwicklung",
+          "Markterschließung"
+        ],
+        "besonderheiten": "Max. 5 Beratungen bis 2026, max. 2 pro Jahr"
+      }
+    ],
+    "bmwk_cybersecurity": [
+      {
+        "name": "IT-Sicherheit in der Wirtschaft",
+        "foerdergeber": "BMWK",
+        "status": "✅ Aktiv (Update 23.04.2025)",
+        "fokus": "Cybersicherheits-Kompetenzen für KMU",
+        "eignung": "SEHR HOCH",
+        "begründung": "Kritisch für Gesundheitsdaten-Schutz"
+      },
+      {
+        "name": "IPCEI-CIS (Cloud Infrastructure)",
+        "foerdergeber": "BMWK",
+        "foerderhoehe": "bis 25% der Kosten, max. 25 Mio. EUR",
+        "eignung": "HOCH",
+        "verwendung": "Cloud-Migration SimpliMed",
+        "bonus": "Zusatzboni für KMU"
+      }
+    ],
+    "nrw_spezial": [
+      {
+        "name": "NEXT.IN.NRW",
+        "foerdergeber": "Land NRW/EFRE",
+        "budget": "104 Mio. EUR",
+        "foerderquote": "bis 90%",
+        "eignung": "SEHR HOCH",
+        "themen": ["KI", "IKT", "Cybersicherheit"],
+        "voraussetzung": "Kooperation mit Forschungseinrichtung"
+      },
+      {
+        "name": "MID-Programme",
+        "varianten": {
+          "MID-Invest": "4.000-25.000 EUR",
+          "MID-Innovation": "Innovationsgutscheine",
+          "MID-Analyse": "Externe Analysen"
+        },
+        "eignung": "HOCH",
+        "besonderheit": "2 Anträge pro Jahr möglich"
+      }
+    ],
+    "gesundheitswesen": [
+      {
+        "name": "Digitale FortschrittsHubs Gesundheit",
+        "foerdergeber": "BMBF",
+        "budget": "50 Mio. EUR bis 2025",
+        "fokus": "Telemedizin, mobile Gesundheitsversorgung",
+        "eignung": "HOCH"
+      },
+      {
+        "name": "BMBF eHealth-Forschungsgruppen",
+        "status": "✅ Ausschreibung 15.01.2025",
+        "einreichfrist": "12.05.2025",
+        "eignung": "MITTEL-HOCH",
+        "hinweis": "Kooperation mit Hochschule erforderlich"
+      },
+      {
+        "name": "EHDS - Europäischer Gesundheitsdatenraum",
+        "start": "Anfang 2025",
+        "relevanz": "FHIR-Standards werden Pflicht",
+        "chance": "Frühzeitige EHDS-Compliance"
+      }
+    ],
+    "ki_machine_learning": [
+      {
+        "name": "KMU-innovativ: IKT",
+        "foerdergeber": "BMBF",
+        "stichtage": ["15.04.2025", "15.10.2025"],
+        "foerderquote": "bis 50%",
+        "fokus": "Software-intensive Systeme",
+        "eignung": "SEHR HOCH",
+        "verwendung": "KI-Features SimpliMed"
+      }
+    ],
+    "forschungszulage": {
+      "name": "Steuerliche Forschungsförderung",
+      "status": "✅ Erweitert 2024",
+      "foerdersatz_kmu": "35% (vorher 25%)",
+      "auftragsforschung": "24,5% (vorher 17,5%)",
+      "max_bemessungsgrundlage": "10 Mio. EUR",
+      "besonderheit": "Rückwirkend ab 2021 beantragbar",
+      "eignung": "HOCH",
+      "hinweis": "Nur bei echtem F&E-Charakter"
+    },
+    "cloud_migration": [
+      {
+        "name": "KfW-Digitalisierungskredit NEU",
+        "start": "Februar 2025",
+        "zuschuss": "3% des Kredits, max. 200.000 EUR",
+        "kreditrahmen": "bis 25 Mio. EUR",
+        "eignung": "HOCH",
+        "vorteil": "Kombination Kredit + Zuschuss"
+      },
+      {
+        "name": "Digital Jetzt Nachfolger",
+        "status": "⏳ In Planung für 2025",
+        "erwartete_foerderung": "45-50%",
+        "fokus": "Cloud-Migration, IT-Sicherheit"
+      }
+    ],
+    "regionale_foerderung_obk": [
+      {
+        "name": "Wirtschaftsförderung OBK",
+        "foerderung": "Beratungsförderung 50%, max. 1.750 EUR",
+        "kontakt": "Kostenlose Erstberatung",
+        "eignung": "HOCH"
+      },
+      {
+        "name": "REGIONALE 2025 Südwestfalen",
+        "motto": "Digital - Nachhaltig - Authentisch",
+        "fokus": "Digitalisierung und Ressourceneffizienz",
+        "chance": "SimpliMed als regionaler Vorreiter"
+      }
+    ],
+    "export_internationalisierung": [
+      {
+        "name": "Exportinitiative Gesundheitswirtschaft",
+        "foerdergeber": "BMWK",
+        "zielgruppe": "Digital Healthcare",
+        "unterstuetzung": "Markterschließung international",
+        "eignung": "MITTEL"
+      }
+    ],
+    "innovationsgutscheine_bundeslaender": [
+      {
+        "bundesland": "Baden-Württemberg",
+        "programme": {
+          "Innovationsgutschein_BW": "bis 7.500 EUR (50%)",
+          "Hightech_BW": "bis 20.000 EUR (50%)",
+          "Startup_BW": "bis 20.000 EUR (50%)"
+        }
+      },
+      {
+        "bundesland": "Bayern",
+        "programm": "Digitalbonus Bayern",
+        "foerderung": "bis 50.000 EUR (50%)",
+        "voraussetzung": "Betriebsstätte in Bayern"
+      },
+      {
+        "bundesland": "Thüringen",
+        "programme": {
+          "Digitalbonus": "bis 15.000 EUR (50%)",
+          "gueltig_bis": "31.12.2026"
+        }
+      }
+    ],
+    "telemedizin_spezifisch": [
+      {
+        "name": "Telemedizinische Netzwerke",
+        "beispiel": "Hessen-Programm",
+        "laufzeit": "bis 31.12.2025",
+        "marktpotenzial": {
+          "ehealth_gesamt": "38 Mrd. EUR bis 2030",
+          "telemedizin_anteil": "3,6 Mrd. EUR"
+        }
+      }
+    ],
+    "laendlicher_raum": [
+      {
+        "name": "Smarte LandRegionen",
+        "foerdergeber": "Bund",
+        "ziel": "Digitalisierung ländlicher Raum",
+        "eignung": "MITTEL"
+      },
+      {
+        "name": "LEADER-Förderung",
+        "foerdergeber": "EU",
+        "fokus": "Ländliche Entwicklung",
+        "chance": "Digitale Gesundheitsversorgung rural"
+      }
+    ]
+  },
+  "optimale_ergaenzungen": {
+    "sofort_umsetzbar": [
+      {
+        "programm": "BAFA-Beratungsförderung",
+        "betrag": 1750,
+        "zeitpunkt": "Q3 2025",
+        "verwendung": "SaaS-Migrationsstrategie"
+      },
+      {
+        "programm": "Forschungszulage rückwirkend",
+        "betrag": "35% der F&E-Kosten",
+        "zeitraum": "2021-2024"
+      }
+    ],
+    "kurzfristig": [
+      {
+        "programm": "KMU-innovativ IKT",
+        "deadline": "15.10.2025",
+        "vorbereitung": "Projektskizze KI-Features"
+      },
+      {
+        "programm": "MID-Invest NRW",
+        "betrag": 25000,
+        "zeitpunkt": "Q4 2025"
+      }
+    ],
+    "mittelfristig": [
+      {
+        "programm": "NEXT.IN.NRW",
+        "betrag": "bis 90% Förderquote",
+        "voraussetzung": "Hochschulkooperation"
+      },
+      {
+        "programm": "EFRE/JTF NRW",
+        "zeitpunkt": "2026",
+        "projekt": "Größeres Digitalisierungsprojekt"
+      }
+    ]
+  },
+  "gesamtpotenzial": {
+    "zusaetzlich_zu_hauptfoerderung": "100.000-150.000 EUR",
+    "steuerersparnis_forschungszulage": "nicht eingerechnet",
+    "gesamtfoerderquote_moeglich": "60-80%"
+  },
+  "wichtige_hinweise": [
+    "De-minimis-Grenze 200.000 EUR/3 Jahre beachten",
+    "Förderprogramme auf Kumulierbarkeit prüfen",
+    "Viele Programme VOR Projektstart beantragen",
+    "FHIR-Standard wird durch EHDS 2025 Pflicht",
+    "F&E-Tätigkeiten für Forschungszulage dokumentieren"
+  ],
+  "kontakte": {
+    "BAFA": "www.bafa.de/unb",
+    "Forschungszulage": "www.bescheinigung-forschungszulage.de",
+    "EFRE_NRW": "www.efre.nrw.de",
+    "WF_OBK": "www.wf-obk.de",
+    "BMBF_eHealth": "Projektträger DLR"
+  },
+  "stand": "Juli 2025"
+}

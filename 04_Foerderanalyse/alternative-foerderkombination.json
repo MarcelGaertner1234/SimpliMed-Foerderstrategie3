@@ -1,0 +1,53 @@
+{
+  "alternative_kombinationen": [
+    {
+      "szenario": "A: ZIM + Digitalbonus NRW",
+      "gesamtförderung": 335000,
+      "förderung_1": {
+        "programm": "ZIM-Einzelprojekt",
+        "summe": 285000,
+        "status": "✅ Aktiv"
+      },
+      "förderung_2": {
+        "programm": "Digitalbonus NRW",
+        "summe": 50000,
+        "status": "✅ Aktiv (Nachfolger von go-digital)"
+      },
+      "vorteil": "Höhere Gesamtförderung, NRW-spezifisch",
+      "nachteil": "Betriebsstätte in NRW erforderlich"
+    },
+    {
+      "szenario": "B: Digital Jetzt + KfW-Kredit",
+      "gesamtförderung": 320000,
+      "förderung_1": {
+        "programm": "Digital Jetzt (Nachfolger)",
+        "summe": 100000,
+        "status": "⏳ In Planung für 2025"
+      },
+      "förderung_2": {
+        "programm": "KfW ERP-Digitalisierungskredit",
+        "summe": 220000,
+        "status": "✅ Aktiv, zinsvergünstigt"
+      },
+      "vorteil": "Hohe Liquidität, niedrige Zinsen",
+      "nachteil": "Kredit muss zurückgezahlt werden"
+    },
+    {
+      "szenario": "C: INVEST + Business Angels",
+      "gesamtförderung": 300000,
+      "förderung_1": {
+        "programm": "INVEST-Zuschuss",
+        "summe": 75000,
+        "erwerbszuschuss": "25% auf 300k Investment"
+      },
+      "förderung_2": {
+        "programm": "Business Angel Investment",
+        "summe": 300000,
+        "anteilsabgabe": "15-20%"
+      },
+      "vorteil": "Expertise + Netzwerk der Angels",
+      "nachteil": "Unternehmensanteile abgeben"
+    }
+  ],
+  "empfehlung": "Szenario A (ZIM + Digitalbonus NRW) bei NRW-Standort, sonst Hauptszenario mit ZIM + go-digital (falls noch verfügbar)"
+}

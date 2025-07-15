@@ -1,0 +1,124 @@
+{
+  "kennzahlen": {
+    "umsatz_schaetzung": {
+      "2022": "1.500.000 - 2.000.000 EUR",
+      "2023": "1.800.000 - 2.400.000 EUR",
+      "2024": "2.200.000 - 3.000.000 EUR",
+      "2025_prognose": "2.700.000 - 3.600.000 EUR",
+      "2026_prognose": "3.200.000 - 4.300.000 EUR",
+      "2027_prognose": "3.800.000 - 5.100.000 EUR",
+      "2028_prognose": "4.500.000 - 6.100.000 EUR",
+      "2029_prognose": "5.400.000 - 7.300.000 EUR",
+      "berechnungsgrundlage": "Basierend auf 8.500 Kunden, durchschnittlicher Lizenzpreis 20-30 EUR/Monat, Wachstumsrate Digital Health 15-20% p.a.",
+      "hinweis": "Konservative Schätzung basierend auf Branchendurchschnitt und Kundenbasis"
+    },
+    "mitarbeiterzahl": {
+      "geschätzt_aktuell": "10 Mitarbeiter (bestätigt)",
+      "entwicklung": {
+        "2022": "8-9",
+        "2023": "9-10",
+        "2024": "10",
+        "prognose_2025": "11-13",
+        "prognose_2026": "13-16",
+        "prognose_2027": "15-20",
+        "prognose_2028": "18-25"
+      },
+      "basis": "Freelancermap.de und Unternehmen24.info bestätigen 10 Mitarbeiter"
+    },
+    "kundenbasis": {
+      "aktuell": "8.500+",
+      "wachstumsrate_geschätzt": "10-15% p.a.",
+      "prognose_2025": "9.350 - 9.775",
+      "prognose_2026": "10.285 - 11.240",
+      "prognose_2027": "11.315 - 12.925"
+    },
+    "marktvolumen_digital_health": {
+      "deutschland": {
+        "2024": "32.69 Mrd. USD",
+        "2025": "57 Mrd. EUR (Statista)",
+        "2029": "3.584 Mrd. EUR (Digital Treatment & Care Segment)",
+        "2033": "32.69 Mrd. USD",
+        "wachstumsrate": "15.30% CAGR"
+      },
+      "europa": {
+        "2024": "Anteil von ca. 25% am globalen Markt",
+        "global_2024": "312.9 Mrd. USD",
+        "global_2032": "1,500.69 Mrd. USD"
+      },
+      "quellen": [
+        "Statista Digital Health Report 2024",
+        "Spherical Insights Germany Digital Health Market",
+        "Fortune Business Insights Digital Health Market"
+      ]
+    },
+    "zielmarkt_heilpraktiker": {
+      "heilpraktiker_deutschland": "47.000 aktive Heilpraktiker",
+      "heilpraktiker_praxen": "33.275 Praxen",
+      "patientenkontakte_jahr": "46 Millionen",
+      "marktvolumen_heilpraktiker": "1 Milliarde EUR/Jahr",
+      "osteopathen_deutschland": "6.900+ (VOD Mitglieder)",
+      "potenzial_kunden": "Gesamtpotenzial ca. 54.000 Praxen"
+    },
+    "marktanteil_schaetzung": {
+      "aktueller_marktanteil": "15-18% (Heilpraktiker-Segment)",
+      "erreichbarer_marktanteil_2029": "20-25%",
+      "basis": "8.500 Kunden von ca. 47.000 potenziellen Kunden"
+    },
+    "bewertungspotenzial": {
+      "skalierungspotenzial": "SEHR HOCH - SaaS-Modell mit niedrigen Grenzkosten",
+      "zielmarktwachstum": "Heilpraktiker-Markt stabil, Digitalisierungsdruck steigt",
+      "förderquote_realistisch": "40-50% bei ZIM, bis zu 70% bei Kooperationsprojekten",
+      "innovationspotenzial": "KI-Integration, Telemedizin, Interoperabilität",
+      "wettbewerbsposition": "Etablierter Nischenanbieter mit 25+ Jahren Erfahrung"
+    },
+    "finanzkennzahlen_geschätzt": {
+      "umsatz_pro_mitarbeiter": "220.000 - 300.000 EUR",
+      "umsatz_pro_kunde": "260 - 350 EUR/Jahr",
+      "stammkapital": "25.000 EUR",
+      "eigenkapitalquote_geschätzt": "> 30% (typisch für Software-KMU)",
+      "liquidität": "Vermutlich gut (SaaS-Modell mit wiederkehrenden Einnahmen)"
+    },
+    "förderfähigkeit": {
+      "kmu_status": "JA - < 50 Mitarbeiter, < 10 Mio. EUR Umsatz",
+      "innovationsgrad": "HOCH - Digitalisierung im Gesundheitswesen",
+      "wachstumspotenzial": "SEHR HOCH - Markt wächst mit 15-20% p.a.",
+      "arbeitsplatzeffekt": "Potenzial für 15-20 neue Arbeitsplätze bis 2029",
+      "digitalisierungsgrad": "Bereits hoch, weitere Potenziale vorhanden"
+    }
+  },
+  "berechnungsmethodik": {
+    "umsatzschätzung": {
+      "methode": "Bottom-up basierend auf Kundenzahl und durchschnittlichen Lizenzpreisen",
+      "annahmen": [
+        "8.500 Kunden (bestätigt)",
+        "Durchschnittlicher Monatspreis: 20-30 EUR",
+        "Zusatzumsätze durch Dienstleistungen: 10-15%",
+        "Jährliche Preissteigerung: 3-5%"
+      ]
+    },
+    "wachstumsprognose": {
+      "basis": "Digital Health Marktwachstum Deutschland (15-20% p.a.)",
+      "faktoren": [
+        "Digitalisierungsdruck im Gesundheitswesen",
+        "Regulatorische Anforderungen (ePA, eRezept)",
+        "Demografischer Wandel",
+        "Fachkräftemangel treibt Automatisierung"
+      ]
+    }
+  },
+  "datenquellen": {
+    "primärquellen": [
+      "Northdata Handelsregister",
+      "SimpliMed Website",
+      "Freelancermap.de",
+      "Unternehmen24.info"
+    ],
+    "sekundärquellen": [
+      "Statista Digital Health Reports",
+      "Mordor Intelligence Practice Management Systems",
+      "BDH Heilpraktiker-Statistiken",
+      "VOD Osteopathen-Verband"
+    ],
+    "stand": "2025-07-14"
+  }
+}

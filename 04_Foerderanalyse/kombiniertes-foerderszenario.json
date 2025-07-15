@@ -1,0 +1,119 @@
+{
+  "projektvorschlag": {
+    "titel": "SimpliMed 2.0 – KI-gestützte Praxissoftware mit Cloud-Infrastruktur",
+    "ziel": "Entwicklung einer innovativen KI-Assistenz für Heilpraktiker und Migration zur skalierbaren Cloud-Architektur",
+    "gesamtkosten": 723000,
+    "förderung_1": {
+      "programm": "ZIM-Einzelprojekt",
+      "art": "Zuschuss",
+      "summe": 285000,
+      "förderquote": "45%",
+      "projektvolumen": 633000,
+      "verwendung": [
+        "KI-Modul für Diagnoseunterstützung",
+        "Cloud-Native Microservices-Architektur",
+        "FHIR-Integration für Interoperabilität",
+        "Personalkosten für 5 neue Entwickler"
+      ],
+      "laufzeit_monate": 18,
+      "status": "✅ Aktiv - Neue Richtlinie 2025"
+    },
+    "förderung_2": {
+      "programm": "Digitalbonus NRW",
+      "art": "Zuschuss",
+      "summe": 50000,
+      "förderquote": "50%",
+      "projektvolumen": 100000,
+      "verwendung": [
+        "Digitalisierte Geschäftsprozesse",
+        "IT-Sicherheitskonzept",
+        "Online-Marketing-Strategie",
+        "Digitale Markterschließung"
+      ],
+      "laufzeit_monate": 6,
+      "status": "✅ Aktiv - NRW Landesprogramm bis 2025",
+      "kommentar": "Förderung des Landes NRW für Digitalisierungsvorhaben, antragsberechtigt sind KMU mit Sitz in NRW. Zuschuss bis zu 50% der Ausgaben, max. 50.000 €."
+    },
+    "kombinierbarkeit": true,
+    "kombinierbarkeit_details": {
+      "überschneidung": "keine - unterschiedliche Kostenarten",
+      "de_minimis": "Beide Programme De-minimis-relevant, Summe 335.000 EUR < 200.000 EUR Grenze über 3 Jahre",
+      "synergien": "ZIM entwickelt Technologie, Digitalbonus NRW unterstützt Markteinführung"
+    },
+    "finanzierungsstruktur": {
+      "förderungen_gesamt": 335000,
+      "eigenanteil": 288000,
+      "bankdarlehen": 100000,
+      "förderquote_gesamt": "46.3%"
+    },
+    "wirtschaftlichkeit": {
+      "break_even_monat": 22,
+      "roi_5_jahre": "280%",
+      "neue_kunden_prognose": 6000,
+      "umsatzsteigerung_2029": "150%",
+      "neue_arbeitsplätze": 10
+    },
+    "risikoanalyse": {
+      "gesamtrisiko": "gering",
+      "technisches_risiko": "mittel - durch erfahrenes Team beherrschbar",
+      "marktrisiko": "gering - etablierter Kundenstamm",
+      "finanzrisiko": "gering - 45.8% staatliche Förderung",
+      "regulatorisches_risiko": "gering - DSGVO-konform"
+    },
+    "empfehlung_zur_antragstellung": {
+      "priorität": "HOCH - optimaler Zeitpunkt",
+      "zeitplan": {
+        "vorbereitung": "KW 29-30/2025",
+        "beratungstermin_förderbank": "KW 30/2025",
+        "hausbankgespräch": "KW 31/2025",
+        "zim_antrag": "KW 32/2025",
+        "digitalbonus_nrw_antrag": "KW 31/2025",
+        "entscheidung_erwartet": "KW 40-44/2025"
+      },
+      "vorbereitung": [
+        "Detaillierte Projektbeschreibung (10 Seiten)",
+        "Technische Spezifikation der KI-Module",
+        "Letter of Intent von 3 Pilotkunden",
+        "De-minimis-Erklärung aktualisieren",
+        "Jahresabschlüsse 2023-2024 bereitstellen",
+        "Liquiditätsplanung 2025-2027",
+        "Angebote für externe Dienstleistungen"
+      ],
+      "ansprechpartner": {
+        "zim": "VDI/VDE Innovation + Technik GmbH",
+        "digitalbonus_nrw": "Autorisiertes Beratungsunternehmen NRW",
+        "hausbank": "Bestehende Geschäftsbeziehung nutzen"
+      }
+    },
+    "alternativ_szenario": {
+      "hinweis": "go-digital wurde zum 31.12.2024 eingestellt - Digitalbonus NRW ist die aktuelle Alternative",
+      "förderung_2_backup": {
+        "programm": "Digital Jetzt",
+        "art": "Zuschuss",
+        "summe": 45000,
+        "förderquote": "45%",
+        "verwendung": [
+          "Digitalisierung von Geschäftsprozessen",
+          "IT-Sicherheit",
+          "E-Commerce-Lösungen"
+        ],
+        "status": "Eingestellt - nur als Backup-Information"
+      }
+    },
+    "unique_selling_points": {
+      "marktführer": "15-18% Marktanteil bei Heilpraktikern",
+      "kundentreue": "8.500+ aktive Kunden",
+      "erfahrung": "25+ Jahre am Markt",
+      "innovation": "Erste KI-gestützte Praxissoftware für Heilpraktiker",
+      "skalierbarkeit": "Cloud-Native für 20.000+ Kunden"
+    }
+  },
+  "export_optionen": {
+    "formate": ["JSON", "PDF", "DOCX", "Markdown"],
+    "zielgruppen": {
+      "förderberater": "Technische Details + Innovationsgrad",
+      "hausbank": "Finanzierung + Sicherheiten + ROI",
+      "management": "Executive Summary + Meilensteine"
+    }
+  }
+}
